@@ -1,0 +1,1206 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02BF9988CC94A01E7CB6049694390020 /* NMBExceptionCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 40FBD52025077E5788ADCE71EF040393 /* NMBExceptionCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02DF5BD2281BA10105A447F95FCF8CF3 /* BeLogical.swift in Sources */ = {isa = PBXBuildFile; fileRef = B011BCE1507648ECA7586CF7DABF6F4C /* BeLogical.swift */; };
+		0492354DA7EF0C9068F7B4E8F74001B0 /* FailureMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25961731CF4F7537A5ECD61A000A150C /* FailureMessage.swift */; };
+		0A6E71555F55082003A3DB2B03CA85D2 /* AsyncMatcherWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42013D479CDC11E7882C7C0045B66B /* AsyncMatcherWrapper.swift */; };
+		0F49254A4C560DD4696936F6080756DC /* Nimble-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BF4AE1E80CC4EA4F2E1FF17CA10A3D26 /* Nimble-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1055E36A0C7C3797A56AC9893732F9E6 /* QCKDSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2543809E4D3D9755B94735346ACDFF03 /* QCKDSL.m */; };
+		1162F6CC322DDCD80B346B1BC4504FD9 /* NSString+QCKSelectorName.m in Sources */ = {isa = PBXBuildFile; fileRef = 20ABC5A3D02301EC1EC014B6ABEFA42A /* NSString+QCKSelectorName.m */; };
+		1608B6410215DCE06329E3365983A69D /* QuickSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 62241019A9DFE31F82A2CDF8690A163C /* QuickSpec.m */; };
+		1A266F203E3947E21326ADFF39C22571 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487245080A1AB0FFD48288B814AEA82 /* World.swift */; };
+		1E28F9362956B758C4C981D3C1129C90 /* BeGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CD67A0263B5D926517C112081F48B2 /* BeGreaterThan.swift */; };
+		24B9DFFAA64087B80A5E1BF4F47E5247 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 279AA6492631DEFA8C439A9C088EEB8A /* XCTest.framework */; };
+		284FB4551B2B5DD8AAE0AA2C2E7DD931 /* Callsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6D6E41BA9F922E7BBD3A24B7E5D00A /* Callsite.swift */; };
+		2D3B916F7168E9412EDB95BA203A5BB4 /* ThrowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC0728045ED4D4A2C12B52A561EEF7 /* ThrowError.swift */; };
+		33264C6A7A3536AD91EF42B3E8CC8220 /* BeGreaterThanOrEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BB6589A73F51F073DF050F55D7F41 /* BeGreaterThanOrEqualTo.swift */; };
+		33514FEE6EA65605EFB6F1801834B692 /* AssertionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0C995C72A44C02A9369FA2BDB1F4FF /* AssertionDispatcher.swift */; };
+		376CE96C1C6C2D7200DCFF32 /* KeyboardAdjuster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376CE96B1C6C2D7200DCFF32 /* KeyboardAdjuster.swift */; };
+		3A92AEE86034356AF8987F20EE1F82DF /* EndWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B6303CCFDEBF93094E92D50CAFF38 /* EndWith.swift */; };
+		3AB403AEB363CFE6C36962DB44E58508 /* Quick-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FC9D0077C69A720B9DD2BB12344FD893 /* Quick-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AEAC447B09E7AABC140654C8529BC94 /* MatcherFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EEEBE209F0CF242FBC231937E6922 /* MatcherFunc.swift */; };
+		3FE8DCBB4D1F76EC8A6CC480810F8918 /* NSString+QCKSelectorName.h in Headers */ = {isa = PBXBuildFile; fileRef = 64F492985EB6550A418DD3DB1BCDE146 /* NSString+QCKSelectorName.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4185759DAA0413987423FEA47BE666AB /* QuickSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = 8880B82EFD81A0D6EE2BBD27A39D61BA /* QuickSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		430E31D7936D754E938B846451622148 /* ExampleMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38715BF4570032AE706B97AB11365E48 /* ExampleMetadata.swift */; };
+		4B0CD53781550E85FC73C359BE7859BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E351727CD07BB90B2A3CAE2C2433F6C5 /* Foundation.framework */; };
+		4E87C6AE24AB15700A39FC24A2F1C93B /* BeLessThanOrEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E12C6F645E5DC0EDB23023A394F1CB1 /* BeLessThanOrEqual.swift */; };
+		512DFAE728521F02AF225F0082195DCC /* Nimble.h in Headers */ = {isa = PBXBuildFile; fileRef = 784135A9193F0FE38182AF2C577B3A52 /* Nimble.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58EBA2C1A43283FB2188AB1FB592D32B /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9040AB08CA7AEB727960E284F746A4 /* DSL.swift */; };
+		65660BCC0D0B1258FEDBA92E978875DB /* World+DSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 94A039912FDC46FCB2AF6DCEEB91ADB4 /* World+DSL.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6C0719F9F721C7DC80A74DA4FE290897 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF695047E0AAFB3CA54EC10F0E97FD3 /* Configuration.swift */; };
+		73695FA6A6CDFBB13C0CC73C2E5126C0 /* Nimble-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E9634CF58B22F95DF5AA222CDAF9B8 /* Nimble-dummy.m */; };
+		7680F08C43B965EC873D26E6AD854C9F /* BeIdenticalTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1AA2E4CDFA7B6FD9B4F253CAF481F /* BeIdenticalTo.swift */; };
+		77128C0365A98E3BAC038A915B38791C /* BeAKindOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B53DF3C5B85F993313E9FA09386C167 /* BeAKindOf.swift */; };
+		785DA1C57BE2AEA51D86D036D0B15A85 /* QuickConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = F1D4A64A54F414359EC782444B27597B /* QuickConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A6E2730A25A55D8DFA74D3D7CB005EF /* BeAnInstanceOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13064CC241598F189B1341470994F9D9 /* BeAnInstanceOf.swift */; };
+		7BFD25B1BB1116D8AC47E2C3874C5B76 /* ObjCMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B922FF75D982F502B345AE30399F97 /* ObjCMatcher.swift */; };
+		7DA9FF8513AA48310B15A0744A541818 /* SourceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4930275AC98E3FD0F3BC81A7D08B8591 /* SourceLocation.swift */; };
+		831D33A4C5C5BBC1EC158D9A236C61D7 /* NimbleXCTestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5596CB4CEA7B7B71461C9ECE75263656 /* NimbleXCTestHandler.swift */; };
+		89EA8A187222000837847BA672C36F4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E351727CD07BB90B2A3CAE2C2433F6C5 /* Foundation.framework */; };
+		8BE8DBC56B119CC293F1EEDA91817BDA /* Pods-KeyboardAdjuster_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 835166CBC76C93465726B27153337B8D /* Pods-KeyboardAdjuster_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D0BF52FF564A170A3D1DE28C27B233E /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = F689A549CFB432AE0684F3EA3BA8D2FF /* Poll.swift */; };
+		9187EEC2982DB82AD8D3A7001AA647D6 /* NMBExceptionCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F4CE0DE16848CBDA8A93366A52BEF7 /* NMBExceptionCapture.m */; };
+		9341B96D63EF6C54A1F906A1BBAEAF46 /* DSL.h in Headers */ = {isa = PBXBuildFile; fileRef = DA695A07DF17BA243064E57D889E1CBB /* DSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		958877C9CE452BA7B2E69583FBB7A888 /* Quick.h in Headers */ = {isa = PBXBuildFile; fileRef = D4E0D7E2D11371A45CB3D1221E7B4EC2 /* Quick.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9646787942A85613FE77F45794E9B5CD /* BeginWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CD57ED9D79412A49A037E8EAA4AF42 /* BeginWith.swift */; };
+		9726BDC7694DAB3A3DB2B0BFC5332430 /* KeyboardAdjuster.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5A2C0C999C005D6DA7D46223ED09607C /* KeyboardAdjuster.bundle */; };
+		9E7786C034F0E0A6B5F0A0E6BE7D7E4A /* BeEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE24AE8654BDA8234080C23F6335E26 /* BeEmpty.swift */; };
+		A3AFC629C742A31440E6803DE186B0A4 /* World+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDA3CDE7515A11BE56C6C2FE5FB65D8 /* World+DSL.swift */; };
+		A5FED4341ECC45A6A470A9418B759AAC /* World.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C0EAA5BA062125C64E6A819695F87C6 /* World.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A74F9833C8E1C952E5DB09166C8499EF /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7511682ED488897012E4EEC14429BF /* Filter.swift */; };
+		A789B9E492B939DC8DB9574935B9FF1F /* Quick-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 616BFD5BF73AEF373E5250D05560A338 /* Quick-dummy.m */; };
+		AB5BD99CD41DBB808D4E881D63DB5E00 /* SuiteHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F0BEE5B67844F0E333920C2CB3416C /* SuiteHooks.swift */; };
+		AB9C7D7F4ECB45038108FD8C48525D48 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DD2CC5441C4540A072B29E4A257A9D /* DSL.swift */; };
+		B0A26F58BA3E6222E50AE5AC883B8EAF /* DSL.m in Sources */ = {isa = PBXBuildFile; fileRef = D17DFC0D37F8449B1B2A2D117D1179A2 /* DSL.m */; };
+		B41E8E775408ACE233F29CE93388B270 /* Contain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6727AA774C6723AFCA6CFCEF099071C7 /* Contain.swift */; };
+		B4A5237DB8FAB2338F49038386E77670 /* Pods-KeyboardAdjuster_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA34BD0D213242BE0786CB5652B60013 /* Pods-KeyboardAdjuster_Tests-dummy.m */; };
+		B4DAC428863122804980D107E0164EF6 /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6E3634125A20B9BA58962919B08DDC /* Closures.swift */; };
+		B905718B2501DDA22F2AE73CB6E76E6B /* BeCloseTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A378AC6A7BCB5D43F7586353A7610A /* BeCloseTo.swift */; };
+		BB4F35062294C1A461DA3CEF6306A1DB /* HaveCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BC3268759E7DB38A0E192F06A1BD06 /* HaveCount.swift */; };
+		BCB53F24DCADF12601B8BA90AE3190AE /* BeLessThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69578BBC16AAA12ED9630E2036580E94 /* BeLessThan.swift */; };
+		C150157922BAEB1F93635508FB59E618 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E351727CD07BB90B2A3CAE2C2433F6C5 /* Foundation.framework */; };
+		C63AB521EA514A811A167E507C0CF9AD /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227AD60FAC82B3DEDDBB09BAEE052647 /* Expression.swift */; };
+		C9AC658F3FCB67B50E96313C2687B33D /* MatcherProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D0DF7E7A59098355B7877A39D254B6 /* MatcherProtocols.swift */; };
+		CAAED5FB81DB035A9EC080917C783FA6 /* AdapterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB4882E47E7537D32F4C677DF4F0B43 /* AdapterProtocols.swift */; };
+		CD9D31B6063C50689EAC2A0745C282DC /* ObjCExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FE6BD80E2769820B83F2550DAC4AAF /* ObjCExpectation.swift */; };
+		D429691F39B4C30A8993360FB8A3E334 /* AllPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2CCEF958AF4E4C4F073031905F2CE2 /* AllPass.swift */; };
+		D7B45D4600C6166C124C0A926EE65284 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E302676FFF0A4192E3ECFB4B1FDCF6 /* Functional.swift */; };
+		D923BC35962162B6D9C607A09DE2407C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E351727CD07BB90B2A3CAE2C2433F6C5 /* Foundation.framework */; };
+		DA0685F0711B2788A2CBE64E19C8AD74 /* KeyboardAdjuster-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 79164357A7FB7BF4EF8488D3E87797C0 /* KeyboardAdjuster-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC2348D7250043B8F588AD54EE7DE8E1 /* QuickConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = AE670FBBCC7FBB0E81F05DA0C8EAAEE5 /* QuickConfiguration.m */; };
+		DEE170DD3064F7343884A4016546B762 /* DSL+Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA388FEA33C5B8824432D9681B318F3 /* DSL+Wait.swift */; };
+		E2FBD93D72DF01427486D1A6853FC689 /* Expectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3116FC3DA077740D1C5702FA4C187A2 /* Expectation.swift */; };
+		E36C5201AE7F1CBB25F9D2E7CBFC3C20 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0843BD7412E439120C081E8D9FE0F80 /* Match.swift */; };
+		E52A8D6D7203BC8217FB0D315A629112 /* ExampleGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2005F86F2C2D05CDE00BB78EF02D6D4 /* ExampleGroup.swift */; };
+		E6B1EEFBCA5D81FE03F55001EB627369 /* QCKDSL.h in Headers */ = {isa = PBXBuildFile; fileRef = E41A31E4949F1319040B8D2BBBF2B5D6 /* QCKDSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6E7B15FAD6C56681511813DB2666478 /* AssertionRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84D274316F8C6F9695294FB40D7596F /* AssertionRecorder.swift */; };
+		E9E071B11005F4776BACEFD426920B76 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1EFFE836005E11B9D420692E9E50C /* Example.swift */; };
+		F10FD3129985704FA1610F84FB98EDF5 /* Stringers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31CE50F8B4B99D3C229D2438892ED5B /* Stringers.swift */; };
+		F1D4A8A1FC68EFA7F45945908D70A352 /* BeNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02297D692E5CA1B1C21CCCDA1853BA44 /* BeNil.swift */; };
+		F5B23790BE8433A592CF330B34DFED33 /* ExampleHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8C281E400A6FABAD082CEA7263B2A /* ExampleHooks.swift */; };
+		F744040AA5EA5B710C20AD29594213AB /* KeyboardAdjuster-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A2624B91078FCA420C5F63482B30C3 /* KeyboardAdjuster-dummy.m */; };
+		FB1347627E64CA7E98C19DC985E13D95 /* Equal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75276E4A134A22E123F4C40E529080C /* Equal.swift */; };
+		FFC311AC1E19A23E0EB7B1B3A7A5A744 /* RaisesException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88457B3A5C81E0F34AC48AC05B8040D6 /* RaisesException.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1A09B2787DAE4C53453D65EFEE612EB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C55037028F8873680D2608BDF73561FA;
+			remoteInfo = "KeyboardAdjuster-KeyboardAdjuster";
+		};
+		57D628A45D0C83EE56BC67F72F047A83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5DB5104FED3C10F78978AFC810982B9;
+			remoteInfo = Nimble;
+		};
+		86C2143C05B5956D10BEC37F8BE75CAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68BB476FEC9AA6E03CC32A65FC935891;
+			remoteInfo = Quick;
+		};
+		DE282E7B391FF919012FA59F7AD46179 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B86EDF5EAFEE1D10E00765EFDB8EB57;
+			remoteInfo = KeyboardAdjuster;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01F8C281E400A6FABAD082CEA7263B2A /* ExampleHooks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleHooks.swift; path = Quick/Hooks/ExampleHooks.swift; sourceTree = "<group>"; };
+		021C4E135FFC34B4A74FD0560A640549 /* Quick.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Quick.modulemap; sourceTree = "<group>"; };
+		02297D692E5CA1B1C21CCCDA1853BA44 /* BeNil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeNil.swift; path = Nimble/Matchers/BeNil.swift; sourceTree = "<group>"; };
+		02739BA5C60E6366C3D3E82A1729BCF1 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		02A43FD9C36A3E905CED8FE96D38312B /* Pods-KeyboardAdjuster_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KeyboardAdjuster_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		06570F88DF76AE2E7194B967C7D6CBAC /* Pods_KeyboardAdjuster_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeyboardAdjuster_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B0C995C72A44C02A9369FA2BDB1F4FF /* AssertionDispatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionDispatcher.swift; path = Nimble/Adapters/AssertionDispatcher.swift; sourceTree = "<group>"; };
+		0B53DF3C5B85F993313E9FA09386C167 /* BeAKindOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeAKindOf.swift; path = Nimble/Matchers/BeAKindOf.swift; sourceTree = "<group>"; };
+		13064CC241598F189B1341470994F9D9 /* BeAnInstanceOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeAnInstanceOf.swift; path = Nimble/Matchers/BeAnInstanceOf.swift; sourceTree = "<group>"; };
+		1573432DFD57C201E8EFE8D5E22AE22B /* KeyboardAdjuster.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeyboardAdjuster.xcconfig; sourceTree = "<group>"; };
+		1AC345E85E02A511352FFD8C743E9010 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D42013D479CDC11E7882C7C0045B66B /* AsyncMatcherWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncMatcherWrapper.swift; path = Nimble/Wrappers/AsyncMatcherWrapper.swift; sourceTree = "<group>"; };
+		1E8B6303CCFDEBF93094E92D50CAFF38 /* EndWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EndWith.swift; path = Nimble/Matchers/EndWith.swift; sourceTree = "<group>"; };
+		20A5349CE833A9D63E1BBC6FEE104E25 /* KeyboardAdjuster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyboardAdjuster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20ABC5A3D02301EC1EC014B6ABEFA42A /* NSString+QCKSelectorName.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+QCKSelectorName.m"; path = "Quick/NSString+QCKSelectorName.m"; sourceTree = "<group>"; };
+		227AD60FAC82B3DEDDBB09BAEE052647 /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Nimble/Expression.swift; sourceTree = "<group>"; };
+		237258B07F2E34139E6B0AC9536F96BA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2543809E4D3D9755B94735346ACDFF03 /* QCKDSL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QCKDSL.m; path = Quick/DSL/QCKDSL.m; sourceTree = "<group>"; };
+		25961731CF4F7537A5ECD61A000A150C /* FailureMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FailureMessage.swift; path = Nimble/FailureMessage.swift; sourceTree = "<group>"; };
+		262649BA1069366C6B21671E86E1B736 /* Pods-KeyboardAdjuster_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KeyboardAdjuster_Tests-resources.sh"; sourceTree = "<group>"; };
+		263AA072796F7FEFC07F70F4408BDA41 /* Pods-KeyboardAdjuster_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KeyboardAdjuster_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		279AA6492631DEFA8C439A9C088EEB8A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		28CBE0D19FC6E65EFAA29981A9422B23 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28D0DF7E7A59098355B7877A39D254B6 /* MatcherProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatcherProtocols.swift; path = Nimble/Matchers/MatcherProtocols.swift; sourceTree = "<group>"; };
+		28E302676FFF0A4192E3ECFB4B1FDCF6 /* Functional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Functional.swift; path = Nimble/Utils/Functional.swift; sourceTree = "<group>"; };
+		29A378AC6A7BCB5D43F7586353A7610A /* BeCloseTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeCloseTo.swift; path = Nimble/Matchers/BeCloseTo.swift; sourceTree = "<group>"; };
+		2B9040AB08CA7AEB727960E284F746A4 /* DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DSL.swift; path = Nimble/DSL.swift; sourceTree = "<group>"; };
+		2FE24AE8654BDA8234080C23F6335E26 /* BeEmpty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeEmpty.swift; path = Nimble/Matchers/BeEmpty.swift; sourceTree = "<group>"; };
+		33DD2CC5441C4540A072B29E4A257A9D /* DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DSL.swift; path = Quick/DSL/DSL.swift; sourceTree = "<group>"; };
+		376CE96B1C6C2D7200DCFF32 /* KeyboardAdjuster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAdjuster.swift; sourceTree = "<group>"; };
+		38017F177B949EB51FEF151927903B57 /* KeyboardAdjuster.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = KeyboardAdjuster.modulemap; sourceTree = "<group>"; };
+		38715BF4570032AE706B97AB11365E48 /* ExampleMetadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleMetadata.swift; path = Quick/ExampleMetadata.swift; sourceTree = "<group>"; };
+		3F1975D001BFB447009180BAF8C14ADB /* Quick-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-prefix.pch"; sourceTree = "<group>"; };
+		40A2624B91078FCA420C5F63482B30C3 /* KeyboardAdjuster-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeyboardAdjuster-dummy.m"; sourceTree = "<group>"; };
+		40FBD52025077E5788ADCE71EF040393 /* NMBExceptionCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NMBExceptionCapture.h; path = Nimble/objc/NMBExceptionCapture.h; sourceTree = "<group>"; };
+		4930275AC98E3FD0F3BC81A7D08B8591 /* SourceLocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SourceLocation.swift; path = Nimble/Utils/SourceLocation.swift; sourceTree = "<group>"; };
+		4C0EAA5BA062125C64E6A819695F87C6 /* World.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = World.h; path = Quick/World.h; sourceTree = "<group>"; };
+		4C6D6E41BA9F922E7BBD3A24B7E5D00A /* Callsite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Callsite.swift; path = Quick/Callsite.swift; sourceTree = "<group>"; };
+		4F2CCEF958AF4E4C4F073031905F2CE2 /* AllPass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AllPass.swift; path = Nimble/Matchers/AllPass.swift; sourceTree = "<group>"; };
+		54BC3268759E7DB38A0E192F06A1BD06 /* HaveCount.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HaveCount.swift; path = Nimble/Matchers/HaveCount.swift; sourceTree = "<group>"; };
+		5596CB4CEA7B7B71461C9ECE75263656 /* NimbleXCTestHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NimbleXCTestHandler.swift; path = Nimble/Adapters/NimbleXCTestHandler.swift; sourceTree = "<group>"; };
+		58CD57ED9D79412A49A037E8EAA4AF42 /* BeginWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeginWith.swift; path = Nimble/Matchers/BeginWith.swift; sourceTree = "<group>"; };
+		5A2C0C999C005D6DA7D46223ED09607C /* KeyboardAdjuster.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyboardAdjuster.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BF695047E0AAFB3CA54EC10F0E97FD3 /* Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Quick/Configuration/Configuration.swift; sourceTree = "<group>"; };
+		5D6A2E71DBC9D0DE17402BCFCFEEBDB2 /* Nimble-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-prefix.pch"; sourceTree = "<group>"; };
+		616BFD5BF73AEF373E5250D05560A338 /* Quick-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Quick-dummy.m"; sourceTree = "<group>"; };
+		62241019A9DFE31F82A2CDF8690A163C /* QuickSpec.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QuickSpec.m; path = Quick/QuickSpec.m; sourceTree = "<group>"; };
+		64F0BEE5B67844F0E333920C2CB3416C /* SuiteHooks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SuiteHooks.swift; path = Quick/Hooks/SuiteHooks.swift; sourceTree = "<group>"; };
+		64F492985EB6550A418DD3DB1BCDE146 /* NSString+QCKSelectorName.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+QCKSelectorName.h"; path = "Quick/NSString+QCKSelectorName.h"; sourceTree = "<group>"; };
+		6727AA774C6723AFCA6CFCEF099071C7 /* Contain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Contain.swift; path = Nimble/Matchers/Contain.swift; sourceTree = "<group>"; };
+		68A01905CC209324581696A69118F954 /* Pods-KeyboardAdjuster_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KeyboardAdjuster_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		69578BBC16AAA12ED9630E2036580E94 /* BeLessThan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLessThan.swift; path = Nimble/Matchers/BeLessThan.swift; sourceTree = "<group>"; };
+		69A1AA2E4CDFA7B6FD9B4F253CAF481F /* BeIdenticalTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeIdenticalTo.swift; path = Nimble/Matchers/BeIdenticalTo.swift; sourceTree = "<group>"; };
+		6DDA3CDE7515A11BE56C6C2FE5FB65D8 /* World+DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "World+DSL.swift"; path = "Quick/DSL/World+DSL.swift"; sourceTree = "<group>"; };
+		73B922FF75D982F502B345AE30399F97 /* ObjCMatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjCMatcher.swift; path = Nimble/Wrappers/ObjCMatcher.swift; sourceTree = "<group>"; };
+		784135A9193F0FE38182AF2C577B3A52 /* Nimble.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nimble.h; path = Nimble/Nimble.h; sourceTree = "<group>"; };
+		79164357A7FB7BF4EF8488D3E87797C0 /* KeyboardAdjuster-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeyboardAdjuster-umbrella.h"; sourceTree = "<group>"; };
+		7C07CB259CB51CAA2B1B59537C0A7C2C /* Quick.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Quick.xcconfig; sourceTree = "<group>"; };
+		835166CBC76C93465726B27153337B8D /* Pods-KeyboardAdjuster_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KeyboardAdjuster_Tests-umbrella.h"; sourceTree = "<group>"; };
+		8487245080A1AB0FFD48288B814AEA82 /* World.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = World.swift; path = Quick/World.swift; sourceTree = "<group>"; };
+		88457B3A5C81E0F34AC48AC05B8040D6 /* RaisesException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RaisesException.swift; path = Nimble/Matchers/RaisesException.swift; sourceTree = "<group>"; };
+		8880B82EFD81A0D6EE2BBD27A39D61BA /* QuickSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickSpec.h; path = Quick/QuickSpec.h; sourceTree = "<group>"; };
+		8E12C6F645E5DC0EDB23023A394F1CB1 /* BeLessThanOrEqual.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLessThanOrEqual.swift; path = Nimble/Matchers/BeLessThanOrEqual.swift; sourceTree = "<group>"; };
+		9029611E001AF3DD9DB59D2DF4F3528B /* Pods-KeyboardAdjuster_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KeyboardAdjuster_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		94A039912FDC46FCB2AF6DCEEB91ADB4 /* World+DSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "World+DSL.h"; path = "Quick/DSL/World+DSL.h"; sourceTree = "<group>"; };
+		AE670FBBCC7FBB0E81F05DA0C8EAAEE5 /* QuickConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QuickConfiguration.m; path = Quick/Configuration/QuickConfiguration.m; sourceTree = "<group>"; };
+		AE6E3634125A20B9BA58962919B08DDC /* Closures.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Closures.swift; path = Quick/Hooks/Closures.swift; sourceTree = "<group>"; };
+		B011BCE1507648ECA7586CF7DABF6F4C /* BeLogical.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLogical.swift; path = Nimble/Matchers/BeLogical.swift; sourceTree = "<group>"; };
+		B2005F86F2C2D05CDE00BB78EF02D6D4 /* ExampleGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleGroup.swift; path = Quick/ExampleGroup.swift; sourceTree = "<group>"; };
+		B3116FC3DA077740D1C5702FA4C187A2 /* Expectation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expectation.swift; path = Nimble/Expectation.swift; sourceTree = "<group>"; };
+		B3C2554DAA154554B732CCDE2BA09F59 /* KeyboardAdjuster-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeyboardAdjuster-prefix.pch"; sourceTree = "<group>"; };
+		B68A276C05A93CFCC331A055BCA33167 /* Nimble.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Nimble.xcconfig; sourceTree = "<group>"; };
+		B84D274316F8C6F9695294FB40D7596F /* AssertionRecorder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionRecorder.swift; path = Nimble/Adapters/AssertionRecorder.swift; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BEA1EFFE836005E11B9D420692E9E50C /* Example.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Example.swift; path = Quick/Example.swift; sourceTree = "<group>"; };
+		BF4AE1E80CC4EA4F2E1FF17CA10A3D26 /* Nimble-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-umbrella.h"; sourceTree = "<group>"; };
+		C03BB6589A73F51F073DF050F55D7F41 /* BeGreaterThanOrEqualTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeGreaterThanOrEqualTo.swift; path = Nimble/Matchers/BeGreaterThanOrEqualTo.swift; sourceTree = "<group>"; };
+		C8E9634CF58B22F95DF5AA222CDAF9B8 /* Nimble-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Nimble-dummy.m"; sourceTree = "<group>"; };
+		CD6892139A4E44DF95C89A6BE52900CE /* Nimble.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Nimble.modulemap; sourceTree = "<group>"; };
+		D0843BD7412E439120C081E8D9FE0F80 /* Match.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Match.swift; path = Nimble/Matchers/Match.swift; sourceTree = "<group>"; };
+		D0C6646DEFE39D8026B2CFD4FF49F0E2 /* Pods-KeyboardAdjuster_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KeyboardAdjuster_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D17DFC0D37F8449B1B2A2D117D1179A2 /* DSL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DSL.m; path = Nimble/objc/DSL.m; sourceTree = "<group>"; };
+		D4E0D7E2D11371A45CB3D1221E7B4EC2 /* Quick.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Quick.h; path = Quick/Quick.h; sourceTree = "<group>"; };
+		D75276E4A134A22E123F4C40E529080C /* Equal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Equal.swift; path = Nimble/Matchers/Equal.swift; sourceTree = "<group>"; };
+		DA34BD0D213242BE0786CB5652B60013 /* Pods-KeyboardAdjuster_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KeyboardAdjuster_Tests-dummy.m"; sourceTree = "<group>"; };
+		DA695A07DF17BA243064E57D889E1CBB /* DSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DSL.h; path = Nimble/objc/DSL.h; sourceTree = "<group>"; };
+		E2BC0728045ED4D4A2C12B52A561EEF7 /* ThrowError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThrowError.swift; path = Nimble/Matchers/ThrowError.swift; sourceTree = "<group>"; };
+		E31CE50F8B4B99D3C229D2438892ED5B /* Stringers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stringers.swift; path = Nimble/Utils/Stringers.swift; sourceTree = "<group>"; };
+		E351727CD07BB90B2A3CAE2C2433F6C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E3CD67A0263B5D926517C112081F48B2 /* BeGreaterThan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeGreaterThan.swift; path = Nimble/Matchers/BeGreaterThan.swift; sourceTree = "<group>"; };
+		E41A31E4949F1319040B8D2BBBF2B5D6 /* QCKDSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QCKDSL.h; path = Quick/DSL/QCKDSL.h; sourceTree = "<group>"; };
+		E43EEEBE209F0CF242FBC231937E6922 /* MatcherFunc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatcherFunc.swift; path = Nimble/Wrappers/MatcherFunc.swift; sourceTree = "<group>"; };
+		ECB4882E47E7537D32F4C677DF4F0B43 /* AdapterProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdapterProtocols.swift; path = Nimble/Adapters/AdapterProtocols.swift; sourceTree = "<group>"; };
+		ED9A1C68FD4E7EC3AF1A94AE3D4D9806 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF35BD98E82E5FEC86AD258473F2C68A /* Pods-KeyboardAdjuster_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-KeyboardAdjuster_Tests.modulemap"; sourceTree = "<group>"; };
+		F1D4A64A54F414359EC782444B27597B /* QuickConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickConfiguration.h; path = Quick/Configuration/QuickConfiguration.h; sourceTree = "<group>"; };
+		F5F4CE0DE16848CBDA8A93366A52BEF7 /* NMBExceptionCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NMBExceptionCapture.m; path = Nimble/objc/NMBExceptionCapture.m; sourceTree = "<group>"; };
+		F689A549CFB432AE0684F3EA3BA8D2FF /* Poll.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Poll.swift; path = Nimble/Utils/Poll.swift; sourceTree = "<group>"; };
+		F7FE6BD80E2769820B83F2550DAC4AAF /* ObjCExpectation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjCExpectation.swift; path = Nimble/ObjCExpectation.swift; sourceTree = "<group>"; };
+		FC9D0077C69A720B9DD2BB12344FD893 /* Quick-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-umbrella.h"; sourceTree = "<group>"; };
+		FD0AF5781847E82CEC8A2C6AEE2DBE57 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDA388FEA33C5B8824432D9681B318F3 /* DSL+Wait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DSL+Wait.swift"; path = "Nimble/DSL+Wait.swift"; sourceTree = "<group>"; };
+		FF7511682ED488897012E4EEC14429BF /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Quick/Filter.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		02DB095F08336FB907DCE24C612E34F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89EA8A187222000837847BA672C36F4C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F29B83DFFCF9495EB9FD99B328BA844 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D923BC35962162B6D9C607A09DE2407C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DAAB713A1AFE7FF147B6EEA33297CEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FBD7B1537B634BB7C94BB4D4384BD63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C150157922BAEB1F93635508FB59E618 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B38E7B7061C5C8521CB1BBDC7C60832F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B0CD53781550E85FC73C359BE7859BC /* Foundation.framework in Frameworks */,
+				24B9DFFAA64087B80A5E1BF4F47E5247 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C6B012983F9FEF8CC65C1318F5F090C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E351727CD07BB90B2A3CAE2C2433F6C5 /* Foundation.framework */,
+				279AA6492631DEFA8C439A9C088EEB8A /* XCTest.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		16F40755D50C39F84A302222E30E8DD2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				28CBE0D19FC6E65EFAA29981A9422B23 /* Info.plist */,
+				021C4E135FFC34B4A74FD0560A640549 /* Quick.modulemap */,
+				7C07CB259CB51CAA2B1B59537C0A7C2C /* Quick.xcconfig */,
+				616BFD5BF73AEF373E5250D05560A338 /* Quick-dummy.m */,
+				3F1975D001BFB447009180BAF8C14ADB /* Quick-prefix.pch */,
+				FC9D0077C69A720B9DD2BB12344FD893 /* Quick-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Quick";
+			sourceTree = "<group>";
+		};
+		34D8E4B48BA827E25D9ED8347D87C0FA /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				E644B0ED9D286573A8E00CA6F56A9AB7 /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		36FD97F93AB8E4D454DAB2C2051EC699 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD0AF5781847E82CEC8A2C6AEE2DBE57 /* Info.plist */,
+				CD6892139A4E44DF95C89A6BE52900CE /* Nimble.modulemap */,
+				B68A276C05A93CFCC331A055BCA33167 /* Nimble.xcconfig */,
+				C8E9634CF58B22F95DF5AA222CDAF9B8 /* Nimble-dummy.m */,
+				5D6A2E71DBC9D0DE17402BCFCFEEBDB2 /* Nimble-prefix.pch */,
+				BF4AE1E80CC4EA4F2E1FF17CA10A3D26 /* Nimble-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Nimble";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C6B012983F9FEF8CC65C1318F5F090C /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A4FCAF06F0A994E7B35DD1013C84984 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A2C0C999C005D6DA7D46223ED09607C /* KeyboardAdjuster.bundle */,
+				20A5349CE833A9D63E1BBC6FEE104E25 /* KeyboardAdjuster.framework */,
+				02739BA5C60E6366C3D3E82A1729BCF1 /* Nimble.framework */,
+				06570F88DF76AE2E7194B967C7D6CBAC /* Pods_KeyboardAdjuster_Tests.framework */,
+				1AC345E85E02A511352FFD8C743E9010 /* Quick.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		64E98FF7B6454214F8290BB0AC208D8F /* Quick */ = {
+			isa = PBXGroup;
+			children = (
+				4C6D6E41BA9F922E7BBD3A24B7E5D00A /* Callsite.swift */,
+				AE6E3634125A20B9BA58962919B08DDC /* Closures.swift */,
+				5BF695047E0AAFB3CA54EC10F0E97FD3 /* Configuration.swift */,
+				33DD2CC5441C4540A072B29E4A257A9D /* DSL.swift */,
+				BEA1EFFE836005E11B9D420692E9E50C /* Example.swift */,
+				B2005F86F2C2D05CDE00BB78EF02D6D4 /* ExampleGroup.swift */,
+				01F8C281E400A6FABAD082CEA7263B2A /* ExampleHooks.swift */,
+				38715BF4570032AE706B97AB11365E48 /* ExampleMetadata.swift */,
+				FF7511682ED488897012E4EEC14429BF /* Filter.swift */,
+				64F492985EB6550A418DD3DB1BCDE146 /* NSString+QCKSelectorName.h */,
+				20ABC5A3D02301EC1EC014B6ABEFA42A /* NSString+QCKSelectorName.m */,
+				E41A31E4949F1319040B8D2BBBF2B5D6 /* QCKDSL.h */,
+				2543809E4D3D9755B94735346ACDFF03 /* QCKDSL.m */,
+				D4E0D7E2D11371A45CB3D1221E7B4EC2 /* Quick.h */,
+				F1D4A64A54F414359EC782444B27597B /* QuickConfiguration.h */,
+				AE670FBBCC7FBB0E81F05DA0C8EAAEE5 /* QuickConfiguration.m */,
+				8880B82EFD81A0D6EE2BBD27A39D61BA /* QuickSpec.h */,
+				62241019A9DFE31F82A2CDF8690A163C /* QuickSpec.m */,
+				64F0BEE5B67844F0E333920C2CB3416C /* SuiteHooks.swift */,
+				4C0EAA5BA062125C64E6A819695F87C6 /* World.h */,
+				8487245080A1AB0FFD48288B814AEA82 /* World.swift */,
+				94A039912FDC46FCB2AF6DCEEB91ADB4 /* World+DSL.h */,
+				6DDA3CDE7515A11BE56C6C2FE5FB65D8 /* World+DSL.swift */,
+				16F40755D50C39F84A302222E30E8DD2 /* Support Files */,
+			);
+			path = Quick;
+			sourceTree = "<group>";
+		};
+		6EC51191AEE6CFA152BF4F6043FDD74F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				99BFBFE7D85EE35E78E1D3D4A52A8121 /* Pods-KeyboardAdjuster_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				88A93CF50B811DA9D0525708CF98AE4D /* Development Pods */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				8F29E9621F2E4347FEA6F6D7F0748038 /* Pods */,
+				5A4FCAF06F0A994E7B35DD1013C84984 /* Products */,
+				6EC51191AEE6CFA152BF4F6043FDD74F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		88A93CF50B811DA9D0525708CF98AE4D /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F13959DF0FADE65EE3B89A91C55E3831 /* KeyboardAdjuster */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		8F29E9621F2E4347FEA6F6D7F0748038 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D877BEEDC4F6494B4B10BC732B32A32B /* Nimble */,
+				64E98FF7B6454214F8290BB0AC208D8F /* Quick */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		99BFBFE7D85EE35E78E1D3D4A52A8121 /* Pods-KeyboardAdjuster_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				237258B07F2E34139E6B0AC9536F96BA /* Info.plist */,
+				EF35BD98E82E5FEC86AD258473F2C68A /* Pods-KeyboardAdjuster_Tests.modulemap */,
+				9029611E001AF3DD9DB59D2DF4F3528B /* Pods-KeyboardAdjuster_Tests-acknowledgements.markdown */,
+				D0C6646DEFE39D8026B2CFD4FF49F0E2 /* Pods-KeyboardAdjuster_Tests-acknowledgements.plist */,
+				DA34BD0D213242BE0786CB5652B60013 /* Pods-KeyboardAdjuster_Tests-dummy.m */,
+				263AA072796F7FEFC07F70F4408BDA41 /* Pods-KeyboardAdjuster_Tests-frameworks.sh */,
+				262649BA1069366C6B21671E86E1B736 /* Pods-KeyboardAdjuster_Tests-resources.sh */,
+				835166CBC76C93465726B27153337B8D /* Pods-KeyboardAdjuster_Tests-umbrella.h */,
+				68A01905CC209324581696A69118F954 /* Pods-KeyboardAdjuster_Tests.debug.xcconfig */,
+				02A43FD9C36A3E905CED8FE96D38312B /* Pods-KeyboardAdjuster_Tests.release.xcconfig */,
+			);
+			name = "Pods-KeyboardAdjuster_Tests";
+			path = "Target Support Files/Pods-KeyboardAdjuster_Tests";
+			sourceTree = "<group>";
+		};
+		AD72D2C9FA81280211A4D93DBD3BE4DE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED9A1C68FD4E7EC3AF1A94AE3D4D9806 /* Info.plist */,
+				38017F177B949EB51FEF151927903B57 /* KeyboardAdjuster.modulemap */,
+				1573432DFD57C201E8EFE8D5E22AE22B /* KeyboardAdjuster.xcconfig */,
+				40A2624B91078FCA420C5F63482B30C3 /* KeyboardAdjuster-dummy.m */,
+				B3C2554DAA154554B732CCDE2BA09F59 /* KeyboardAdjuster-prefix.pch */,
+				79164357A7FB7BF4EF8488D3E87797C0 /* KeyboardAdjuster-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/KeyboardAdjuster";
+			sourceTree = "<group>";
+		};
+		D877BEEDC4F6494B4B10BC732B32A32B /* Nimble */ = {
+			isa = PBXGroup;
+			children = (
+				ECB4882E47E7537D32F4C677DF4F0B43 /* AdapterProtocols.swift */,
+				4F2CCEF958AF4E4C4F073031905F2CE2 /* AllPass.swift */,
+				0B0C995C72A44C02A9369FA2BDB1F4FF /* AssertionDispatcher.swift */,
+				B84D274316F8C6F9695294FB40D7596F /* AssertionRecorder.swift */,
+				1D42013D479CDC11E7882C7C0045B66B /* AsyncMatcherWrapper.swift */,
+				0B53DF3C5B85F993313E9FA09386C167 /* BeAKindOf.swift */,
+				13064CC241598F189B1341470994F9D9 /* BeAnInstanceOf.swift */,
+				29A378AC6A7BCB5D43F7586353A7610A /* BeCloseTo.swift */,
+				2FE24AE8654BDA8234080C23F6335E26 /* BeEmpty.swift */,
+				58CD57ED9D79412A49A037E8EAA4AF42 /* BeginWith.swift */,
+				E3CD67A0263B5D926517C112081F48B2 /* BeGreaterThan.swift */,
+				C03BB6589A73F51F073DF050F55D7F41 /* BeGreaterThanOrEqualTo.swift */,
+				69A1AA2E4CDFA7B6FD9B4F253CAF481F /* BeIdenticalTo.swift */,
+				69578BBC16AAA12ED9630E2036580E94 /* BeLessThan.swift */,
+				8E12C6F645E5DC0EDB23023A394F1CB1 /* BeLessThanOrEqual.swift */,
+				B011BCE1507648ECA7586CF7DABF6F4C /* BeLogical.swift */,
+				02297D692E5CA1B1C21CCCDA1853BA44 /* BeNil.swift */,
+				6727AA774C6723AFCA6CFCEF099071C7 /* Contain.swift */,
+				DA695A07DF17BA243064E57D889E1CBB /* DSL.h */,
+				D17DFC0D37F8449B1B2A2D117D1179A2 /* DSL.m */,
+				2B9040AB08CA7AEB727960E284F746A4 /* DSL.swift */,
+				FDA388FEA33C5B8824432D9681B318F3 /* DSL+Wait.swift */,
+				1E8B6303CCFDEBF93094E92D50CAFF38 /* EndWith.swift */,
+				D75276E4A134A22E123F4C40E529080C /* Equal.swift */,
+				B3116FC3DA077740D1C5702FA4C187A2 /* Expectation.swift */,
+				227AD60FAC82B3DEDDBB09BAEE052647 /* Expression.swift */,
+				25961731CF4F7537A5ECD61A000A150C /* FailureMessage.swift */,
+				28E302676FFF0A4192E3ECFB4B1FDCF6 /* Functional.swift */,
+				54BC3268759E7DB38A0E192F06A1BD06 /* HaveCount.swift */,
+				D0843BD7412E439120C081E8D9FE0F80 /* Match.swift */,
+				E43EEEBE209F0CF242FBC231937E6922 /* MatcherFunc.swift */,
+				28D0DF7E7A59098355B7877A39D254B6 /* MatcherProtocols.swift */,
+				784135A9193F0FE38182AF2C577B3A52 /* Nimble.h */,
+				5596CB4CEA7B7B71461C9ECE75263656 /* NimbleXCTestHandler.swift */,
+				40FBD52025077E5788ADCE71EF040393 /* NMBExceptionCapture.h */,
+				F5F4CE0DE16848CBDA8A93366A52BEF7 /* NMBExceptionCapture.m */,
+				F7FE6BD80E2769820B83F2550DAC4AAF /* ObjCExpectation.swift */,
+				73B922FF75D982F502B345AE30399F97 /* ObjCMatcher.swift */,
+				F689A549CFB432AE0684F3EA3BA8D2FF /* Poll.swift */,
+				88457B3A5C81E0F34AC48AC05B8040D6 /* RaisesException.swift */,
+				4930275AC98E3FD0F3BC81A7D08B8591 /* SourceLocation.swift */,
+				E31CE50F8B4B99D3C229D2438892ED5B /* Stringers.swift */,
+				E2BC0728045ED4D4A2C12B52A561EEF7 /* ThrowError.swift */,
+				36FD97F93AB8E4D454DAB2C2051EC699 /* Support Files */,
+			);
+			path = Nimble;
+			sourceTree = "<group>";
+		};
+		E644B0ED9D286573A8E00CA6F56A9AB7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				376CE96B1C6C2D7200DCFF32 /* KeyboardAdjuster.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F13959DF0FADE65EE3B89A91C55E3831 /* KeyboardAdjuster */ = {
+			isa = PBXGroup;
+			children = (
+				34D8E4B48BA827E25D9ED8347D87C0FA /* Pod */,
+				AD72D2C9FA81280211A4D93DBD3BE4DE /* Support Files */,
+			);
+			name = KeyboardAdjuster;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4974D9E7BDDD7C83684C6AECDBE87F85 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FE8DCBB4D1F76EC8A6CC480810F8918 /* NSString+QCKSelectorName.h in Headers */,
+				E6B1EEFBCA5D81FE03F55001EB627369 /* QCKDSL.h in Headers */,
+				3AB403AEB363CFE6C36962DB44E58508 /* Quick-umbrella.h in Headers */,
+				958877C9CE452BA7B2E69583FBB7A888 /* Quick.h in Headers */,
+				785DA1C57BE2AEA51D86D036D0B15A85 /* QuickConfiguration.h in Headers */,
+				4185759DAA0413987423FEA47BE666AB /* QuickSpec.h in Headers */,
+				65660BCC0D0B1258FEDBA92E978875DB /* World+DSL.h in Headers */,
+				A5FED4341ECC45A6A470A9418B759AAC /* World.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BA778E63A83A4B0F0F55F7340A4A18C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BE8DBC56B119CC293F1EEDA91817BDA /* Pods-KeyboardAdjuster_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B88FFF1DFE7322D0DE9B8C8006A5E687 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA0685F0711B2788A2CBE64E19C8AD74 /* KeyboardAdjuster-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E558CFA5C045F339837B0B7645133081 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9341B96D63EF6C54A1F906A1BBAEAF46 /* DSL.h in Headers */,
+				0F49254A4C560DD4696936F6080756DC /* Nimble-umbrella.h in Headers */,
+				512DFAE728521F02AF225F0082195DCC /* Nimble.h in Headers */,
+				02BF9988CC94A01E7CB6049694390020 /* NMBExceptionCapture.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3B86EDF5EAFEE1D10E00765EFDB8EB57 /* KeyboardAdjuster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7D7D336357A01F5E11BEB7CC8FB278A /* Build configuration list for PBXNativeTarget "KeyboardAdjuster" */;
+			buildPhases = (
+				01FE471920179BD9265B434FB28BEDB2 /* Sources */,
+				02DB095F08336FB907DCE24C612E34F5 /* Frameworks */,
+				2D8318B87D306AEF1AC46C6E9AE5F8F7 /* Resources */,
+				B88FFF1DFE7322D0DE9B8C8006A5E687 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42FFC58EDAC5A070CF264C99D645FE89 /* PBXTargetDependency */,
+			);
+			name = KeyboardAdjuster;
+			productName = KeyboardAdjuster;
+			productReference = 20A5349CE833A9D63E1BBC6FEE104E25 /* KeyboardAdjuster.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		68BB476FEC9AA6E03CC32A65FC935891 /* Quick */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42FBD8F402E46AB287B63228EAEFA712 /* Build configuration list for PBXNativeTarget "Quick" */;
+			buildPhases = (
+				3BBD330CDD5EADA3A0399E92960E110E /* Sources */,
+				B38E7B7061C5C8521CB1BBDC7C60832F /* Frameworks */,
+				4974D9E7BDDD7C83684C6AECDBE87F85 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Quick;
+			productName = Quick;
+			productReference = 1AC345E85E02A511352FFD8C743E9010 /* Quick.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C55037028F8873680D2608BDF73561FA /* KeyboardAdjuster-KeyboardAdjuster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E7170294C5B763C96AECB69A5234277 /* Build configuration list for PBXNativeTarget "KeyboardAdjuster-KeyboardAdjuster" */;
+			buildPhases = (
+				D99DCF4E7C72D933C83585ABB30576D8 /* Sources */,
+				6DAAB713A1AFE7FF147B6EEA33297CEF /* Frameworks */,
+				14248D10DF3A0A455A47B3B11BBDFE92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "KeyboardAdjuster-KeyboardAdjuster";
+			productName = "KeyboardAdjuster-KeyboardAdjuster";
+			productReference = 5A2C0C999C005D6DA7D46223ED09607C /* KeyboardAdjuster.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		C5DB5104FED3C10F78978AFC810982B9 /* Nimble */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4DCEA35595251EC6B9BDC29A571E7B2 /* Build configuration list for PBXNativeTarget "Nimble" */;
+			buildPhases = (
+				CC264E557A8A184C30ECCED31C74BB34 /* Sources */,
+				7FBD7B1537B634BB7C94BB4D4384BD63 /* Frameworks */,
+				E558CFA5C045F339837B0B7645133081 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nimble;
+			productName = Nimble;
+			productReference = 02739BA5C60E6366C3D3E82A1729BCF1 /* Nimble.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C9BDB9A5CF3BFB4669C05FF3C17DA2E2 /* Pods-KeyboardAdjuster_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A5723092B8E507401A7FF3FA2E0AB30 /* Build configuration list for PBXNativeTarget "Pods-KeyboardAdjuster_Tests" */;
+			buildPhases = (
+				EB1B8996AA90BEDF060709D8FF87D846 /* Sources */,
+				1F29B83DFFCF9495EB9FD99B328BA844 /* Frameworks */,
+				8BA778E63A83A4B0F0F55F7340A4A18C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9E1A4FC9B463A178A5F9A47F13136782 /* PBXTargetDependency */,
+				6E8DAAF631AD335358F36F9A4104D424 /* PBXTargetDependency */,
+				55CDA2EE034F60A14678FAF6AF831BC2 /* PBXTargetDependency */,
+			);
+			name = "Pods-KeyboardAdjuster_Tests";
+			productName = "Pods-KeyboardAdjuster_Tests";
+			productReference = 06570F88DF76AE2E7194B967C7D6CBAC /* Pods_KeyboardAdjuster_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 5A4FCAF06F0A994E7B35DD1013C84984 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B86EDF5EAFEE1D10E00765EFDB8EB57 /* KeyboardAdjuster */,
+				C55037028F8873680D2608BDF73561FA /* KeyboardAdjuster-KeyboardAdjuster */,
+				C5DB5104FED3C10F78978AFC810982B9 /* Nimble */,
+				C9BDB9A5CF3BFB4669C05FF3C17DA2E2 /* Pods-KeyboardAdjuster_Tests */,
+				68BB476FEC9AA6E03CC32A65FC935891 /* Quick */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14248D10DF3A0A455A47B3B11BBDFE92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D8318B87D306AEF1AC46C6E9AE5F8F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9726BDC7694DAB3A3DB2B0BFC5332430 /* KeyboardAdjuster.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01FE471920179BD9265B434FB28BEDB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376CE96C1C6C2D7200DCFF32 /* KeyboardAdjuster.swift in Sources */,
+				F744040AA5EA5B710C20AD29594213AB /* KeyboardAdjuster-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BBD330CDD5EADA3A0399E92960E110E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				284FB4551B2B5DD8AAE0AA2C2E7DD931 /* Callsite.swift in Sources */,
+				B4DAC428863122804980D107E0164EF6 /* Closures.swift in Sources */,
+				6C0719F9F721C7DC80A74DA4FE290897 /* Configuration.swift in Sources */,
+				AB9C7D7F4ECB45038108FD8C48525D48 /* DSL.swift in Sources */,
+				E9E071B11005F4776BACEFD426920B76 /* Example.swift in Sources */,
+				E52A8D6D7203BC8217FB0D315A629112 /* ExampleGroup.swift in Sources */,
+				F5B23790BE8433A592CF330B34DFED33 /* ExampleHooks.swift in Sources */,
+				430E31D7936D754E938B846451622148 /* ExampleMetadata.swift in Sources */,
+				A74F9833C8E1C952E5DB09166C8499EF /* Filter.swift in Sources */,
+				1162F6CC322DDCD80B346B1BC4504FD9 /* NSString+QCKSelectorName.m in Sources */,
+				1055E36A0C7C3797A56AC9893732F9E6 /* QCKDSL.m in Sources */,
+				A789B9E492B939DC8DB9574935B9FF1F /* Quick-dummy.m in Sources */,
+				DC2348D7250043B8F588AD54EE7DE8E1 /* QuickConfiguration.m in Sources */,
+				1608B6410215DCE06329E3365983A69D /* QuickSpec.m in Sources */,
+				AB5BD99CD41DBB808D4E881D63DB5E00 /* SuiteHooks.swift in Sources */,
+				A3AFC629C742A31440E6803DE186B0A4 /* World+DSL.swift in Sources */,
+				1A266F203E3947E21326ADFF39C22571 /* World.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC264E557A8A184C30ECCED31C74BB34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAAED5FB81DB035A9EC080917C783FA6 /* AdapterProtocols.swift in Sources */,
+				D429691F39B4C30A8993360FB8A3E334 /* AllPass.swift in Sources */,
+				33514FEE6EA65605EFB6F1801834B692 /* AssertionDispatcher.swift in Sources */,
+				E6E7B15FAD6C56681511813DB2666478 /* AssertionRecorder.swift in Sources */,
+				0A6E71555F55082003A3DB2B03CA85D2 /* AsyncMatcherWrapper.swift in Sources */,
+				77128C0365A98E3BAC038A915B38791C /* BeAKindOf.swift in Sources */,
+				7A6E2730A25A55D8DFA74D3D7CB005EF /* BeAnInstanceOf.swift in Sources */,
+				B905718B2501DDA22F2AE73CB6E76E6B /* BeCloseTo.swift in Sources */,
+				9E7786C034F0E0A6B5F0A0E6BE7D7E4A /* BeEmpty.swift in Sources */,
+				9646787942A85613FE77F45794E9B5CD /* BeginWith.swift in Sources */,
+				1E28F9362956B758C4C981D3C1129C90 /* BeGreaterThan.swift in Sources */,
+				33264C6A7A3536AD91EF42B3E8CC8220 /* BeGreaterThanOrEqualTo.swift in Sources */,
+				7680F08C43B965EC873D26E6AD854C9F /* BeIdenticalTo.swift in Sources */,
+				BCB53F24DCADF12601B8BA90AE3190AE /* BeLessThan.swift in Sources */,
+				4E87C6AE24AB15700A39FC24A2F1C93B /* BeLessThanOrEqual.swift in Sources */,
+				02DF5BD2281BA10105A447F95FCF8CF3 /* BeLogical.swift in Sources */,
+				F1D4A8A1FC68EFA7F45945908D70A352 /* BeNil.swift in Sources */,
+				B41E8E775408ACE233F29CE93388B270 /* Contain.swift in Sources */,
+				DEE170DD3064F7343884A4016546B762 /* DSL+Wait.swift in Sources */,
+				B0A26F58BA3E6222E50AE5AC883B8EAF /* DSL.m in Sources */,
+				58EBA2C1A43283FB2188AB1FB592D32B /* DSL.swift in Sources */,
+				3A92AEE86034356AF8987F20EE1F82DF /* EndWith.swift in Sources */,
+				FB1347627E64CA7E98C19DC985E13D95 /* Equal.swift in Sources */,
+				E2FBD93D72DF01427486D1A6853FC689 /* Expectation.swift in Sources */,
+				C63AB521EA514A811A167E507C0CF9AD /* Expression.swift in Sources */,
+				0492354DA7EF0C9068F7B4E8F74001B0 /* FailureMessage.swift in Sources */,
+				D7B45D4600C6166C124C0A926EE65284 /* Functional.swift in Sources */,
+				BB4F35062294C1A461DA3CEF6306A1DB /* HaveCount.swift in Sources */,
+				E36C5201AE7F1CBB25F9D2E7CBFC3C20 /* Match.swift in Sources */,
+				3AEAC447B09E7AABC140654C8529BC94 /* MatcherFunc.swift in Sources */,
+				C9AC658F3FCB67B50E96313C2687B33D /* MatcherProtocols.swift in Sources */,
+				73695FA6A6CDFBB13C0CC73C2E5126C0 /* Nimble-dummy.m in Sources */,
+				831D33A4C5C5BBC1EC158D9A236C61D7 /* NimbleXCTestHandler.swift in Sources */,
+				9187EEC2982DB82AD8D3A7001AA647D6 /* NMBExceptionCapture.m in Sources */,
+				CD9D31B6063C50689EAC2A0745C282DC /* ObjCExpectation.swift in Sources */,
+				7BFD25B1BB1116D8AC47E2C3874C5B76 /* ObjCMatcher.swift in Sources */,
+				8D0BF52FF564A170A3D1DE28C27B233E /* Poll.swift in Sources */,
+				FFC311AC1E19A23E0EB7B1B3A7A5A744 /* RaisesException.swift in Sources */,
+				7DA9FF8513AA48310B15A0744A541818 /* SourceLocation.swift in Sources */,
+				F10FD3129985704FA1610F84FB98EDF5 /* Stringers.swift in Sources */,
+				2D3B916F7168E9412EDB95BA203A5BB4 /* ThrowError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D99DCF4E7C72D933C83585ABB30576D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB1B8996AA90BEDF060709D8FF87D846 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4A5237DB8FAB2338F49038386E77670 /* Pods-KeyboardAdjuster_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42FFC58EDAC5A070CF264C99D645FE89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "KeyboardAdjuster-KeyboardAdjuster";
+			target = C55037028F8873680D2608BDF73561FA /* KeyboardAdjuster-KeyboardAdjuster */;
+			targetProxy = 1A09B2787DAE4C53453D65EFEE612EB0 /* PBXContainerItemProxy */;
+		};
+		55CDA2EE034F60A14678FAF6AF831BC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Quick;
+			target = 68BB476FEC9AA6E03CC32A65FC935891 /* Quick */;
+			targetProxy = 86C2143C05B5956D10BEC37F8BE75CAD /* PBXContainerItemProxy */;
+		};
+		6E8DAAF631AD335358F36F9A4104D424 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Nimble;
+			target = C5DB5104FED3C10F78978AFC810982B9 /* Nimble */;
+			targetProxy = 57D628A45D0C83EE56BC67F72F047A83 /* PBXContainerItemProxy */;
+		};
+		9E1A4FC9B463A178A5F9A47F13136782 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KeyboardAdjuster;
+			target = 3B86EDF5EAFEE1D10E00765EFDB8EB57 /* KeyboardAdjuster */;
+			targetProxy = DE282E7B391FF919012FA59F7AD46179 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0A3F2F7C2CC3602B4A94E11B296F9891 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C07CB259CB51CAA2B1B59537C0A7C2C /* Quick.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Quick/Quick-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Quick/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Quick/Quick.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Quick;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A931A7644CC926D3162E0BA9E4ACFA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B68A276C05A93CFCC331A055BCA33167 /* Nimble.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Nimble/Nimble-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Nimble/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Nimble/Nimble.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Nimble;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4EF564BEA62C557AE8F9B8C1693AA239 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B68A276C05A93CFCC331A055BCA33167 /* Nimble.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Nimble/Nimble-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Nimble/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Nimble/Nimble.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Nimble;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		552D02D5BA751AC2E8790D2811D496CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		62D93AA9F7E8657D6BD816A8F695CB47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1573432DFD57C201E8EFE8D5E22AE22B /* KeyboardAdjuster.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = KeyboardAdjuster;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		7F1C24180BDE928D0DFE7674DF25B1A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1573432DFD57C201E8EFE8D5E22AE22B /* KeyboardAdjuster.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KeyboardAdjuster/KeyboardAdjuster-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KeyboardAdjuster/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KeyboardAdjuster/KeyboardAdjuster.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = KeyboardAdjuster;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9BC7DA4FE2DD5E8DB6CA81EBA178A6D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02A43FD9C36A3E905CED8FE96D38312B /* Pods-KeyboardAdjuster_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-KeyboardAdjuster_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KeyboardAdjuster_Tests/Pods-KeyboardAdjuster_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_KeyboardAdjuster_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C36C77382822714A7D2AD3E764AD4B3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C07CB259CB51CAA2B1B59537C0A7C2C /* Quick.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Quick/Quick-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Quick/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Quick/Quick.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Quick;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C40DC61966652B4EB443894300086B03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1573432DFD57C201E8EFE8D5E22AE22B /* KeyboardAdjuster.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KeyboardAdjuster/KeyboardAdjuster-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KeyboardAdjuster/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KeyboardAdjuster/KeyboardAdjuster.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = KeyboardAdjuster;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E48D92BC7060BFD8938F0538F0FFFDEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68A01905CC209324581696A69118F954 /* Pods-KeyboardAdjuster_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-KeyboardAdjuster_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KeyboardAdjuster_Tests/Pods-KeyboardAdjuster_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_KeyboardAdjuster_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ED710909F3709AB48787D3FE94F7ADF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1573432DFD57C201E8EFE8D5E22AE22B /* KeyboardAdjuster.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = KeyboardAdjuster;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				552D02D5BA751AC2E8790D2811D496CA /* Debug */,
+				10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42FBD8F402E46AB287B63228EAEFA712 /* Build configuration list for PBXNativeTarget "Quick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C36C77382822714A7D2AD3E764AD4B3D /* Debug */,
+				0A3F2F7C2CC3602B4A94E11B296F9891 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E7170294C5B763C96AECB69A5234277 /* Build configuration list for PBXNativeTarget "KeyboardAdjuster-KeyboardAdjuster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED710909F3709AB48787D3FE94F7ADF0 /* Debug */,
+				62D93AA9F7E8657D6BD816A8F695CB47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A5723092B8E507401A7FF3FA2E0AB30 /* Build configuration list for PBXNativeTarget "Pods-KeyboardAdjuster_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E48D92BC7060BFD8938F0538F0FFFDEF /* Debug */,
+				9BC7DA4FE2DD5E8DB6CA81EBA178A6D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4DCEA35595251EC6B9BDC29A571E7B2 /* Build configuration list for PBXNativeTarget "Nimble" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A931A7644CC926D3162E0BA9E4ACFA6 /* Debug */,
+				4EF564BEA62C557AE8F9B8C1693AA239 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7D7D336357A01F5E11BEB7CC8FB278A /* Build configuration list for PBXNativeTarget "KeyboardAdjuster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F1C24180BDE928D0DFE7674DF25B1A3 /* Debug */,
+				C40DC61966652B4EB443894300086B03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
