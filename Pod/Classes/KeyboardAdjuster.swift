@@ -36,10 +36,20 @@ extension UIViewController {
      - date: February 18, 2016
      */
     public func activateKeyboardAdjustment(showBlock: AnyObject?, hideBlock: AnyObject?) {
-        if self is KeyboardAdjusting {
+        if let conformingSelf = self as? KeyboardAdjusting {
+            // Activate the bottom constraint.
+            conformingSelf.keyboardAdjustmentConstraint?.active = true
+
             let notificationCenter = NSNotificationCenter.defaultCenter()
             notificationCenter.addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: hideBlock)
-            notificationCenter.addObserver(self, selector: "keyboardDidShow:", name: UIKeyboardWillHideNotification, object: showBlock)
+            notificationCenter.addObserver(self, selector: "keyboardDidShow:", name: UIKeyboardDidShowNotification, object: showBlock)
+
+            if let viewA = conformingSelf.keyboardAdjustmentConstraint?.firstItem as? UIView,
+                viewB = conformingSelf.keyboardAdjustmentConstraint?.secondItem as? UIView {
+                    if viewB.subviews.contains(viewA) {
+                        assertionFailure("Please reverse the order of arguments in your keyboard adjustment constraint.")
+                    }
+            }
         }
         else {
             print("You must define `keyboardAdjustmentConstraint` on your view controller to activate KeyboardAdjuster.")
@@ -61,13 +71,13 @@ extension UIViewController {
 
     /**
      A private method called when the keyboard is about to be hidden.
-     
+
      - parameter sender: An `NSNotification` containing a `Dictionary` with information regarding the keyboard appearance.
      - author: Daniel Loewenherz
      - copyright: ©2016 Lionheart Software LLC
      - date: February 18, 2016
      */
-    private func keyboardWillHide(sender: NSNotification) {
+    func keyboardWillHide(sender: NSNotification) {
         guard let conformingSelf = self as? KeyboardAdjusting else {
             return
         }
@@ -103,7 +113,7 @@ extension UIViewController {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 18, 2016
      */
-    private func keyboardDidShow(sender: NSNotification) {
+    func keyboardDidShow(sender: NSNotification) {
         guard let conformingSelf = self as? KeyboardAdjusting else {
             return
         }
@@ -117,15 +127,35 @@ extension UIViewController {
                 value = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue {
                     let frame = value.CGRectValue()
                     let keyboardFrameInViewCoordinates = view.convertRect(frame, fromView: nil)
-                    if let duration: NSTimeInterval = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSTimeInterval,
-                        curve = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? UIViewAnimationOptions,
+
+                    if let _curve = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? Int,
+                        curve = UIViewAnimationCurve(rawValue: _curve),
+                        duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? Double,
                         animated = conformingSelf.keyboardAdjustmentAnimated {
+                            var curveAnimationOption: UIViewAnimationOptions
+                            switch curve {
+                            case .EaseIn:
+                                curveAnimationOption = .CurveEaseIn
+                                
+                            case .EaseInOut:
+                                curveAnimationOption = .CurveEaseInOut
+                                
+                            case .EaseOut:
+                                curveAnimationOption = .CurveEaseOut
+                                
+                            case .Linear:
+                                curveAnimationOption = .CurveLinear
+                            }
+
                             constraint.constant = CGRectGetHeight(view.bounds) - keyboardFrameInViewCoordinates.origin.y
-                            let animationOptions: UIViewAnimationOptions = [UIViewAnimationOptions.BeginFromCurrentState, curve]
+                            let animationOptions: UIViewAnimationOptions = [UIViewAnimationOptions.BeginFromCurrentState, curveAnimationOption]
                             if animated {
                                 UIView.animateWithDuration(duration, delay: 0, options: animationOptions, animations: {
                                     self.view.layoutIfNeeded()
                                     }, completion: nil)
+                            }
+                            else {
+                                view.layoutIfNeeded()
                             }
                     }
             }
