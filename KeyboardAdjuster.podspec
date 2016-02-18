@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary          = "A short description of KeyboardAdjuster."
   s.homepage         = "https://github.com/lionheart/KeyboardAdjuster"
   s.license          = 'Apache 2.0'
-  s.author           = { "Dan Loewenherz" => "dloewenherz@gmail.com" }
+  s.author           = { "Dan Loewenherz" => "dan@lionheartsw.com" }
   s.source           = { :git => "https://github.com/lionheart/KeyboardAdjuster.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/dwlz'
 
