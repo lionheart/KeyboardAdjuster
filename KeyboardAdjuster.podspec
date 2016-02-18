@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "KeyboardAdjuster"
   s.version          = "0.1.0"
-  s.summary          = "A short description of KeyboardAdjuster."
+  s.summary          = "Automatically resizes and adjust views to scroll when a keyboard appears."
   s.homepage         = "https://github.com/lionheart/KeyboardAdjuster"
   s.license          = 'Apache 2.0'
   s.author           = { "Dan Loewenherz" => "dan@lionheartsw.com" }
