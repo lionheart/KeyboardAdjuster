@@ -8,11 +8,13 @@
 KeyboardAdjuster
 ----------------
 
-After one too many times of referencing a [Gist](https://gist.github.com/dlo/8572874) I wrote on how to set up automatic view resizing when a keyboard appears in iOS, I decided to just abstract the entire thing and throw it up on GitHub.
-
 KeyboardAdjuster will adjust the bottom position of any given `UIView` when a keyboard appears on screen. All you have to do is provide an NSLayoutConstraint that pins the bottom of your view to the bottom of the screen. KeyboardAdjuster will automatically adjust that constraint and pin it to the top of the keyboard when it appears.
 
 Note: KeyboardAdjuster requires layout anchors in your build target, so it will only work with iOS 9 or above. If you'd like to add support for earlier iOS versions, please submit a pull request.
+
+# History
+
+KeyboardAdjuster is a Swift port of [LHSKeyboardAdjusting](https://github.com/lionheart/LHSKeyboardAdjusting), which targets projects written in Objective-C.
 
 ## Installation
 
