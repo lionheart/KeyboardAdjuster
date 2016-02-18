@@ -76,11 +76,11 @@ pod "KeyboardAdjuster"
 
 4. And you're done! Whenever a keyboard appears, your views will be automatically resized.
 
-### How It Works
+## How It Works
 
 KeyboardAdjuster registers NSNotificationCenter callbacks for keyboard appearance and disappearance. When a keyboard appears, it pulls out the keyboard size from the notification, along with the duration of the keyboard animation, and applies that to the view constraint adjustment.
 
-### Philosophy
+## Philosophy
 
 Why use this over any other libraries that solve a similar problem?
 
