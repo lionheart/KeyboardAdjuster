@@ -17,7 +17,7 @@ Why?
 
 Why use this over any other libraries that solve a similar problem?
 
-All [Lionheart](http://lionheartsw.com) Swift and Objective-C libraries are built with a strong "no magic" philosophy. This means absolutely no usage of:
+All [Lionheart](http://lionheartsw.com) Swift and Objective-C libraries are built with a "no magic" philosophy. This means absolutely no usage of:
 
 * Method swizzling.
 * Custom operators.
@@ -27,6 +27,8 @@ Our Swift libraries are all developed with a protocol-oriented philosophy. For m
 
 * Always unwrap optionals safely, and never define implicitly unwrapped optionals.
 * Never depend on type-safety at runtime.
+
+While these restrictions entail additional code, I believe that the tradeoff is worth it. The deal is that you can be assurred that nothing magical is occurring behind the scenes in your codebase.
 
 ## History
 
