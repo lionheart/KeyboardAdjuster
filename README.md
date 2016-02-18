@@ -1,6 +1,6 @@
 # KeyboardAdjuster
 
-[![CI Status](http://img.shields.io/travis/Dan Loewenherz/KeyboardAdjuster.svg?style=flat)](https://travis-ci.org/Dan Loewenherz/KeyboardAdjuster)
+[![CI Status](http://img.shields.io/travis/lionheart/KeyboardAdjuster.svg?style=flat)](https://travis-ci.org/lionheart/KeyboardAdjuster)
 [![Version](https://img.shields.io/cocoapods/v/KeyboardAdjuster.svg?style=flat)](http://cocoapods.org/pods/KeyboardAdjuster)
 [![License](https://img.shields.io/cocoapods/l/KeyboardAdjuster.svg?style=flat)](http://cocoapods.org/pods/KeyboardAdjuster)
 [![Platform](https://img.shields.io/cocoapods/p/KeyboardAdjuster.svg?style=flat)](http://cocoapods.org/pods/KeyboardAdjuster)
