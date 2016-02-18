@@ -3,10 +3,10 @@
 jazzy \
   --author Lionheart \
   --author_url http://lionheartsw.com \
-  --github_url https://github.com/lionheart/LionheartExtensions \
-  --github-file-prefix https://github.com/lionheart/LionheartExtensions/tree/0.1.0 \
+  --github_url https://github.com/lionheart/KeyboardAdjuster \
+  --github-file-prefix https://github.com/lionheart/KeyboardAdjuster/tree/0.1.0 \
   --module-version 0.1.0 \
-  --module LionheartExtensions
+  --module KeyboardAdjuster
 
 git co gh-pages
 cp -r docs/* .
