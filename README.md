@@ -12,6 +12,19 @@ KeyboardAdjuster will adjust the bottom position of any given `UIView` when a ke
 
 Note: KeyboardAdjuster requires layout anchors in your build target, so it will only work with iOS 9 or above. If you'd like to add support for earlier iOS versions, please submit a pull request.
 
+Why?
+----
+
+Why use this over any other libraries that solve a similar problem?
+
+All [Lionheart](http://lionheartsw.com) Swift and Objective-C libraries are built with a strong "no magic" philosophy. This means absolutely no:
+
+* Method swizzling.
+* `objc_setAssociatedObject` or `objc_getAssociatedObject`
+* Custom operators.
+
+Our Swift libraries are all developed with a protocol-oriented philosophy. For more information, watch [WWDC 2015, Session 408](https://developer.apple.com/videos/play/wwdc2015-408/)
+
 ## History
 
 KeyboardAdjuster is a Swift port of [LHSKeyboardAdjusting](https://github.com/lionheart/LHSKeyboardAdjusting), which targets projects written in Objective-C.
