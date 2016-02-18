@@ -14,8 +14,6 @@ If you're currently choosing between KeyboardAdjuster and another alternative, p
 
 Note: KeyboardAdjuster requires layout anchors in your build target, so it will only work with iOS 9 or above. If you'd like to add support for earlier iOS versions, please submit a pull request.
 
-## History
-
 KeyboardAdjuster is a Swift port of [LHSKeyboardAdjusting](https://github.com/lionheart/LHSKeyboardAdjusting), which targets projects written in Objective-C.
 
 ## Installation
@@ -27,7 +25,7 @@ it, simply add the following line to your Podfile:
 pod "KeyboardAdjuster"
 ```
 
-### Usage
+## Usage
 
 1. In your view controller file, import `KeyboardAdjusted` protocol.
 
@@ -78,11 +76,11 @@ pod "KeyboardAdjuster"
 
 4. And you're done! Whenever a keyboard appears, your views will be automatically resized.
 
-## How It Works
+### How It Works
 
 KeyboardAdjuster registers NSNotificationCenter callbacks for keyboard appearance and disappearance. When a keyboard appears, it pulls out the keyboard size from the notification, along with the duration of the keyboard animation, and applies that to the view constraint adjustment.
 
-## Philosophy
+### Philosophy
 
 Why use this over any other libraries that solve a similar problem?
 
