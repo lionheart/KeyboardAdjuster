@@ -27,13 +27,13 @@ pod "KeyboardAdjuster"
 
 ## Usage
 
-1. In your view controller file, import `KeyboardAdjusted` protocol.
+1. In your view controller file, import `KeyboardAdjusted`.
 
    ```swift
    import KeyboardAdjusted
    ```
 
-2. Make sure your `UIViewController` conforms to `KeyboardAdjusting`, and define two properties on it--`keyboardAdjustmentConstraint` and `keyboardAdjustmentAnimated` (a `Bool` to indicate whether the constraint adjustment should be animated).
+2. Make sure your `UIViewController` conforms to `KeyboardAdjusting`, and define two properties. Set `keyboardAdjustmentAnimated` to `true` or `false`, depending on whether you want the constraint adjustment to be animated.
 
    ```swift
    class MyViewController: UIViewController, KeyboardAdjusting {
@@ -42,15 +42,17 @@ pod "KeyboardAdjuster"
    }
    ```
 
-2. Figure out which view you'd like to pin to the top of the keyboard. A `UIScrollView`, `UITableView`, or `UITextView` are likely candidates. Then, wherever you're setting up your view constraints, set the `keyboardAdjustmentConstraint` to the constraint pinning the bottom of this view to the bottom of the screen:
+2. Figure out which view you'd like to pin to the top of the keyboard. A `UIScrollView`, `UITableView`, or `UITextView` are likely candidates. Then, wherever you're setting up your view constraints, set `keyboardAdjustmentConstraint` to the constraint pinning the bottom of this view to the bottom of the screen:
 
    ```swift
-   func viewDidLoad() {
-       super.viewDidLoad()
+   class MyViewController: UIViewController, KeyboardAdjusting {
+       func viewDidLoad() {
+           super.viewDidLoad()
 
-       // Your other setup code here...
+           // Your other setup code here...
 
-       keyboardAdjustmentConstraint = view.bottomAnchor.constraintEqualToAnchor(scrollView.bottomAnchor)
+           keyboardAdjustmentConstraint = view.bottomAnchor.constraintEqualToAnchor(scrollView.bottomAnchor)
+       }
    }
    ```
 
