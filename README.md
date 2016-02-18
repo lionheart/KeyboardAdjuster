@@ -17,13 +17,16 @@ Why?
 
 Why use this over any other libraries that solve a similar problem?
 
-All [Lionheart](http://lionheartsw.com) Swift and Objective-C libraries are built with a strong "no magic" philosophy. This means absolutely no:
+All [Lionheart](http://lionheartsw.com) Swift and Objective-C libraries are built with a strong "no magic" philosophy. This means absolutely no usage of:
 
 * Method swizzling.
-* `objc_setAssociatedObject` or `objc_getAssociatedObject`
 * Custom operators.
+* Associated Objects (`objc_setAssociatedObject` / `objc_getAssociatedObject`).
 
-Our Swift libraries are all developed with a protocol-oriented philosophy. For more information, watch [WWDC 2015, Session 408](https://developer.apple.com/videos/play/wwdc2015-408/)
+Our Swift libraries are all developed with a protocol-oriented philosophy. For more information, watch [WWDC 2015, Session 408](https://developer.apple.com/videos/play/wwdc2015-408/). Additionally, our Swift libraries:
+
+* Always unwrap optionals safely, and never define implicitly unwrapped optionals.
+* Never depend on type-safety at runtime.
 
 ## History
 
