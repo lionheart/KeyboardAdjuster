@@ -13,7 +13,7 @@ public protocol KeyboardAdjusting {
     var keyboardAdjustmentAnimated: Bool? { get set }
 }
 
-extension UIViewController {
+public extension UIViewController {
     var keyboardAdjustmentConstraint: NSLayoutConstraint? { get { return nil } }
     var keyboardAdjustmentAnimated: Bool? { get { return nil } }
 
