@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0720"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3B86EDF5EAFEE1D10E00765EFDB8EB57"
-               BuildableName = "KeyboardAdjuster.framework"
-               BlueprintName = "KeyboardAdjuster"
+               BlueprintIdentifier = "C55037028F8873680D2608BDF73561FA"
+               BuildableName = "KeyboardAdjuster.bundle"
+               BlueprintName = "KeyboardAdjuster-KeyboardAdjuster"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3B86EDF5EAFEE1D10E00765EFDB8EB57"
-            BuildableName = "KeyboardAdjuster.framework"
-            BlueprintName = "KeyboardAdjuster"
+            BlueprintIdentifier = "C55037028F8873680D2608BDF73561FA"
+            BuildableName = "KeyboardAdjuster.bundle"
+            BlueprintName = "KeyboardAdjuster-KeyboardAdjuster"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -60,6 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "C55037028F8873680D2608BDF73561FA"
+            BuildableName = "KeyboardAdjuster.bundle"
+            BlueprintName = "KeyboardAdjuster-KeyboardAdjuster"
+            ReferencedContainer = "container:Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
