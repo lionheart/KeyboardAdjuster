@@ -39,6 +39,8 @@ pod "KeyboardAdjuster"
    class MyViewController: UIViewController, KeyboardAdjusting {
        var keyboardAdjustmentConstraint: NSLayoutConstraint?
        var keyboardAdjustmentAnimated: Bool? = false
+
+       // ...
    }
    ```
 
@@ -46,6 +48,8 @@ pod "KeyboardAdjuster"
 
    ```swift
    class MyViewController: UIViewController, KeyboardAdjusting {
+       // ...
+
        func viewDidLoad() {
            super.viewDidLoad()
 
@@ -53,6 +57,8 @@ pod "KeyboardAdjuster"
 
            keyboardAdjustmentConstraint = view.bottomAnchor.constraintEqualToAnchor(scrollView.bottomAnchor)
        }
+
+       // ...
    }
    ```
 
@@ -73,6 +79,8 @@ pod "KeyboardAdjuster"
            super.viewWillDisappear(animated)
            deactivateKeyboardAdjustment()
        }
+
+       // ...
    }
    ```
 
