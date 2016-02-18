@@ -93,7 +93,7 @@ All [Lionheart](http://lionheartsw.com) Swift and Objective-C libraries are buil
 Our Swift libraries are all developed with a protocol-oriented philosophy. For more information, watch [WWDC 2015, Session 408](https://developer.apple.com/videos/play/wwdc2015-408/). Additionally, our Swift libraries:
 
 * Always unwrap optionals safely, and never define implicitly unwrapped optionals.
-* Never depend on type-safety at runtime.
+* Never check type-safety at runtime.
 
 While these restrictions usually entail additional code, I believe that the tradeoff is worth it. You can rest assurred that nothing magical or unexpected is occurring behind the scenes in your codebase.
 
