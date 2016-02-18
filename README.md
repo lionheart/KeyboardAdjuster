@@ -91,7 +91,7 @@ All [Lionheart](http://lionheartsw.com) Swift and Objective-C libraries are buil
 * Associated Objects (`objc_setAssociatedObject` / `objc_getAssociatedObject`).
 * `respondsToSelector(_:)`
 
-Our Swift libraries are all developed with a protocol-oriented philosophy. For more information, watch [WWDC 2015, Session 408](https://developer.apple.com/videos/play/wwdc2015-408/). Additionally, our Swift libraries:
+Our Swift libraries are all protocol-oriented. For more information on what this means, watch [WWDC 2015, Session 408](https://developer.apple.com/videos/play/wwdc2015-408/). Additionally, our Swift libraries:
 
 * Always unwrap optionals safely, and never define implicitly unwrapped optionals.
 * Never check type-safety at runtime.
