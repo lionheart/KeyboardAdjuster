@@ -89,6 +89,7 @@ All [Lionheart](http://lionheartsw.com) Swift and Objective-C libraries are buil
 * Method swizzling.
 * Custom operators.
 * Associated Objects (`objc_setAssociatedObject` / `objc_getAssociatedObject`).
+* `respondsToSelector(:)`
 
 Our Swift libraries are all developed with a protocol-oriented philosophy. For more information, watch [WWDC 2015, Session 408](https://developer.apple.com/videos/play/wwdc2015-408/). Additionally, our Swift libraries:
 
