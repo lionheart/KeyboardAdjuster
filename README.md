@@ -96,7 +96,7 @@ Our Swift libraries are all developed with a protocol-oriented philosophy. For m
 * Always unwrap optionals safely, and never define implicitly unwrapped optionals.
 * Never check type-safety at runtime.
 
-While these restrictions usually entail additional code, I believe that the tradeoff is worth it. You can rest assurred that nothing magical or unexpected is occurring behind the scenes in your codebase.
+While these restrictions usually entail additional code, I believe that the tradeoff is not only worth it, but better mirrors the philosophy of Swift itself. You can use any of our libraries rest assurred that any issues you'll see are found at compile-time, not runtime.
 
 ## Author
 
