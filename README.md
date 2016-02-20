@@ -24,10 +24,10 @@ pod "KeyboardAdjuster"
 
 ## Usage
 
-1. In your view controller file, import `KeyboardAdjusted`.
+1. In your view controller file, import `KeyboardAdjuster`.
 
    ```swift
-   import KeyboardAdjusted
+   import KeyboardAdjuster
    ```
 
 2. Make sure your `UIViewController` conforms to `KeyboardAdjusting`, and define two properties. Set `keyboardAdjustmentAnimated` to `true` or `false`, depending on whether you want the constraint adjustment to be animated.
