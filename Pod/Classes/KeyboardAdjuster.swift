@@ -87,14 +87,32 @@ extension UIViewController {
                 block()
             }
             
-            if let userInfo = sender.userInfo,
-                duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSTimeInterval,
-                curve = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? UIViewAnimationOptions,
+
+
+            if let userInfo = sender.userInfo as? [String: AnyObject],
+                _curve = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? Int,
+                curve = UIViewAnimationCurve(rawValue: _curve),
+                duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? Double,
                 animated = conformingSelf.keyboardAdjustmentAnimated {
+                    var curveAnimationOption: UIViewAnimationOptions
+                    switch curve {
+                    case .EaseIn:
+                        curveAnimationOption = .CurveEaseIn
+
+                    case .EaseInOut:
+                        curveAnimationOption = .CurveEaseInOut
+
+                    case .EaseOut:
+                        curveAnimationOption = .CurveEaseOut
+
+                    case .Linear:
+                        curveAnimationOption = .CurveLinear
+                    }
+
                     constraint.constant = 0
-                    
                     if animated {
-                        let animationOptions: UIViewAnimationOptions = [UIViewAnimationOptions.BeginFromCurrentState, curve]
+                        let animationOptions: UIViewAnimationOptions = [UIViewAnimationOptions.BeginFromCurrentState, curveAnimationOption]
+
                         UIView.animateWithDuration(duration, delay: 0, options: animationOptions, animations: {
                             self.view.layoutIfNeeded()
                             }, completion:nil)
