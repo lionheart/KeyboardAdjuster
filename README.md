@@ -11,7 +11,7 @@ If you're currently choosing between KeyboardAdjuster and another alternative, p
 
 Note: KeyboardAdjuster requires layout anchors in your build target, so it will only work with iOS 9 or above. If you'd like to add support for earlier iOS versions, please submit a pull request.
 
-KeyboardAdjuster is a Swift port of [LHSKeyboardAdjusting](https://github.com/lionheart/LHSKeyboardAdjusting), which targets projects written in Objective-C.
+KeyboardAdjuster is a Swift port of [LHSKeyboardAdjuster](https://github.com/lionheart/LHSKeyboardAdjuster), which targets projects written in Objective-C.
 
 ## Installation
 
@@ -30,10 +30,10 @@ pod "KeyboardAdjuster"
    import KeyboardAdjuster
    ```
 
-2. Make sure your `UIViewController` conforms to `KeyboardAdjusting`, and define two properties. Set `keyboardAdjustmentAnimated` to `true` or `false`, depending on whether you want the constraint adjustment to be animated.
+2. Make sure your `UIViewController` conforms to `KeyboardAdjuster`, and define two properties. Set `keyboardAdjustmentAnimated` to `true` or `false`, depending on whether you want the constraint adjustment to be animated.
 
    ```swift
-   class MyViewController: UIViewController, KeyboardAdjusting {
+   class MyViewController: UIViewController, KeyboardAdjuster {
        var keyboardAdjustmentConstraint: NSLayoutConstraint?
        var keyboardAdjustmentAnimated: Bool? = false
 
@@ -44,7 +44,7 @@ pod "KeyboardAdjuster"
 2. Figure out which view you'd like to pin to the top of the keyboard. A `UIScrollView`, `UITableView`, or `UITextView` are likely candidates. Then, wherever you're setting up your view constraints, set `keyboardAdjustmentConstraint` to the constraint pinning the bottom of this view to the bottom of the screen:
 
    ```swift
-   class MyViewController: UIViewController, KeyboardAdjusting {
+   class MyViewController: UIViewController, KeyboardAdjuster {
        // ...
 
        func viewDidLoad() {
@@ -64,17 +64,17 @@ pod "KeyboardAdjuster"
 3. All you need to do now is activate and deactivate the automatic adjustments in your `viewWillAppear(animated:)` and `viewWillDisappear(animated:)` methods.
 
    ```swift
-   class MyViewController: UIViewController, KeyboardAdjusting {
+   class MyViewController: UIViewController, KeyboardAdjuster {
        // ...
 
        override func viewWillAppear(animated: Bool) {
            super.viewWillAppear(animated)
-           activateKeyboardAdjustment()
+           activateKeyboardAdjuster()
        }
 
        override func viewWillDisappear(animated: Bool) {
            super.viewWillDisappear(animated)
-           deactivateKeyboardAdjustment()
+           deactivateKeyboardAdjuster()
        }
 
        // ...
