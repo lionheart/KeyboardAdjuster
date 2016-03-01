@@ -9,11 +9,11 @@
 import UIKit
 import KeyboardAdjuster
 
-class ViewController: UIViewController, KeyboardAdjusting, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, KeyboardAdjuster, UITableViewDelegate, UITableViewDataSource {
     let CellIdentifier = "CellIdentifier"
 
-    var keyboardAdjustmentConstraint: NSLayoutConstraint?
-    var keyboardAdjustmentAnimated: Bool? = false
+    var keyboardAdjusterConstraint: NSLayoutConstraint?
+    var keyboardAdjusterAnimated: Bool? = false
     var tableView: UITableView!
     var textField: UITextField!
 
@@ -38,20 +38,20 @@ class ViewController: UIViewController, KeyboardAdjusting, UITableViewDelegate, 
         tableView.leftAnchor.constraintEqualToAnchor(view.leftAnchor).active = true
         tableView.rightAnchor.constraintEqualToAnchor(view.rightAnchor).active = true
         
-        keyboardAdjustmentConstraint = view.bottomAnchor.constraintEqualToAnchor(tableView.bottomAnchor)
-        keyboardAdjustmentConstraint?.active = true
+        keyboardAdjusterConstraint = view.bottomAnchor.constraintEqualToAnchor(tableView.bottomAnchor)
+        keyboardAdjusterConstraint?.active = true
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        activateKeyboardAdjustment()
+        activateKeyboardAdjuster()
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
-        deactivateKeyboardAdjustment()
+        deactivateKeyboardAdjuster()
     }
     
     // MARK -
