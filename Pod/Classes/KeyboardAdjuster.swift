@@ -15,7 +15,7 @@ public protocol KeyboardAdjuster {
 
 extension UIViewController {
     /**
-     Activates keyboard Adjuster for the calling view controller.
+     Activates keyboard adjustment for the calling view controller.
 
      - seealso: `activateKeyboardAdjuster(showBlock:hideBlock:)`
      - author: Daniel Loewenherz
@@ -27,7 +27,7 @@ extension UIViewController {
     }
 
     /**
-     Enable keyboard Adjuster for the current view controller, providing optional closures to call when the keyboard appears and when it disappears.
+     Enable keyboard adjustment for the current view controller, providing optional closures to call when the keyboard appears and when it disappears.
      
      - parameter showBlock: (optional) a closure that's called when the keyboard appears
      - parameter hideBlock: (optional) a closure that's called when the keyboard disappears
