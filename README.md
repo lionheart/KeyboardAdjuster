@@ -30,18 +30,18 @@ pod "KeyboardAdjuster"
    import KeyboardAdjuster
    ```
 
-2. Make sure your `UIViewController` conforms to `KeyboardAdjuster`, and define two properties. Set `keyboardAdjustmentAnimated` to `true` or `false`, depending on whether you want the constraint adjustment to be animated.
+2. Make sure your `UIViewController` conforms to `KeyboardAdjuster`, and define two properties. Set `keyboardAdjusterAnimated` to `true` or `false`, depending on whether you want the constraint adjustment to be animated.
 
    ```swift
    class MyViewController: UIViewController, KeyboardAdjuster {
-       var keyboardAdjustmentConstraint: NSLayoutConstraint?
-       var keyboardAdjustmentAnimated: Bool? = false
+       var keyboardAdjusterConstraint: NSLayoutConstraint?
+       var keyboardAdjusterAnimated: Bool? = false
 
        // ...
    }
    ```
 
-2. Figure out which view you'd like to pin to the top of the keyboard. A `UIScrollView`, `UITableView`, or `UITextView` are likely candidates. Then, wherever you're setting up your view constraints, set `keyboardAdjustmentConstraint` to the constraint pinning the bottom of this view to the bottom of the screen:
+2. Figure out which view you'd like to pin to the top of the keyboard. A `UIScrollView`, `UITableView`, or `UITextView` are likely candidates. Then, wherever you're setting up your view constraints, set `keyboardAdjusterConstraint` to the constraint pinning the bottom of this view to the bottom of the screen:
 
    ```swift
    class MyViewController: UIViewController, KeyboardAdjuster {
@@ -52,14 +52,14 @@ pod "KeyboardAdjuster"
 
            // Your other setup code here...
 
-           keyboardAdjustmentConstraint = view.bottomAnchor.constraintEqualToAnchor(scrollView.bottomAnchor)
+           keyboardAdjusterConstraint = view.bottomAnchor.constraintEqualToAnchor(scrollView.bottomAnchor)
        }
 
        // ...
    }
    ```
 
-   KeyboardAdjuster will automatically activate `keyboardAdjustmentConstraint` for you.
+   KeyboardAdjuster will automatically activate `keyboardAdjusterConstraint` for you.
 
 3. All you need to do now is activate and deactivate the automatic adjustments in your `viewWillAppear(animated:)` and `viewWillDisappear(animated:)` methods.
 
