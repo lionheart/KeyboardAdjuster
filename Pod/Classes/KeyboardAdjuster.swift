@@ -8,26 +8,26 @@
 
 import UIKit
 
-public protocol KeyboardAdjusting {
-    var keyboardAdjustmentConstraint: NSLayoutConstraint? { get set }
-    var keyboardAdjustmentAnimated: Bool? { get set }
+public protocol KeyboardAdjuster {
+    var keyboardAdjusterConstraint: NSLayoutConstraint? { get set }
+    var keyboardAdjusterAnimated: Bool? { get set }
 }
 
 extension UIViewController {
     /**
-     Activates keyboard adjustment for the calling view controller.
+     Activates keyboard Adjuster for the calling view controller.
 
-     - seealso: `activateKeyboardAdjustment(showBlock:hideBlock:)`
+     - seealso: `activateKeyboardAdjuster(showBlock:hideBlock:)`
      - author: Daniel Loewenherz
      - copyright: ©2016 Lionheart Software LLC
      - date: February 18, 2016
      */
-    public func activateKeyboardAdjustment() {
-        activateKeyboardAdjustment(nil, hideBlock: nil)
+    public func activateKeyboardAdjuster() {
+        activateKeyboardAdjuster(nil, hideBlock: nil)
     }
 
     /**
-     Enable keyboard adjustment for the current view controller, providing optional closures to call when the keyboard appears and when it disappears.
+     Enable keyboard Adjuster for the current view controller, providing optional closures to call when the keyboard appears and when it disappears.
      
      - parameter showBlock: (optional) a closure that's called when the keyboard appears
      - parameter hideBlock: (optional) a closure that's called when the keyboard disappears
@@ -35,24 +35,24 @@ extension UIViewController {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 18, 2016
      */
-    public func activateKeyboardAdjustment(showBlock: AnyObject?, hideBlock: AnyObject?) {
-        if let conformingSelf = self as? KeyboardAdjusting {
+    public func activateKeyboardAdjuster(showBlock: AnyObject?, hideBlock: AnyObject?) {
+        if let conformingSelf = self as? KeyboardAdjuster {
             // Activate the bottom constraint.
-            conformingSelf.keyboardAdjustmentConstraint?.active = true
+            conformingSelf.keyboardAdjusterConstraint?.active = true
 
             let notificationCenter = NSNotificationCenter.defaultCenter()
             notificationCenter.addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: hideBlock)
             notificationCenter.addObserver(self, selector: "keyboardDidShow:", name: UIKeyboardDidShowNotification, object: showBlock)
 
-            if let viewA = conformingSelf.keyboardAdjustmentConstraint?.firstItem as? UIView,
-                viewB = conformingSelf.keyboardAdjustmentConstraint?.secondItem as? UIView {
+            if let viewA = conformingSelf.keyboardAdjusterConstraint?.firstItem as? UIView,
+                viewB = conformingSelf.keyboardAdjusterConstraint?.secondItem as? UIView {
                     if viewB.subviews.contains(viewA) {
-                        assertionFailure("Please reverse the order of arguments in your keyboard adjustment constraint.")
+                        assertionFailure("Please reverse the order of arguments in your keyboard Adjuster constraint.")
                     }
             }
         }
         else {
-            print("You must define `keyboardAdjustmentConstraint` on your view controller to activate KeyboardAdjuster.")
+            print("You must define `keyboardAdjusterConstraint` on your view controller to activate KeyboardAdjuster.")
         }
     }
     
@@ -63,7 +63,7 @@ extension UIViewController {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 18, 2016
      */
-    public func deactivateKeyboardAdjustment() {
+    public func deactivateKeyboardAdjuster() {
         let notificationCenter = NSNotificationCenter.defaultCenter()
         notificationCenter.removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
         notificationCenter.removeObserver(self, name: UIKeyboardDidShowNotification, object: nil)
@@ -78,22 +78,20 @@ extension UIViewController {
      - date: February 18, 2016
      */
     func keyboardWillHide(sender: NSNotification) {
-        guard let conformingSelf = self as? KeyboardAdjusting else {
+        guard let conformingSelf = self as? KeyboardAdjuster else {
             return
         }
 
-        if let constraint = conformingSelf.keyboardAdjustmentConstraint {
+        if let constraint = conformingSelf.keyboardAdjusterConstraint {
             if let block = sender.object as? (() -> Void) {
                 block()
             }
-            
-
 
             if let userInfo = sender.userInfo as? [String: AnyObject],
                 _curve = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? Int,
                 curve = UIViewAnimationCurve(rawValue: _curve),
                 duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? Double,
-                animated = conformingSelf.keyboardAdjustmentAnimated {
+                animated = conformingSelf.keyboardAdjusterAnimated {
                     var curveAnimationOption: UIViewAnimationOptions
                     switch curve {
                     case .EaseIn:
@@ -132,11 +130,11 @@ extension UIViewController {
      - date: February 18, 2016
      */
     func keyboardDidShow(sender: NSNotification) {
-        guard let conformingSelf = self as? KeyboardAdjusting else {
+        guard let conformingSelf = self as? KeyboardAdjuster else {
             return
         }
 
-        if let constraint = conformingSelf.keyboardAdjustmentConstraint {
+        if let constraint = conformingSelf.keyboardAdjusterConstraint {
             if let block = sender.object as? (() -> Void) {
                 block()
             }
@@ -149,7 +147,7 @@ extension UIViewController {
                     if let _curve = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? Int,
                         curve = UIViewAnimationCurve(rawValue: _curve),
                         duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? Double,
-                        animated = conformingSelf.keyboardAdjustmentAnimated {
+                        animated = conformingSelf.keyboardAdjusterAnimated {
                             var curveAnimationOption: UIViewAnimationOptions
                             switch curve {
                             case .EaseIn:
