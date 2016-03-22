@@ -46,7 +46,7 @@ extension UIViewController {
                 notificationCenter.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: hideBlock)
                 notificationCenter.addObserver(self, selector: #selector(keyboardDidShow(_:)), name: UIKeyboardDidShowNotification, object: showBlock)
             #else
-                notificationCenter.addObserver(self, selector:"keyboardWillHide:", name: UIKeyboardWillHideNotification, object: hideBlock)
+                notificationCenter.addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: hideBlock)
                 notificationCenter.addObserver(self, selector: "keyboardDidShow:", name: UIKeyboardDidShowNotification, object: showBlock)
             #endif
 
