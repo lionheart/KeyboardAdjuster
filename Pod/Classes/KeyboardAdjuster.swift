@@ -41,14 +41,8 @@ extension UIViewController {
             conformingSelf.keyboardAdjusterConstraint?.active = true
 
             let notificationCenter = NSNotificationCenter.defaultCenter()
-
-            #if swift(>=2.2)
-                notificationCenter.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: hideBlock)
-                notificationCenter.addObserver(self, selector: #selector(keyboardDidShow(_:)), name: UIKeyboardDidShowNotification, object: showBlock)
-            #else
-                notificationCenter.addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: hideBlock)
-                notificationCenter.addObserver(self, selector: "keyboardDidShow:", name: UIKeyboardDidShowNotification, object: showBlock)
-            #endif
+            notificationCenter.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: hideBlock)
+            notificationCenter.addObserver(self, selector: #selector(keyboardDidShow(_:)), name: UIKeyboardDidShowNotification, object: showBlock)
 
             if let viewA = conformingSelf.keyboardAdjusterConstraint?.firstItem as? UIView,
                 viewB = conformingSelf.keyboardAdjusterConstraint?.secondItem as? UIView {
