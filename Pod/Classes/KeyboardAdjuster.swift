@@ -73,7 +73,7 @@ private extension UIViewController {
     }
 
     /**
-     A private method called when the keyboard is about to be hidden.
+     A callback that manages the bottom constraint when the keyboard is about to be hidden.
 
      - parameter sender: An `NSNotification` containing a `Dictionary` with information regarding the keyboard appearance.
      - author: Daniel Loewenherz
@@ -85,7 +85,7 @@ private extension UIViewController {
     }
 
     /**
-     A private method called after the keyboard is shown.
+     A callback that manages the bottom constraint after the keyboard is shown.
 
      - parameter sender: An `NSNotification` containing a `Dictionary` with information regarding the keyboard appearance.
      - author: Daniel Loewenherz
