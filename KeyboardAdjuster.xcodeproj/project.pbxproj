@@ -15,7 +15,8 @@
 		3736F9501C76518900666FB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3736F94F1C76518900666FB1 /* Assets.xcassets */; };
 		3736F9531C76518900666FB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3736F9511C76518900666FB1 /* LaunchScreen.storyboard */; };
 		3736F98F1C765B5100666FB1 /* TestApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3736F98E1C765B5100666FB1 /* TestApplicationUITests.swift */; };
-		374B883C1D18161A00A1A350 /* KeyboardAdjuster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3736F8FF1C763B9100666FB1 /* KeyboardAdjuster.framework */; };
+		37E9BCC61D43B245000DAA0F /* KeyboardAdjuster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3736F8FF1C763B9100666FB1 /* KeyboardAdjuster.framework */; };
+		37E9BCC71D43B245000DAA0F /* KeyboardAdjuster.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3736F8FF1C763B9100666FB1 /* KeyboardAdjuster.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,7 +27,7 @@
 			remoteGlobalIDString = 3736F9451C76518900666FB1;
 			remoteInfo = TestApplication;
 		};
-		374B883D1D18161D00A1A350 /* PBXContainerItemProxy */ = {
+		37E9BCC81D43B245000DAA0F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3736F8F61C763B9100666FB1 /* Project object */;
 			proxyType = 1;
@@ -34,6 +35,20 @@
 			remoteInfo = KeyboardAdjuster;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		37E9BCCA1D43B245000DAA0F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				37E9BCC71D43B245000DAA0F /* KeyboardAdjuster.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3736F8FF1C763B9100666FB1 /* KeyboardAdjuster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyboardAdjuster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				374B883C1D18161A00A1A350 /* KeyboardAdjuster.framework in Frameworks */,
+				37E9BCC61D43B245000DAA0F /* KeyboardAdjuster.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,11 +201,12 @@
 				3736F9421C76518900666FB1 /* Sources */,
 				3736F9431C76518900666FB1 /* Frameworks */,
 				3736F9441C76518900666FB1 /* Resources */,
+				37E9BCCA1D43B245000DAA0F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				374B883E1D18161D00A1A350 /* PBXTargetDependency */,
+				37E9BCC91D43B245000DAA0F /* PBXTargetDependency */,
 			);
 			name = TestApplication;
 			productName = TestApplication;
@@ -318,10 +334,10 @@
 			target = 3736F9451C76518900666FB1 /* TestApplication */;
 			targetProxy = 3736F9911C765B5100666FB1 /* PBXContainerItemProxy */;
 		};
-		374B883E1D18161D00A1A350 /* PBXTargetDependency */ = {
+		37E9BCC91D43B245000DAA0F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3736F8FE1C763B9100666FB1 /* KeyboardAdjuster */;
-			targetProxy = 374B883D1D18161D00A1A350 /* PBXContainerItemProxy */;
+			targetProxy = 37E9BCC81D43B245000DAA0F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -475,6 +491,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TestApplication/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -487,6 +504,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TestApplication/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
