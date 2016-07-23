@@ -45,17 +45,11 @@ pod "KeyboardAdjuster"
 
    ```swift
    class MyViewController: UIViewController, KeyboardAdjuster {
-       // ...
-
        func viewDidLoad() {
            super.viewDidLoad()
 
-           // Your other setup code here...
-
            keyboardAdjusterConstraint = view.bottomAnchor.constraintEqualToAnchor(scrollView.bottomAnchor)
        }
-
-       // ...
    }
    ```
 
@@ -65,8 +59,6 @@ pod "KeyboardAdjuster"
 
    ```swift
    class MyViewController: UIViewController, KeyboardAdjuster {
-       // ...
-
        override func viewWillAppear(animated: Bool) {
            super.viewWillAppear(animated)
            activateKeyboardAdjuster()
@@ -76,8 +68,6 @@ pod "KeyboardAdjuster"
            super.viewWillDisappear(animated)
            deactivateKeyboardAdjuster()
        }
-
-       // ...
    }
    ```
 
