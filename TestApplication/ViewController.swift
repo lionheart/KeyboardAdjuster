@@ -9,6 +9,10 @@
 import UIKit
 import KeyboardAdjuster
 
+extension UIViewController {
+    
+}
+
 class ViewController: UIViewController, KeyboardAdjuster, UITableViewDelegate, UITableViewDataSource {
     let CellIdentifier = "CellIdentifier"
 
@@ -54,7 +58,7 @@ class ViewController: UIViewController, KeyboardAdjuster, UITableViewDelegate, U
         deactivateKeyboardAdjuster()
     }
     
-    // MARK -
+    // MARK: - UITableViewDataSource
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
@@ -88,6 +92,14 @@ class ViewController: UIViewController, KeyboardAdjuster, UITableViewDelegate, U
             break
         }
         return cell
+    }
+
+    // MARK: - UITableViewDelegate
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+
+        textField.resignFirstResponder()
     }
 }
 
