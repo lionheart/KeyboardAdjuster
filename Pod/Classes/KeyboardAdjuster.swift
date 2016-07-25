@@ -1,11 +1,4 @@
 //
-//  KeyboardAdjuster.swift
-//  Pods
-//
-//  Created by Daniel Loewenherz on 2/10/16.
-//
-//  MARK: - Copyright -
-//
 //  Copyright 2016 Lionheart Software LLC
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");

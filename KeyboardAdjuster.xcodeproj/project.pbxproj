@@ -15,6 +15,8 @@
 		3736F9501C76518900666FB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3736F94F1C76518900666FB1 /* Assets.xcassets */; };
 		3736F9531C76518900666FB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3736F9511C76518900666FB1 /* LaunchScreen.storyboard */; };
 		3736F98F1C765B5100666FB1 /* TestApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3736F98E1C765B5100666FB1 /* TestApplicationUITests.swift */; };
+		37585EC81D466B1800B8D8AE /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 37585EC61D466B1800B8D8AE /* LICENSE */; };
+		37585EC91D466B1800B8D8AE /* NOTICE in Resources */ = {isa = PBXBuildFile; fileRef = 37585EC71D466B1800B8D8AE /* NOTICE */; };
 		37E9BCC61D43B245000DAA0F /* KeyboardAdjuster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3736F8FF1C763B9100666FB1 /* KeyboardAdjuster.framework */; };
 		37E9BCC71D43B245000DAA0F /* KeyboardAdjuster.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3736F8FF1C763B9100666FB1 /* KeyboardAdjuster.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -52,7 +54,7 @@
 
 /* Begin PBXFileReference section */
 		3736F8FF1C763B9100666FB1 /* KeyboardAdjuster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyboardAdjuster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3736F9021C763B9100666FB1 /* KeyboardAdjuster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardAdjuster.h; sourceTree = "<group>"; };
+		3736F9021C763B9100666FB1 /* KeyboardAdjuster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KeyboardAdjuster.h; path = ../KeyboardAdjuster/KeyboardAdjuster.h; sourceTree = "<group>"; };
 		3736F9041C763B9100666FB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3736F91C1C763BE200666FB1 /* KeyboardAdjuster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = KeyboardAdjuster.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3736F9461C76518900666FB1 /* TestApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +67,8 @@
 		3736F98C1C765B5100666FB1 /* TestApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestApplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3736F98E1C765B5100666FB1 /* TestApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApplicationUITests.swift; sourceTree = "<group>"; };
 		3736F9901C765B5100666FB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37585EC61D466B1800B8D8AE /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		37585EC71D466B1800B8D8AE /* NOTICE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NOTICE; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,19 +120,21 @@
 		3736F9011C763B9100666FB1 /* KeyboardAdjuster */ = {
 			isa = PBXGroup;
 			children = (
-				3736F91A1C763BE200666FB1 /* Pod */,
-				3736F9021C763B9100666FB1 /* KeyboardAdjuster.h */,
+				37585EC61D466B1800B8D8AE /* LICENSE */,
+				37585EC71D466B1800B8D8AE /* NOTICE */,
+				3736F91A1C763BE200666FB1 /* Source */,
 				3736F9041C763B9100666FB1 /* Info.plist */,
 			);
 			path = KeyboardAdjuster;
 			sourceTree = "<group>";
 		};
-		3736F91A1C763BE200666FB1 /* Pod */ = {
+		3736F91A1C763BE200666FB1 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				3736F9021C763B9100666FB1 /* KeyboardAdjuster.h */,
 				3736F91B1C763BE200666FB1 /* Classes */,
 			);
-			name = Pod;
+			name = Source;
 			path = ../Pod;
 			sourceTree = "<group>";
 		};
@@ -278,6 +284,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37585EC91D466B1800B8D8AE /* NOTICE in Resources */,
+				37585EC81D466B1800B8D8AE /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
