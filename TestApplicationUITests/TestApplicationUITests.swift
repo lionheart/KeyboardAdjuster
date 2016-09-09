@@ -25,15 +25,15 @@ class TestApplicationUITests: XCTestCase {
     func testKeyboardAdjusterTableView() {
         let app = XCUIApplication()
         let tables = app.tables
-        let table = tables.elementBoundByIndex(0)
+        let table = tables.element(boundBy: 0)
         table.textFields["Library Name"].tap()
-        table.childrenMatchingType(.Cell).elementBoundByIndex(0).childrenMatchingType(.TextField).element.typeText("KeyboardAdjuster")
+        table.children(matching: .cell).element(boundBy: 0).children(matching: .textField).element.typeText("KeyboardAdjuster")
 
         let lastCell = table.staticTexts["Row 9"]
         app.swipeUp()
         app.swipeUp()
 
         table.swipeUp()
-        XCTAssert(lastCell.hittable)
+        XCTAssert(lastCell.isHittable)
     }
 }

@@ -23,14 +23,14 @@ public protocol KeyboardAdjuster: class {
 
 private extension UIViewController {
     enum KeyboardState {
-        case Hidden
-        case Visible
+        case hidden
+        case visible
     }
 
-    private func keyboardChangedAppearance(sender: NSNotification, toState: KeyboardState) {
+    func keyboardChangedAppearance(_ sender: Notification, toState: KeyboardState) {
         guard let conformingSelf = self as? KeyboardAdjuster,
             let constraint = conformingSelf.keyboardAdjusterConstraint,
-            let userInfo = sender.userInfo as? [String: AnyObject],
+            let userInfo = (sender as NSNotification).userInfo as? [String: AnyObject],
             let _curve = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? Int,
             let curve = UIViewAnimationCurve(rawValue: _curve),
             let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? Double else {
@@ -43,38 +43,38 @@ private extension UIViewController {
 
         var curveAnimationOption: UIViewAnimationOptions
         switch curve {
-        case .EaseIn:
-            curveAnimationOption = .CurveEaseIn
+        case .easeIn:
+            curveAnimationOption = .curveEaseIn
 
-        case .EaseInOut:
-            curveAnimationOption = .CurveEaseInOut
+        case .easeInOut:
+            curveAnimationOption = UIViewAnimationOptions()
 
-        case .EaseOut:
-            curveAnimationOption = .CurveEaseOut
+        case .easeOut:
+            curveAnimationOption = .curveEaseOut
 
-        case .Linear:
-            curveAnimationOption = .CurveLinear
+        case .linear:
+            curveAnimationOption = .curveLinear
         }
 
         switch toState {
-        case .Hidden:
+        case .hidden:
             constraint.constant = 0
 
-        case .Visible:
+        case .visible:
             guard let value = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue else {
                 debugPrint("UIKeyboardFrameEndUserInfoKey not available.")
                 break
             }
 
-            let frame = value.CGRectValue()
-            let keyboardFrameInViewCoordinates = view.convertRect(frame, fromView: nil)
-            constraint.constant = CGRectGetHeight(view.bounds) - keyboardFrameInViewCoordinates.origin.y
+            let frame = value.cgRectValue
+            let keyboardFrameInViewCoordinates = view.convert(frame, from: nil)
+            constraint.constant = view.bounds.height - keyboardFrameInViewCoordinates.origin.y
         }
 
         let animated = conformingSelf.keyboardAdjusterAnimated ?? false
         if animated {
-            let animationOptions: UIViewAnimationOptions = [UIViewAnimationOptions.BeginFromCurrentState, curveAnimationOption]
-            UIView.animateWithDuration(duration, delay: 0, options: animationOptions, animations: self.view.layoutIfNeeded, completion:nil)
+            let animationOptions: UIViewAnimationOptions = [UIViewAnimationOptions.beginFromCurrentState, curveAnimationOption]
+            UIView.animate(withDuration: duration, delay: 0, options: animationOptions, animations: self.view.layoutIfNeeded, completion:nil)
         } else {
             view.layoutIfNeeded()
         }
@@ -88,8 +88,8 @@ private extension UIViewController {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 18, 2016
      */
-    @objc func keyboardWillHide(sender: NSNotification) {
-        keyboardChangedAppearance(sender, toState: .Hidden)
+    @objc func keyboardWillHide(_ sender: Notification) {
+        keyboardChangedAppearance(sender, toState: .hidden)
     }
 
     /**
@@ -100,8 +100,8 @@ private extension UIViewController {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 18, 2016
      */
-    @objc func keyboardDidShow(sender: NSNotification) {
-        keyboardChangedAppearance(sender, toState: .Visible)
+    @objc func keyboardDidShow(_ sender: Notification) {
+        keyboardChangedAppearance(sender, toState: .visible)
     }
 }
 
@@ -127,13 +127,13 @@ extension KeyboardAdjuster where Self: UIViewController {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 18, 2016
      */
-    public func activateKeyboardAdjuster(showBlock: AnyObject?, hideBlock: AnyObject?) {
+    public func activateKeyboardAdjuster(_ showBlock: AnyObject?, hideBlock: AnyObject?) {
         // Activate the bottom constraint.
-        keyboardAdjusterConstraint?.active = true
+        keyboardAdjusterConstraint?.isActive = true
 
-        let notificationCenter = NSNotificationCenter.defaultCenter()
-        notificationCenter.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: hideBlock)
-        notificationCenter.addObserver(self, selector: #selector(keyboardDidShow(_:)), name: UIKeyboardDidShowNotification, object: showBlock)
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: hideBlock)
+        notificationCenter.addObserver(self, selector: #selector(keyboardDidShow(_:)), name: NSNotification.Name.UIKeyboardDidShow, object: showBlock)
 
         guard let viewA = keyboardAdjusterConstraint?.firstItem as? UIView,
             let viewB = keyboardAdjusterConstraint?.secondItem as? UIView else {
@@ -153,8 +153,8 @@ extension KeyboardAdjuster where Self: UIViewController {
      - date: February 18, 2016
      */
     public func deactivateKeyboardAdjuster() {
-        let notificationCenter = NSNotificationCenter.defaultCenter()
-        notificationCenter.removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
-        notificationCenter.removeObserver(self, name: UIKeyboardDidShowNotification, object: nil)
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        notificationCenter.removeObserver(self, name: NSNotification.Name.UIKeyboardDidShow, object: nil)
     }
 }
