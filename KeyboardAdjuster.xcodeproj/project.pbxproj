@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,8 +15,10 @@
 		3736F9501C76518900666FB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3736F94F1C76518900666FB1 /* Assets.xcassets */; };
 		3736F9531C76518900666FB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3736F9511C76518900666FB1 /* LaunchScreen.storyboard */; };
 		3736F98F1C765B5100666FB1 /* TestApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3736F98E1C765B5100666FB1 /* TestApplicationUITests.swift */; };
-		3736F99D1C765CB000666FB1 /* KeyboardAdjuster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3736F8FF1C763B9100666FB1 /* KeyboardAdjuster.framework */; };
-		3736F99E1C765CB000666FB1 /* KeyboardAdjuster.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3736F8FF1C763B9100666FB1 /* KeyboardAdjuster.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		37585EC81D466B1800B8D8AE /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 37585EC61D466B1800B8D8AE /* LICENSE */; };
+		37585EC91D466B1800B8D8AE /* NOTICE in Resources */ = {isa = PBXBuildFile; fileRef = 37585EC71D466B1800B8D8AE /* NOTICE */; };
+		37E9BCC61D43B245000DAA0F /* KeyboardAdjuster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3736F8FF1C763B9100666FB1 /* KeyboardAdjuster.framework */; };
+		37E9BCC71D43B245000DAA0F /* KeyboardAdjuster.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3736F8FF1C763B9100666FB1 /* KeyboardAdjuster.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,7 +29,7 @@
 			remoteGlobalIDString = 3736F9451C76518900666FB1;
 			remoteInfo = TestApplication;
 		};
-		3736F99F1C765CB000666FB1 /* PBXContainerItemProxy */ = {
+		37E9BCC81D43B245000DAA0F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3736F8F61C763B9100666FB1 /* Project object */;
 			proxyType = 1;
@@ -37,13 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3736F9A11C765CB000666FB1 /* Embed Frameworks */ = {
+		37E9BCCA1D43B245000DAA0F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3736F99E1C765CB000666FB1 /* KeyboardAdjuster.framework in Embed Frameworks */,
+				37E9BCC71D43B245000DAA0F /* KeyboardAdjuster.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,12 +54,12 @@
 
 /* Begin PBXFileReference section */
 		3736F8FF1C763B9100666FB1 /* KeyboardAdjuster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyboardAdjuster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3736F9021C763B9100666FB1 /* KeyboardAdjuster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardAdjuster.h; sourceTree = "<group>"; };
+		3736F9021C763B9100666FB1 /* KeyboardAdjuster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KeyboardAdjuster.h; path = ../KeyboardAdjuster/KeyboardAdjuster.h; sourceTree = "<group>"; };
 		3736F9041C763B9100666FB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3736F91C1C763BE200666FB1 /* KeyboardAdjuster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAdjuster.swift; sourceTree = "<group>"; };
+		3736F91C1C763BE200666FB1 /* KeyboardAdjuster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = KeyboardAdjuster.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3736F9461C76518900666FB1 /* TestApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3736F9481C76518900666FB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3736F94A1C76518900666FB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3736F94A1C76518900666FB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3736F94D1C76518900666FB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3736F94F1C76518900666FB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3736F9521C76518900666FB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,6 +67,8 @@
 		3736F98C1C765B5100666FB1 /* TestApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestApplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3736F98E1C765B5100666FB1 /* TestApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApplicationUITests.swift; sourceTree = "<group>"; };
 		3736F9901C765B5100666FB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37585EC61D466B1800B8D8AE /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		37585EC71D466B1800B8D8AE /* NOTICE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NOTICE; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3736F99D1C765CB000666FB1 /* KeyboardAdjuster.framework in Frameworks */,
+				37E9BCC61D43B245000DAA0F /* KeyboardAdjuster.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,19 +120,21 @@
 		3736F9011C763B9100666FB1 /* KeyboardAdjuster */ = {
 			isa = PBXGroup;
 			children = (
-				3736F91A1C763BE200666FB1 /* Pod */,
-				3736F9021C763B9100666FB1 /* KeyboardAdjuster.h */,
+				37585EC61D466B1800B8D8AE /* LICENSE */,
+				37585EC71D466B1800B8D8AE /* NOTICE */,
+				3736F91A1C763BE200666FB1 /* Source */,
 				3736F9041C763B9100666FB1 /* Info.plist */,
 			);
 			path = KeyboardAdjuster;
 			sourceTree = "<group>";
 		};
-		3736F91A1C763BE200666FB1 /* Pod */ = {
+		3736F91A1C763BE200666FB1 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				3736F9021C763B9100666FB1 /* KeyboardAdjuster.h */,
 				3736F91B1C763BE200666FB1 /* Classes */,
 			);
-			name = Pod;
+			name = Source;
 			path = ../Pod;
 			sourceTree = "<group>";
 		};
@@ -201,12 +207,12 @@
 				3736F9421C76518900666FB1 /* Sources */,
 				3736F9431C76518900666FB1 /* Frameworks */,
 				3736F9441C76518900666FB1 /* Resources */,
-				3736F9A11C765CB000666FB1 /* Embed Frameworks */,
+				37E9BCCA1D43B245000DAA0F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3736F9A01C765CB000666FB1 /* PBXTargetDependency */,
+				37E9BCC91D43B245000DAA0F /* PBXTargetDependency */,
 			);
 			name = TestApplication;
 			productName = TestApplication;
@@ -238,23 +244,26 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Lionheart Software LLC";
 				TargetAttributes = {
 					3736F8FE1C763B9100666FB1 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0800;
 					};
 					3736F9451C76518900666FB1 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0800;
 					};
 					3736F98B1C765B5100666FB1 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 3736F9451C76518900666FB1;
 					};
 				};
 			};
 			buildConfigurationList = 3736F8F91C763B9100666FB1 /* Build configuration list for PBXProject "KeyboardAdjuster" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -278,6 +287,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37585EC91D466B1800B8D8AE /* NOTICE in Resources */,
+				37585EC81D466B1800B8D8AE /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,10 +345,10 @@
 			target = 3736F9451C76518900666FB1 /* TestApplication */;
 			targetProxy = 3736F9911C765B5100666FB1 /* PBXContainerItemProxy */;
 		};
-		3736F9A01C765CB000666FB1 /* PBXTargetDependency */ = {
+		37E9BCC91D43B245000DAA0F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3736F8FE1C763B9100666FB1 /* KeyboardAdjuster */;
-			targetProxy = 3736F99F1C765CB000666FB1 /* PBXContainerItemProxy */;
+			targetProxy = 37E9BCC81D43B245000DAA0F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -374,8 +385,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -400,7 +413,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -422,8 +435,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -444,6 +459,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -454,6 +470,7 @@
 		3736F9141C763B9100666FB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -465,6 +482,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lionheartsw.KeyboardAdjuster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -472,6 +490,7 @@
 		3736F9151C763B9100666FB1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -483,6 +502,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lionheartsw.KeyboardAdjuster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -490,26 +510,28 @@
 		3736F9611C76518900666FB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TestApplication/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lionheartsw.TestApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		3736F9621C76518900666FB1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TestApplication/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lionheartsw.TestApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -520,6 +542,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lionheartsw.TestApplicationUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = TestApplication;
 				USES_XCTRUNNER = YES;
 			};
@@ -532,6 +555,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lionheartsw.TestApplicationUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = TestApplication;
 				USES_XCTRUNNER = YES;
 			};
@@ -574,6 +598,7 @@
 				3736F9951C765B5100666FB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

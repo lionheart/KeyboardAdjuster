@@ -9,11 +9,15 @@
 import UIKit
 import KeyboardAdjuster
 
-class ViewController: UIViewController, KeyboardAdjusting, UITableViewDelegate, UITableViewDataSource {
+extension UIViewController {
+    
+}
+
+class ViewController: UIViewController, KeyboardAdjuster, UITableViewDelegate, UITableViewDataSource {
     let CellIdentifier = "CellIdentifier"
 
-    var keyboardAdjustmentConstraint: NSLayoutConstraint?
-    var keyboardAdjustmentAnimated: Bool? = false
+    var keyboardAdjusterConstraint: NSLayoutConstraint?
+    var keyboardAdjusterAnimated: Bool? = false
     var tableView: UITableView!
     var textField: UITextField!
 
@@ -24,43 +28,43 @@ class ViewController: UIViewController, KeyboardAdjusting, UITableViewDelegate, 
         textField.placeholder = "Library Name"
         textField.translatesAutoresizingMaskIntoConstraints = false
 
-        tableView = UITableView(frame: CGRectZero, style: .Grouped)
+        tableView = UITableView(frame: CGRect.zero, style: .grouped)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
         tableView.estimatedRowHeight = 44
         tableView.rowHeight = UITableViewAutomaticDimension;
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: CellIdentifier)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: CellIdentifier)
 
         view.addSubview(tableView)
 
-        tableView.topAnchor.constraintEqualToAnchor(view.topAnchor).active = true
-        tableView.leftAnchor.constraintEqualToAnchor(view.leftAnchor).active = true
-        tableView.rightAnchor.constraintEqualToAnchor(view.rightAnchor).active = true
+        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         
-        keyboardAdjustmentConstraint = view.bottomAnchor.constraintEqualToAnchor(tableView.bottomAnchor)
-        keyboardAdjustmentConstraint?.active = true
+        keyboardAdjusterConstraint = view.bottomAnchor.constraint(equalTo: tableView.bottomAnchor)
+        keyboardAdjusterConstraint?.isActive = true
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        activateKeyboardAdjustment()
+        activateKeyboardAdjuster()
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        deactivateKeyboardAdjustment()
+        deactivateKeyboardAdjuster()
     }
     
-    // MARK -
+    // MARK: - UITableViewDataSource
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
             return 1
@@ -70,24 +74,32 @@ class ViewController: UIViewController, KeyboardAdjusting, UITableViewDelegate, 
         }
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier)! as UITableViewCell
-        switch indexPath.section {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier)! as UITableViewCell
+        switch (indexPath as NSIndexPath).section {
         case 0:
             cell.addSubview(textField)
-            textField.heightAnchor.constraintEqualToConstant(30).active = true
-            textField.topAnchor.constraintEqualToAnchor(cell.topAnchor, constant: 15).active = true
-            textField.leftAnchor.constraintEqualToAnchor(cell.leftAnchor, constant: 15).active = true
-            textField.rightAnchor.constraintEqualToAnchor(cell.rightAnchor, constant: 15).active = true
-            textField.bottomAnchor.constraintEqualToAnchor(cell.bottomAnchor, constant: -15).active = true
+            textField.heightAnchor.constraint(equalToConstant: 30).isActive = true
+            textField.topAnchor.constraint(equalTo: cell.topAnchor, constant: 15).isActive = true
+            textField.leftAnchor.constraint(equalTo: cell.leftAnchor, constant: 15).isActive = true
+            textField.rightAnchor.constraint(equalTo: cell.rightAnchor, constant: 15).isActive = true
+            textField.bottomAnchor.constraint(equalTo: cell.bottomAnchor, constant: -15).isActive = true
             
         case 1:
-            cell.textLabel?.text = "Row \(indexPath.row)"
+            cell.textLabel?.text = "Row \((indexPath as NSIndexPath).row)"
             
         default:
             break
         }
         return cell
+    }
+
+    // MARK: - UITableViewDelegate
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        textField.resignFirstResponder()
     }
 }
 
