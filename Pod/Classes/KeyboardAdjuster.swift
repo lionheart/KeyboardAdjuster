@@ -27,7 +27,7 @@ private extension UIViewController {
         case visible
     }
 
-    func keyboardChangedAppearance(_ sender: Notification, toState: KeyboardState) {
+    private func keyboardWillChangeAppearance(_ sender: Notification, toState: KeyboardState) {
         guard let conformingSelf = self as? KeyboardAdjuster,
             let constraint = conformingSelf.keyboardAdjusterConstraint,
             let userInfo = (sender as NSNotification).userInfo as? [String: AnyObject],
@@ -89,19 +89,19 @@ private extension UIViewController {
      - date: February 18, 2016
      */
     @objc func keyboardWillHide(_ sender: Notification) {
-        keyboardChangedAppearance(sender, toState: .hidden)
+        keyboardWillChangeAppearance(sender, toState: .hidden)
     }
 
     /**
-     A callback that manages the bottom constraint after the keyboard is shown.
+     A callback that manages the bottom constraint before the keyboard is shown.
 
      - parameter sender: An `NSNotification` containing a `Dictionary` with information regarding the keyboard appearance.
      - author: Daniel Loewenherz
      - copyright: ©2016 Lionheart Software LLC
      - date: February 18, 2016
      */
-    @objc func keyboardDidShow(_ sender: Notification) {
-        keyboardChangedAppearance(sender, toState: .visible)
+    @objc func keyboardWillShow(_ sender: Notification) {
+        keyboardWillChangeAppearance(sender, toState: .visible)
     }
 }
 
@@ -133,7 +133,7 @@ extension KeyboardAdjuster where Self: UIViewController {
 
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: hideBlock)
-        notificationCenter.addObserver(self, selector: #selector(keyboardDidShow(_:)), name: NSNotification.Name.UIKeyboardDidShow, object: showBlock)
+        notificationCenter.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: showBlock)
 
         guard let viewA = keyboardAdjusterConstraint?.firstItem as? UIView,
             let viewB = keyboardAdjusterConstraint?.secondItem as? UIView else {
