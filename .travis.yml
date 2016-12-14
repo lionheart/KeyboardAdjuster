@@ -5,4 +5,4 @@ script:
 language: objective-c
 xcode_project: KeyboardAdjuster.xcodeproj
 xcode_scheme: TestApplication
-osx_image: xcode8.1
+osx_image: xcode8.2
