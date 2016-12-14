@@ -37,10 +37,6 @@ private extension UIViewController {
                 return
         }
 
-        if let block = sender.object as? (() -> Void) {
-            block()
-        }
-
         var curveAnimationOption: UIViewAnimationOptions
         switch curve {
         case .easeIn:
@@ -127,13 +123,26 @@ extension KeyboardAdjuster where Self: UIViewController {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 18, 2016
      */
-    public func activateKeyboardAdjuster(_ showBlock: AnyObject?, hideBlock: AnyObject?) {
+    public func activateKeyboardAdjuster(_ showBlock: (()->())?, hideBlock: (()->())?) {
         // Activate the bottom constraint.
         keyboardAdjusterConstraint?.isActive = true
 
         let notificationCenter = NotificationCenter.default
-        notificationCenter.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: hideBlock)
-        notificationCenter.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: showBlock)
+        notificationCenter.addObserver(forName: NSNotification.Name.UIKeyboardWillHide, object: nil, queue: OperationQueue.main, using: {
+            [weak self] notification in
+            
+            self?.keyboardWillHide(notification)
+            
+            hideBlock?()
+        })
+        
+        notificationCenter.addObserver(forName: NSNotification.Name.UIKeyboardWillShow, object: nil, queue: OperationQueue.main, using: {
+            [weak self] notification in
+            
+            self?.keyboardWillShow(notification)
+            
+            showBlock?()
+        })
 
         guard let viewA = keyboardAdjusterConstraint?.firstItem as? UIView,
             let viewB = keyboardAdjusterConstraint?.secondItem as? UIView else {
