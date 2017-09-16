@@ -9,7 +9,7 @@
 import UIKit
 import KeyboardAdjuster
 
-class ViewController: UIViewController, KeyboardAdjuster, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, KeyboardAdjuster {
     let CellIdentifier = "CellIdentifier"
 
     var keyboardAdjustmentHelper = KeyboardAdjustmentHelper()
@@ -24,6 +24,8 @@ class ViewController: UIViewController, KeyboardAdjuster, UITableViewDelegate, U
         
         textField = UITextField()
         textField.placeholder = "Library Name"
+        textField.delegate = self
+        textField.returnKeyType = .done
         textField.translatesAutoresizingMaskIntoConstraints = false
 
         tableView = UITableView(frame: CGRect.zero, style: .grouped)
@@ -52,12 +54,21 @@ class ViewController: UIViewController, KeyboardAdjuster, UITableViewDelegate, U
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
+
         deactivateKeyboardAdjuster()
     }
-    
-    // MARK: - UITableViewDataSource
-    
+}
+
+// MARK: - UITextFieldDelegate
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+// MARK: - UITableViewDataSource
+extension ViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -91,15 +102,22 @@ class ViewController: UIViewController, KeyboardAdjuster, UITableViewDelegate, U
         }
         return cell
     }
+}
 
-    // MARK: - UITableViewDelegate
-
+// MARK: - UITableViewDelegate
+extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
+        guard indexPath.section > 0 else {
+            return
+        }
+
         textField.resignFirstResponder()
 
-        navigationController?.pushViewController(DetailViewController(), animated: true)
+        let controller = DetailViewController()
+        controller.title = "Row \(indexPath.row)"
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 

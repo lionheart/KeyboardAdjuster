@@ -89,7 +89,8 @@ private extension UIViewController {
     /**
      A callback that manages the bottom constraint when the keyboard is about to be hidden.
 
-     - parameter sender: An `NSNotification` containing a `Dictionary` with information regarding the keyboard appearance.
+     - Parameters:
+         * sender: An `NSNotification` containing a `Dictionary` with information regarding the keyboard appearance.
      - Date: February 18, 2016
      */
     @objc func keyboardWillHide(_ sender: Notification) {
@@ -99,7 +100,8 @@ private extension UIViewController {
     /**
      A callback that manages the bottom constraint before the keyboard is shown.
 
-     - parameter sender: An `NSNotification` containing a `Dictionary` with information regarding the keyboard appearance.
+     - Parameters:
+         * sender: An `NSNotification` containing a `Dictionary` with information regarding the keyboard appearance.
      - Date: February 18, 2016
      */
     @objc func keyboardWillShow(_ sender: Notification) {
@@ -121,8 +123,9 @@ extension KeyboardAdjuster where Self: UIViewController {
     /**
      Enable keyboard adjustment for the current view controller, providing optional closures to call when the keyboard appears and when it disappears.
      
-     - parameter showBlock: (optional) a closure that's called when the keyboard appears
-     - parameter hideBlock: (optional) a closure that's called when the keyboard disappears
+     - Parameters:
+         * showBlock: (optional) a block to call when the keyboard appears
+         * hideBlock: (optional) a block to call when the keyboard disappears
      - Date: February 18, 2016
      */
     public func activateKeyboardAdjuster(_ showBlock: (() -> Void)?, hideBlock: (() -> Void)?) {
