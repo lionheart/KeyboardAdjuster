@@ -9,20 +9,18 @@
 import UIKit
 import KeyboardAdjuster
 
-extension UIViewController {
-    
-}
-
 class ViewController: UIViewController, KeyboardAdjuster, UITableViewDelegate, UITableViewDataSource {
     let CellIdentifier = "CellIdentifier"
 
-    var keyboardAdjusterConstraint: NSLayoutConstraint?
-    var keyboardAdjusterAnimated: Bool? = false
+    var keyboardAdjustmentHelper = KeyboardAdjustmentHelper()
+
     var tableView: UITableView!
     var textField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        title = "KeyboardAdjuster"
         
         textField = UITextField()
         textField.placeholder = "Library Name"
@@ -41,9 +39,9 @@ class ViewController: UIViewController, KeyboardAdjuster, UITableViewDelegate, U
         tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        
-        keyboardAdjusterConstraint = view.bottomAnchor.constraint(equalTo: tableView.bottomAnchor)
-        keyboardAdjusterConstraint?.isActive = true
+
+        keyboardAdjustmentHelper.constraint = view.bottomAnchor.constraint(equalTo: tableView.bottomAnchor)
+        keyboardAdjustmentHelper.constraint?.isActive = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -100,6 +98,8 @@ class ViewController: UIViewController, KeyboardAdjuster, UITableViewDelegate, U
         tableView.deselectRow(at: indexPath, animated: true)
 
         textField.resignFirstResponder()
+
+        navigationController?.pushViewController(DetailViewController(), animated: true)
     }
 }
 

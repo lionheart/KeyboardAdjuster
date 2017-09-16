@@ -30,25 +30,22 @@ pod "KeyboardAdjuster"
    import KeyboardAdjuster
    ```
 
-2. Make sure your `UIViewController` conforms to `KeyboardAdjuster`, and define two properties. Set `keyboardAdjusterAnimated` to `true` or `false`, depending on whether you want the constraint adjustment to be animated.
+2. Make your `UIViewController` conform to `KeyboardAdjuster` and define a property called `keyboardAdjustmentHelper`.
 
    ```swift
    class MyViewController: UIViewController, KeyboardAdjuster {
-       var keyboardAdjusterConstraint: NSLayoutConstraint?
-       var keyboardAdjusterAnimated: Bool? = false
-
-       // ...
+       var keyboardAdjustmentHelper = KeyboardAdjustmentHelper()
    }
    ```
 
-2. Figure out which view you'd like to pin to the top of the keyboard. A `UIScrollView`, `UITableView`, or `UITextView` are likely candidates. Then, wherever you're setting up your view constraints, set `keyboardAdjusterConstraint` to the constraint pinning the bottom of this view to the bottom of the screen:
+2. Figure out which view you'd like to pin to the top of the keyboard. A `UIScrollView`, `UITableView`, or `UITextView` are likely candidates. Then, wherever you're setting up your view constraints, set `keyboardAdjustmentHelper.constraint` to the constraint pinning the bottom of this view to the bottom of the screen:
 
    ```swift
    class MyViewController: UIViewController, KeyboardAdjuster {
        func viewDidLoad() {
            super.viewDidLoad()
 
-           keyboardAdjusterConstraint = view.bottomAnchor.constraintEqualToAnchor(scrollView.bottomAnchor)
+           keyboardAdjustmentHelper.constraint = view.bottomAnchor.constraintEqualToAnchor(scrollView.bottomAnchor)
        }
    }
    ```
@@ -61,11 +58,13 @@ pod "KeyboardAdjuster"
    class MyViewController: UIViewController, KeyboardAdjuster {
        override func viewWillAppear(animated: Bool) {
            super.viewWillAppear(animated)
+
            activateKeyboardAdjuster()
        }
 
        override func viewWillDisappear(animated: Bool) {
            super.viewWillDisappear(animated)
+
            deactivateKeyboardAdjuster()
        }
    }
