@@ -1,16 +1,10 @@
 #!/bin/bash
 
-jazzy \
-  --author Lionheart \
-  --author_url http://lionheartsw.com \
-  --github_url https://github.com/lionheart/KeyboardAdjuster \
-  --github-file-prefix https://github.com/lionheart/KeyboardAdjuster/tree/0.1.0 \
-  --module-version 0.1.0 \
-  --module KeyboardAdjuster
+jazzy
 
-git co gh-pages
-cp -r docs/* .
-rm -rf docs/
-git add .
+git add docs/
+git add .jazzy.yaml
 git commit -m "documentation update"
-git co master
+
+sync_directory_to_s3 "us-east-2" "lionheart-opensource" "E33XE7TKGUV1ZD" "docs" "KeyboardAdjuster/"
+

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>KeyboardAdjuster  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="KeyboardAdjuster  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          KeyboardAdjuster Docs
+        </a>
+         (30% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/lionheart/KeyboardAdjuster">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">KeyboardAdjuster Reference</a>
+      <img class="carat" src="img/carat.png" />
+      KeyboardAdjuster  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/KeyboardAdjuster.html">KeyboardAdjuster</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/KeyboardAdjustmentHelper.html">KeyboardAdjustmentHelper</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            
+            <h1 id='keyboardadjuster' class='heading'>KeyboardAdjuster</h1>
+
+<p><a href="https://travis-ci.org/lionheart/KeyboardAdjuster"><img src="http://img.shields.io/travis/lionheart/KeyboardAdjuster.svg?style=flat" alt="CI Status"></a>
+<a href="http://cocoapods.org/pods/KeyboardAdjuster"><img src="https://img.shields.io/cocoapods/v/KeyboardAdjuster.svg?style=flat" alt="Version"></a>
+<a href="http://cocoapods.org/pods/KeyboardAdjuster"><img src="https://img.shields.io/cocoapods/p/KeyboardAdjuster.svg?style=flat" alt="Platform"></a>
+<img src="http://img.shields.io/badge/swift-3-blue.svg?style=flat" alt="Swift"></p>
+
+<p>KeyboardAdjuster will adjust the bottom position of any given <code>UIView</code> when a keyboard appears on screen. All you have to do is provide an NSLayoutConstraint that pins the bottom of your view to the bottom of the screen. KeyboardAdjuster will automatically adjust that constraint and pin it to the top of the keyboard when it appears.</p>
+
+<p>If you&rsquo;re currently choosing between KeyboardAdjuster and another alternative, please read about our <a href="https://gist.github.com/dlo/86208878ff976261fa16">philosophy</a></p>
+
+<p>Note: KeyboardAdjuster requires layout anchors in your build target, so it will only work with iOS 9 or above. If you&rsquo;d like to add support for earlier iOS versions, please submit a pull request.</p>
+
+<p>KeyboardAdjuster is a Swift port of <a href="https://github.com/lionheart/LHSKeyboardAdjuster">LHSKeyboardAdjuster</a>, which targets projects written in Objective-C.</p>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>KeyboardAdjuster is available through <a href="http://cocoapods.org">CocoaPods</a>. To install
+it, simply add the following line to your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s2">"KeyboardAdjuster"</span>
+</code></pre>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<ol>
+<li>In your view controller file, import <code>KeyboardAdjuster</code>.</li>
+</ol>
+<pre class="highlight swift"><code>   <span class="kd">import</span> <span class="kt">KeyboardAdjuster</span>
+</code></pre>
+
+<ol>
+<li>Make your <code>UIViewController</code> conform to <code>KeyboardAdjuster</code> and define a property called <code>keyboardAdjustmentHelper</code>.</li>
+</ol>
+<pre class="highlight swift"><code>   <span class="kd">class</span> <span class="kt">MyViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">KeyboardAdjuster</span> <span class="p">{</span>
+       <span class="k">var</span> <span class="nv">keyboardAdjustmentHelper</span> <span class="o">=</span> <span class="kt">KeyboardAdjustmentHelper</span><span class="p">()</span>
+   <span class="p">}</span>
+</code></pre>
+
+<ol>
+<li>Figure out which view you&rsquo;d like to pin to the top of the keyboard. A <code>UIScrollView</code>, <code>UITableView</code>, or <code>UITextView</code> are likely candidates. Then, wherever you&rsquo;re setting up your view constraints, set <code>keyboardAdjustmentHelper.constraint</code> to the constraint pinning the bottom of this view to the bottom of the screen:</li>
+</ol>
+<pre class="highlight swift"><code>   <span class="kd">class</span> <span class="kt">MyViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">KeyboardAdjuster</span> <span class="p">{</span>
+       <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+           <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+
+           <span class="n">keyboardAdjustmentHelper</span><span class="o">.</span><span class="n">constraint</span> <span class="o">=</span> <span class="n">view</span><span class="o">.</span><span class="n">bottomAnchor</span><span class="o">.</span><span class="nf">constraintEqualToAnchor</span><span class="p">(</span><span class="n">scrollView</span><span class="o">.</span><span class="n">bottomAnchor</span><span class="p">)</span>
+       <span class="p">}</span>
+   <span class="p">}</span>
+</code></pre>
+
+<p>KeyboardAdjuster will automatically activate <code>keyboardAdjusterConstraint</code> for you.</p>
+
+<ol>
+<li>All you need to do now is activate and deactivate the automatic adjustments in your <code>viewWillAppear(animated:)</code> and <code>viewWillDisappear(animated:)</code> methods.</li>
+</ol>
+<pre class="highlight swift"><code>   <span class="kd">class</span> <span class="kt">MyViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">KeyboardAdjuster</span> <span class="p">{</span>
+       <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillAppear</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
+           <span class="k">super</span><span class="o">.</span><span class="nf">viewWillAppear</span><span class="p">(</span><span class="n">animated</span><span class="p">)</span>
+
+           <span class="nf">activateKeyboardAdjuster</span><span class="p">()</span>
+       <span class="p">}</span>
+
+       <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillDisappear</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
+           <span class="k">super</span><span class="o">.</span><span class="nf">viewWillDisappear</span><span class="p">(</span><span class="n">animated</span><span class="p">)</span>
+
+           <span class="nf">deactivateKeyboardAdjuster</span><span class="p">()</span>
+       <span class="p">}</span>
+   <span class="p">}</span>
+</code></pre>
+
+<ol>
+<li>And you&rsquo;re done! Whenever a keyboard appears, your views will be automatically resized.</li>
+</ol>
+<h2 id='how-it-works' class='heading'>How It Works</h2>
+
+<p>KeyboardAdjuster registers NSNotificationCenter callbacks for keyboard appearance and disappearance. When a keyboard appears, it pulls out the keyboard size from the notification, along with the duration of the keyboard animation, and applies that to the view constraint adjustment.</p>
+<h2 id='author' class='heading'>Author</h2>
+
+<p><a href="https://github.com/dlo">Dan Loewenherz</a></p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>KeyboardAdjuster is available under the Apache 2.0 LICENSE. See the <a href="LICENSE">LICENSE</a> file for more info.</p>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2017 Lionheart Software LLC</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
