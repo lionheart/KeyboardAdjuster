@@ -23,28 +23,28 @@
     },
     {
       "file": "/Users/dan/Projects/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
-      "line": 21,
+      "line": 29,
       "symbol": "KeyboardAdjustmentHelper.animated",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
-      "line": 26,
+      "line": 35,
       "symbol": "KeyboardAdjustmentHelper.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
-      "line": 29,
+      "line": 38,
       "symbol": "KeyboardAdjuster",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
-      "line": 30,
+      "line": 39,
       "symbol": "KeyboardAdjuster.keyboardAdjustmentHelper",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"

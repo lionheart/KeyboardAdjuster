@@ -8,9 +8,6 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     <style type='text/css'>body { font-family: -apple-system !important; }</style>
-    <script src="../js/lunr.min.js" defer></script>
-    <script src="../js/typeahead.jquery.js" defer></script>
-    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
 
@@ -24,12 +21,6 @@
           KeyboardAdjuster Docs
         </a>
          (30% documented)
-      </p>
-    
-      <p class="header-col--secondary">
-        <form role="search" action="../search.json">
-          <input type="text" placeholder="Search documentation" data-typeahead>
-        </form>
       </p>
     
         <p class="header-col header-col--secondary">
@@ -99,7 +90,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/KeyboardAdjuster/tree/2.0.0/Pod/Classes/KeyboardAdjuster.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/KeyboardAdjuster/tree/2.0.1/Pod/Classes/KeyboardAdjuster.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -125,11 +116,13 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Activates keyboard adjustment for the calling view controller.</p>
+
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
     <code>activateKeyboardAdjuster(showBlock:hideBlock:)</code>
 
 </div>
+
 <div class="aside aside-date">
     <p class="aside-title">Date</p>
     February 18, 2016
@@ -146,7 +139,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/KeyboardAdjuster/tree/2.0.0/Pod/Classes/KeyboardAdjuster.swift#L119-L121">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/KeyboardAdjuster/tree/2.0.1/Pod/Classes/KeyboardAdjuster.swift#L128-L130">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -168,11 +161,18 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Enable keyboard adjustment for the current view controller, providing optional closures to call when the keyboard appears and when it disappears.</p>
+
+<p><li>Parameters:</p>
+
+<p><ul>
+<li>showBlock: (optional) a block to call when the keyboard appears</li>
+<li>hideBlock: (optional) a block to call when the keyboard disappears</li>
+</ul></li>
 <div class="aside aside-date">
     <p class="aside-title">Date</p>
-    February 18, 2016
+    February 18, 2016</p>
 
-</div>
+<p></div></p>
 
                       </div>
                       <div class="declaration">
@@ -183,39 +183,8 @@
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>showBlock</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>(optional) a block to call when the keyboard appears</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>hideBlock</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>(optional) a block to call when the keyboard disappears</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/KeyboardAdjuster/tree/2.0.0/Pod/Classes/KeyboardAdjuster.swift#L131-L161">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/KeyboardAdjuster/tree/2.0.1/Pod/Classes/KeyboardAdjuster.swift#L140-L170">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -237,6 +206,7 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Call this in your <code>viewWillDisappear</code> method for your <code>UIViewController</code>. This method removes any active keyboard observers from your view controller.</p>
+
 <div class="aside aside-date">
     <p class="aside-title">Date</p>
     February 18, 2016
@@ -253,7 +223,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/KeyboardAdjuster/tree/2.0.0/Pod/Classes/KeyboardAdjuster.swift#L168-L178">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/KeyboardAdjuster/tree/2.0.1/Pod/Classes/KeyboardAdjuster.swift#L177-L187">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -266,8 +236,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 Lionheart Software LLC</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2016-2017 Lionheart Software LLC</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
