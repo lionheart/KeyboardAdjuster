@@ -17,9 +17,18 @@
 import UIKit
 
 public struct KeyboardAdjustmentHelper {
-    public var constraint: NSLayoutConstraint?
+    public var constraint: NSLayoutConstraint? {
+        didSet {
+            guard let constraint = constraint else {
+                return
+            }
+
+            originalConstant = constraint.constant
+        }
+    }
     public var animated = false
 
+    fileprivate var originalConstant: CGFloat = 0
     fileprivate var willHideBlockObserver: NSObjectProtocol?
     fileprivate var willShowBlockObserver: NSObjectProtocol?
 
@@ -63,7 +72,7 @@ private extension UIViewController {
 
         switch toState {
         case .hidden:
-            constraint.constant = 0
+            constraint.constant = conformingSelf.keyboardAdjustmentHelper.originalConstant
 
         case .visible:
             guard let value = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue else {
@@ -73,7 +82,7 @@ private extension UIViewController {
 
             let frame = value.cgRectValue
             let keyboardFrameInViewCoordinates = view.convert(frame, from: nil)
-            constraint.constant = view.bounds.height - keyboardFrameInViewCoordinates.origin.y
+            constraint.constant = view.bounds.height - keyboardFrameInViewCoordinates.origin.y + conformingSelf.keyboardAdjustmentHelper.originalConstant
         }
 
         if conformingSelf.keyboardAdjustmentHelper.animated {
