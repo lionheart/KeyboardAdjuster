@@ -8,6 +8,9 @@
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     <style type='text/css'>body { font-family: -apple-system !important; }</style>
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
 
@@ -20,6 +23,12 @@
           KeyboardAdjuster Docs
         </a>
          (30% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
       </p>
     
         <p class="header-col header-col--secondary">
@@ -49,7 +58,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Structs.html">Structs</a>
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/KeyboardAdjustmentHelper.html">KeyboardAdjustmentHelper</a>
@@ -63,35 +72,36 @@
         <section class="section">
           <div class="section-content">
             
-            <a href='#keyboardadjuster' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='keyboardadjuster'>KeyboardAdjuster</h1>
+            <h1 id='keyboardadjuster' class='heading'>KeyboardAdjuster</h1>
 
-<p><a href="https://travis-ci.org/lionheart/KeyboardAdjuster"><img src="http://img.shields.io/travis/lionheart/KeyboardAdjuster.svg?style=flat" alt="CI Status"></a>
-<a href="http://cocoapods.org/pods/KeyboardAdjuster"><img src="https://img.shields.io/cocoapods/v/KeyboardAdjuster.svg?style=flat" alt="Version"></a>
+<!-- [![CI Status](http://img.shields.io/travis/lionheart/KeyboardAdjuster.svg?style=flat)](https://travis-ci.org/lionheart/KeyboardAdjuster) -->
+
+<p><a href="http://cocoapods.org/pods/KeyboardAdjuster"><img src="https://img.shields.io/cocoapods/v/KeyboardAdjuster.svg?style=flat" alt="Version"></a>
 <a href="http://cocoapods.org/pods/KeyboardAdjuster"><img src="https://img.shields.io/cocoapods/p/KeyboardAdjuster.svg?style=flat" alt="Platform"></a>
-<img src="http://img.shields.io/badge/swift-3-blue.svg?style=flat" alt="Swift"></p>
+<img src="http://img.shields.io/badge/swift-4-blue.svg?style=flat" alt="Swift"></p>
 
 <p>KeyboardAdjuster will adjust the bottom position of any given <code>UIView</code> when a keyboard appears on screen. All you have to do is provide an NSLayoutConstraint that pins the bottom of your view to the bottom of the screen. KeyboardAdjuster will automatically adjust that constraint and pin it to the top of the keyboard when it appears.</p>
 
-<p>If you&rsquo;re currently choosing between KeyboardAdjuster and another alternative, please read about our <a href="https://gist.github.com/dlo/86208878ff976261fa16">philosophy</a></p>
+<p>If you&rsquo;re currently choosing between KeyboardAdjuster and another alternative, please read about our <a href="https://gist.github.com/dlo/86208878ff976261fa16">philosophy</a>.</p>
 
 <p>Note: KeyboardAdjuster requires layout anchors in your build target, so it will only work with iOS 9 or above. If you&rsquo;d like to add support for earlier iOS versions, please submit a pull request.</p>
 
 <p>KeyboardAdjuster is a Swift port of <a href="https://github.com/lionheart/LHSKeyboardAdjusting">LHSKeyboardAdjuster</a>, which targets projects written in Objective-C.</p>
-<a href='#installation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation'>Installation</h2>
+<h2 id='installation' class='heading'>Installation</h2>
 
 <p>KeyboardAdjuster is available through <a href="http://cocoapods.org">CocoaPods</a>. To install it, simply add the following line to your Podfile:</p>
 <pre class="highlight ruby"><code><span class="n">pod</span> <span class="s2">"KeyboardAdjuster"</span>
 </code></pre>
-<a href='#usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='usage'>Usage</h2>
+<h2 id='usage' class='heading'>Usage</h2>
 
 <ol>
-<li>In your view controller file, import <code>KeyboardAdjuster</code>.</li>
+<li>In your view controller file, import <code><a href="Protocols/KeyboardAdjuster.html">KeyboardAdjuster</a></code>.</li>
 </ol>
 <pre class="highlight swift"><code>   <span class="kd">import</span> <span class="kt">KeyboardAdjuster</span>
 </code></pre>
 
 <ol>
-<li>Make your <code>UIViewController</code> conform to <code>KeyboardAdjuster</code> and define a property called <code>keyboardAdjustmentHelper</code>.</li>
+<li>Make your <code>UIViewController</code> conform to <code><a href="Protocols/KeyboardAdjuster.html">KeyboardAdjuster</a></code> and define a property called <code>keyboardAdjustmentHelper</code>.</li>
 </ol>
 <pre class="highlight swift"><code>   <span class="kd">class</span> <span class="kt">MyViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">KeyboardAdjuster</span> <span class="p">{</span>
        <span class="k">var</span> <span class="nv">keyboardAdjustmentHelper</span> <span class="o">=</span> <span class="kt">KeyboardAdjustmentHelper</span><span class="p">()</span>
@@ -133,13 +143,13 @@
 <ol>
 <li>And you&rsquo;re done! Whenever a keyboard appears, your views will be automatically resized.</li>
 </ol>
-<a href='#how-it-works' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='how-it-works'>How It Works</h2>
+<h2 id='how-it-works' class='heading'>How It Works</h2>
 
 <p>KeyboardAdjuster registers NSNotificationCenter callbacks for keyboard appearance and disappearance. When a keyboard appears, it pulls out the keyboard size from the notification, along with the duration of the keyboard animation, and applies that to the view constraint adjustment.</p>
-<a href='#author' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='author'>Author</h2>
+<h2 id='author' class='heading'>Author</h2>
 
 <p><a href="https://github.com/dlo">Dan Loewenherz</a></p>
-<a href='#license' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='license'>License</h2>
+<h2 id='license' class='heading'>License</h2>
 
 <p>KeyboardAdjuster is available under the Apache 2.0 LICENSE. See the <a href="LICENSE">LICENSE</a> file for more info.</p>
 
@@ -151,7 +161,7 @@
     </div>
     <section class="footer">
       <p>&copy; 2016-2017 Lionheart Software LLC</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
