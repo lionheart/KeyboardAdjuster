@@ -55,13 +55,13 @@ pod "KeyboardAdjuster"
 
    ```swift
    class MyViewController: UIViewController, KeyboardAdjuster {
-       override func viewWillAppear(animated: Bool) {
+       override func viewWillAppear(_ animated: Bool) {
            super.viewWillAppear(animated)
 
            activateKeyboardAdjuster()
        }
 
-       override func viewWillDisappear(animated: Bool) {
+       override func viewWillDisappear(_ animated: Bool) {
            super.viewWillDisappear(animated)
 
            deactivateKeyboardAdjuster()
