@@ -9,7 +9,15 @@
 import UIKit
 import KeyboardAdjuster
 
-class ViewController: UIViewController, KeyboardAdjuster {
+class ViewController: UIViewController, KeyboardAdjusterWithCustomHandlers {
+    func keyboardWillHideHandler() {
+        print("yo yo yo ---")
+    }
+
+    func keyboardWillShowHandler() {
+        print("no no no")
+    }
+
     let CellIdentifier = "CellIdentifier"
 
     var keyboardAdjustmentHelper = KeyboardAdjustmentHelper()
@@ -49,7 +57,11 @@ class ViewController: UIViewController, KeyboardAdjuster {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        activateKeyboardAdjuster()
+        activateKeyboardAdjuster({
+            print("HI HI HI")
+        }) {
+            print("NONONON")
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {

@@ -39,6 +39,11 @@ public protocol KeyboardAdjuster: class {
     var keyboardAdjustmentHelper: KeyboardAdjustmentHelper { get set }
 }
 
+public protocol KeyboardAdjusterWithCustomHandlers: KeyboardAdjuster {
+    func keyboardWillHideHandler()
+    func keyboardWillShowHandler()
+}
+
 private extension UIViewController {
     enum KeyboardState {
         case hidden
@@ -48,7 +53,7 @@ private extension UIViewController {
     private func keyboardWillChangeAppearance(_ sender: Notification, toState: KeyboardState) {
         guard let conformingSelf = self as? KeyboardAdjuster,
             let constraint = conformingSelf.keyboardAdjustmentHelper.constraint,
-            let userInfo = (sender as NSNotification).userInfo as? [String: AnyObject],
+            let userInfo = sender.userInfo,
             let _curve = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? Int,
             let curve = UIViewAnimationCurve(rawValue: _curve),
             let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? Double else {
@@ -86,7 +91,7 @@ private extension UIViewController {
         }
 
         if conformingSelf.keyboardAdjustmentHelper.animated {
-            let animationOptions: UIViewAnimationOptions = [UIViewAnimationOptions.beginFromCurrentState, curveAnimationOption]
+            let animationOptions: UIViewAnimationOptions = [.beginFromCurrentState, curveAnimationOption]
             UIView.animate(withDuration: duration, delay: 0, options: animationOptions, animations: {
                 self.view.layoutIfNeeded()
             })
@@ -126,7 +131,7 @@ extension KeyboardAdjuster where Self: UIViewController {
      - Date: February 18, 2016
      */
     public func activateKeyboardAdjuster() {
-        activateKeyboardAdjuster(nil, hideBlock: nil)
+        activateKeyboardAdjuster(showBlock: nil, hideBlock: nil)
     }
 
     /**
@@ -137,8 +142,9 @@ extension KeyboardAdjuster where Self: UIViewController {
          * hideBlock: (optional) a block to call when the keyboard disappears
      - Date: February 18, 2016
      */
-    public func activateKeyboardAdjuster(_ showBlock: (() -> Void)?, hideBlock: (() -> Void)?) {
+    public func activateKeyboardAdjuster(showBlock: (() -> Void)?, hideBlock: (() -> Void)?) {
         guard let constraint = keyboardAdjustmentHelper.constraint else {
+            debugPrint("KeyboardAdjuster: No constraint was enabled. Please enable a constraint by setting `keyboardAdjustmentHelper.constraint`.")
             return
         }
 
@@ -148,12 +154,16 @@ extension KeyboardAdjuster where Self: UIViewController {
         let center = NotificationCenter.default
         let queue = OperationQueue.main
         keyboardAdjustmentHelper.willHideBlockObserver = center.addObserver(forName: .UIKeyboardWillHide, object: nil, queue: queue, using: { [weak self] notification in
+            (self as? KeyboardAdjusterWithCustomHandlers)?.keyboardWillHideHandler()
+
             self?.keyboardWillHide(notification)
-            
+
             hideBlock?()
         })
 
         keyboardAdjustmentHelper.willShowBlockObserver = center.addObserver(forName: .UIKeyboardWillShow, object: nil, queue: queue, using: { [weak self] notification in
+            (self as? KeyboardAdjusterWithCustomHandlers)?.keyboardWillShowHandler()
+
             self?.keyboardWillShow(notification)
             
             showBlock?()
@@ -176,13 +186,13 @@ extension KeyboardAdjuster where Self: UIViewController {
      */
     public func deactivateKeyboardAdjuster() {
         // See https://useyourloaf.com/blog/unregistering-nsnotificationcenter-observers-in-ios-9/
-        guard let willShowBlockObserver = keyboardAdjustmentHelper.willShowBlockObserver,
-            let willHideBlockObserver = keyboardAdjustmentHelper.willHideBlockObserver else {
-                return
+        let center = NotificationCenter.default
+        if let willShowBlockObserver = keyboardAdjustmentHelper.willShowBlockObserver {
+            center.removeObserver(willShowBlockObserver)
         }
 
-        let center = NotificationCenter.default
-        center.removeObserver(willShowBlockObserver)
-        center.removeObserver(willHideBlockObserver)
+        if let willHideBlockObserver = keyboardAdjustmentHelper.willHideBlockObserver {
+            center.removeObserver(willHideBlockObserver)
+        }
     }
 }
