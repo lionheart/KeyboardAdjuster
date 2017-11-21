@@ -1,3 +1,5 @@
+# vim: ft=ruby
+
 Pod::Spec.new do |s|
   s.name             = "KeyboardAdjuster"
   s.version          =  "2.0.5"
