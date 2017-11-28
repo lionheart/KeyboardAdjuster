@@ -57,7 +57,7 @@ class ViewController: UIViewController, KeyboardAdjusterWithCustomHandlers {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        activateKeyboardAdjuster({
+        activateKeyboardAdjuster(showBlock: {
             print("HI HI HI")
         }) {
             print("NONONON")
