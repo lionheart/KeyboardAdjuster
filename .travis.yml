@@ -1,4 +1,6 @@
+script:
+  - set -o pipefail && xcodebuild test -project KeyboardAdjuster.xcodeproj -scheme TestApplication -destination 'platform=iOS Simulator,name=iPhone X' | xcpretty
+  - pod lib lint
+
 language: objective-c
-xcode_project: KeyboardAdjuster.xcodeproj
-xcode_scheme: TestApplication
 osx_image: xcode9.1
