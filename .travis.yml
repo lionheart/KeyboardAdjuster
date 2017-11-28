@@ -1,6 +1,4 @@
-script:
-- set -o pipefail && xcodebuild test -scheme TestApplication -destination "platform=iOS Simulator,name=iPhone SE,OS=10.3.1" -destination-timeout 1 ONLY_ACTIVE_ARCH=NO | xcpretty
-- pod lib lint
-
 language: objective-c
-osx_image: xcode8.3
+xcode_project: KeyboardAdjuster.xcodeproj
+xcode_scheme: TestApplication
+osx_image: xcode9.1
