@@ -11,7 +11,7 @@ If you're currently choosing between KeyboardAdjuster and another alternative, p
 
 Note: KeyboardAdjuster requires layout anchors in your build target, so it will only work with iOS 9 or above. If you'd like to add support for earlier iOS versions, please submit a pull request.
 
-KeyboardAdjuster is a Swift port of [LHSKeyboardAdjuster](https://github.com/lionheart/LHSKeyboardAdjusting), which targets projects written in Objective-C.
+KeyboardAdjuster started as a Swift port of [LHSKeyboardAdjuster](https://github.com/lionheart/LHSKeyboardAdjusting), which is recommended for projects written in Objective-C.
 
 ## Installation
 
