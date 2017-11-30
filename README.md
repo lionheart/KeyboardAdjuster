@@ -23,11 +23,12 @@ pod "KeyboardAdjuster"
 
 ## Usage
 
-1. In your view controller file, import `KeyboardAdjuster`.
+1. <details><summary>In your view controller file, import `KeyboardAdjuster`.</summary>
 
    ```swift
    import KeyboardAdjuster
    ```
+   </details>
 
 2. Make your `UIViewController` conform to `KeyboardAdjuster` and define a property called `keyboardAdjustmentHelper`.
 
@@ -50,24 +51,22 @@ pod "KeyboardAdjuster"
    ```
 
    <details>
-     <summary><strong>NOTE:</strong> If you're using iOS 11 and your view is using the `safeAreaLayoutGuide` to set constraints, click here for an alternate approach.</summary>
+     <summary><strong>NOTE:</strong> If you're using iOS 11 and your view is using the `safeAreaLayoutGuide` to set constraints, click here to view an alternate approach.</summary>
 
      ```swift
-     class MyViewController: UIViewController, KeyboardAdjuster {
-         func viewDidLoad() {
-             super.viewDidLoad()
+     func viewDidLoad() {
+         super.viewDidLoad()
 
-             if #available(iOS 11, *) {
-                 keyboardAdjustmentHelper.constraint = view.safeAreaLayoutGuide.bottomAnchor.constraintEqualToAnchor(scrollView.bottomAnchor)
-             } else {
-                 keyboardAdjustmentHelper.constraint = view.bottomAnchor.constraintEqualToAnchor(scrollView.bottomAnchor)
-             }
+         if #available(iOS 11, *) {
+             keyboardAdjustmentHelper.constraint = view.safeAreaLayoutGuide.bottomAnchor.constraintEqualToAnchor(scrollView.bottomAnchor)
+         } else {
+             keyboardAdjustmentHelper.constraint = view.bottomAnchor.constraintEqualToAnchor(scrollView.bottomAnchor)
          }
      }
      ```
    </details>
 
-3. Finally, in your `viewWillAppear(animated:)` and `viewWillDisappear(animated:)` methods, make sure to activate and deactivate `KeyboardAdjuster`.
+3. Finally, in your `viewWillAppear(_:)` and `viewWillDisappear(_:)` methods:
 
    ```swift
    class MyViewController: UIViewController, KeyboardAdjuster {
