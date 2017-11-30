@@ -23,12 +23,11 @@ pod "KeyboardAdjuster"
 
 ## Usage
 
-1. <details><summary>In your view controller file, import `KeyboardAdjuster`.</summary>
+1. In your view controller file, import `KeyboardAdjuster`.
 
    ```swift
    import KeyboardAdjuster
    ```
-   </details>
 
 2. Make your `UIViewController` conform to `KeyboardAdjuster` and define a property called `keyboardAdjustmentHelper`.
 
