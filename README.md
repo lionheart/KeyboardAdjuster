@@ -18,7 +18,7 @@ If you're currently choosing between KeyboardAdjuster and another alternative, p
 KeyboardAdjuster is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
-pod "KeyboardAdjuster"
+pod "KeyboardAdjuster", "~> 2"
 ```
 
 ## Usage
