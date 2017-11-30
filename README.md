@@ -50,7 +50,7 @@ pod "KeyboardAdjuster"
    ```
 
    <details>
-     <summary>If you're using iOS 11 and your view is using the `safeAreaLayoutGuide` to set constraints, you might do the following instead (click to expand):</summary>
+     <summary><strong>NOTE:</strong> If you're using iOS 11 and your view is using the `safeAreaLayoutGuide` to set constraints, click here for an alternate approach.</summary>
 
      ```swift
      class MyViewController: UIViewController, KeyboardAdjuster {
