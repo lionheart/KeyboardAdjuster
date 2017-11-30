@@ -5,13 +5,22 @@
 [![Platform](https://img.shields.io/cocoapods/p/KeyboardAdjuster.svg?style=flat)](http://cocoapods.org/pods/KeyboardAdjuster)
 ![Swift](http://img.shields.io/badge/swift-4-blue.svg?style=flat)
 
-KeyboardAdjuster adjusts your views to avoid the keyboard. That's pretty much all there is to it. It's battle-tested and easy to integrate into any project--Storyboards or code, doesn't matter.
+KeyboardAdjuster adjusts your views to avoid the keyboard ⌨️. That's pretty much all there is to it. It's battle-tested and easy to integrate into any project--Storyboards or code, doesn't matter.
 
-The only requirement is that you're using Auto Layout (you should be anyways ;) ) and targetting iOS 9 or above. If you'd like to add support for earlier iOS versions, please feel free to submit a pull request.
+### Requirements
+
+* [x] Auto Layout
+* [x] iOS 9.0-11.0+
+* [ ] macOS (please contribute!)
+* [ ] tvOS (please contribute!)
 
 KeyboardAdjuster started as a Swift port of [LHSKeyboardAdjuster](https://github.com/lionheart/LHSKeyboardAdjusting), which is recommended for projects written in Objective-C.
 
 If you're currently choosing between KeyboardAdjuster and another alternative, please read about our [philosophy](https://gist.github.com/dlo/86208878ff976261fa16).
+
+### Support KeyboardAdjuster
+
+Supporting KeyboardAdjuster, keeping it up to date with the latest iOS versions, etc., takes a lot of time! So, if you're a developer who's gotten some utility out of this library, please support it by starring the repo. This increases its visibility in GitHub search and encourages others to contribute. 🙏🏻🍻
 
 ## Installation
 
