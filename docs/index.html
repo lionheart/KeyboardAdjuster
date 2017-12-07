@@ -82,17 +82,26 @@
 <a href="http://cocoapods.org/pods/KeyboardAdjuster"><img src="https://img.shields.io/cocoapods/p/KeyboardAdjuster.svg?style=flat" alt="Platform"></a>
 <img src="http://img.shields.io/badge/swift-4-blue.svg?style=flat" alt="Swift"></p>
 
-<p>KeyboardAdjuster will adjust the bottom position of any given <code>UIView</code> when a keyboard appears on screen. All you have to do is provide an NSLayoutConstraint that pins the bottom of your view to the bottom of the screen. KeyboardAdjuster will automatically adjust that constraint and pin it to the top of the keyboard when it appears.</p>
+<p>KeyboardAdjuster adjusts your views to avoid the keyboard ⌨️. That&rsquo;s pretty much all there is to it. It&rsquo;s battle-tested and easy to integrate into any project&ndash;Storyboards or code, doesn&rsquo;t matter.</p>
+<h3 id='requirements' class='heading'>Requirements</h3>
+
+<ul>
+<li>[x] Auto Layout</li>
+<li>[x] iOS 9.0-11.0+</li>
+<li>[ ] macOS (please contribute!)</li>
+<li>[ ] tvOS (please contribute!)</li>
+</ul>
+
+<p>KeyboardAdjuster started as a Swift port of <a href="https://github.com/lionheart/LHSKeyboardAdjusting">LHSKeyboardAdjuster</a>, which is recommended for projects written in Objective-C.</p>
 
 <p>If you&rsquo;re currently choosing between KeyboardAdjuster and another alternative, please read about our <a href="https://gist.github.com/dlo/86208878ff976261fa16">philosophy</a>.</p>
+<h3 id='support-keyboardadjuster' class='heading'>Support KeyboardAdjuster</h3>
 
-<p>Note: KeyboardAdjuster requires layout anchors in your build target, so it will only work with iOS 9 or above. If you&rsquo;d like to add support for earlier iOS versions, please submit a pull request.</p>
-
-<p>KeyboardAdjuster is a Swift port of <a href="https://github.com/lionheart/LHSKeyboardAdjusting">LHSKeyboardAdjuster</a>, which targets projects written in Objective-C.</p>
+<p>Supporting KeyboardAdjuster, keeping it up to date with the latest iOS versions, etc., takes a lot of time! So, if you&rsquo;re a developer who&rsquo;s gotten some utility out of this library, please support it by starring the repo. This increases its visibility in GitHub search and encourages others to contribute. 🙏🏻🍻</p>
 <h2 id='installation' class='heading'>Installation</h2>
 
 <p>KeyboardAdjuster is available through <a href="http://cocoapods.org">CocoaPods</a>. To install it, simply add the following line to your Podfile:</p>
-<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s2">"KeyboardAdjuster"</span>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s2">"KeyboardAdjuster"</span><span class="p">,</span> <span class="s2">"~&gt; 2"</span>
 </code></pre>
 <h2 id='usage' class='heading'>Usage</h2>
 
@@ -111,7 +120,7 @@
 </code></pre>
 
 <ol>
-<li>Figure out which view you&rsquo;d like to pin to the top of the keyboard. A <code>UIScrollView</code>, <code>UITableView</code>, or <code>UITextView</code> are likely candidates. Then, wherever you&rsquo;re setting up your view constraints, set <code>keyboardAdjustmentHelper.constraint</code> to the constraint pinning the bottom of this view to the bottom of the screen:</li>
+<li>Figure out which view you&rsquo;d like to pin to the top of the keyboard&ndash;it&rsquo;s probably going to be a <code>UIScrollView</code>, <code>UITableView</code>, or <code>UITextView</code>. Then, wherever you&rsquo;re setting up your view constraints, set <code>keyboardAdjustmentHelper.constraint</code> to the Y-axis constraint pinning the bottom of this view:</li>
 </ol>
 <pre class="highlight swift"><code>   <span class="kd">class</span> <span class="kt">MyViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">KeyboardAdjuster</span> <span class="p">{</span>
        <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
@@ -122,10 +131,25 @@
    <span class="p">}</span>
 </code></pre>
 
-<p>KeyboardAdjuster will automatically activate <code>keyboardAdjusterConstraint</code> for you.</p>
+<p><details>
+     <summary><strong>NOTE:</strong> If you&rsquo;re using iOS 11 and your view is using the <code>safeAreaLayoutGuide</code> to set constraints, click here to view an alternate approach.</summary></p>
+<pre class="highlight plaintext"><code> ```swift
+ func viewDidLoad() {
+     super.viewDidLoad()
+
+     if #available(iOS 11, *) {
+         keyboardAdjustmentHelper.constraint = view.safeAreaLayoutGuide.bottomAnchor.constraintEqualToAnchor(scrollView.bottomAnchor)
+     } else {
+         keyboardAdjustmentHelper.constraint = view.bottomAnchor.constraintEqualToAnchor(scrollView.bottomAnchor)
+     }
+ }
+ ```
+</code></pre>
+
+<p></details></p>
 
 <ol>
-<li>All you need to do now is activate and deactivate the automatic adjustments in your <code>viewWillAppear(animated:)</code> and <code>viewWillDisappear(animated:)</code> methods.</li>
+<li>Finally, in your <code>viewWillAppear(_:)</code> and <code>viewWillDisappear(_:)</code> methods:</li>
 </ol>
 <pre class="highlight swift"><code>   <span class="kd">class</span> <span class="kt">MyViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">KeyboardAdjuster</span> <span class="p">{</span>
        <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillAppear</span><span class="p">(</span><span class="n">_</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
