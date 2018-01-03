@@ -5,14 +5,14 @@
 [![Platform](https://img.shields.io/cocoapods/p/KeyboardAdjuster.svg?style=flat)](http://cocoapods.org/pods/KeyboardAdjuster)
 ![Swift](http://img.shields.io/badge/swift-4-blue.svg?style=flat)
 
-KeyboardAdjuster adjusts your views to avoid the keyboard ⌨️. That's pretty much all there is to it. It's battle-tested and easy to integrate into any project--Storyboards or code, doesn't matter.
+KeyboardAdjuster provides a drop-in `UILayoutGuide` that helps you adjust your views to avoid the keyboard. That's pretty much all there is to it. It's battle-tested and easy to integrate into any project--Storyboards or code, doesn't matter.
+
+KeyboardAdjuster uses a `UILayoutGuide` approach that was heavily inspired by an implementation in [Swiftilities](https://github.com/Raizlabs/Swiftilities/tree/develop/Pod/Classes/Keyboard), by the fine folks at [RaizLabs](http://raizlabs.com).
 
 ### Requirements
 
 * [x] Auto Layout
-* [x] iOS 9.0-11.0+
-* [ ] macOS (please contribute!)
-* [ ] tvOS (please contribute!)
+* [x] iOS 9.0-11.2+
 
 KeyboardAdjuster started as a Swift port of [LHSKeyboardAdjuster](https://github.com/lionheart/LHSKeyboardAdjusting), which is recommended for projects written in Objective-C.
 
@@ -38,22 +38,19 @@ pod "KeyboardAdjuster", "~> 2"
    import KeyboardAdjuster
    ```
 
-2. Make your `UIViewController` conform to `KeyboardAdjuster` and define a property called `keyboardAdjustmentHelper`.
-
-   ```swift
-   class MyViewController: UIViewController, KeyboardAdjuster {
-       var keyboardAdjustmentHelper = KeyboardAdjustmentHelper()
-   }
-   ```
-
-2. Figure out which view you'd like to pin to the top of the keyboard--it's probably going to be a `UIScrollView`, `UITableView`, or `UITextView`. Then, wherever you're setting up your view constraints, set `keyboardAdjustmentHelper.constraint` to the Y-axis constraint pinning the bottom of this view:
+2. Figure out which view you'd like to pin to the top of the keyboard--it's probably going to be a `UIScrollView`, `UITableView`, or `UITextView`. Then, wherever you're setting up your view constraints, use the `keyboardLayoutGuide` property to create a `lessThanOrEqualTo` constraint:
 
    ```swift
    class MyViewController: UIViewController, KeyboardAdjuster {
        func viewDidLoad() {
            super.viewDidLoad()
 
-           keyboardAdjustmentHelper.constraint = view.bottomAnchor.constraintEqualToAnchor(scrollView.bottomAnchor)
+           // ...
+           // Your Auto Layout code here
+           // ...
+
+           tableView.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor).isActive = true
+           tableView.bottomAnchor.constraint(greaterThanOrEqualTo: keyboardLayoutGuide.topAnchor).isActive = true
        }
    }
    ```
@@ -66,41 +63,26 @@ pod "KeyboardAdjuster", "~> 2"
          super.viewDidLoad()
 
          if #available(iOS 11, *) {
-             keyboardAdjustmentHelper.constraint = view.safeAreaLayoutGuide.bottomAnchor.constraintEqualToAnchor(scrollView.bottomAnchor)
+             tableView.bottomAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
          } else {
-             keyboardAdjustmentHelper.constraint = view.bottomAnchor.constraintEqualToAnchor(scrollView.bottomAnchor)
+             tableView.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor).isActive = true
          }
+
+         tableView.bottomAnchor.constraint(lessThanOrEqualTo: keyboardLayoutGuide.topAnchor).isActive = true
      }
      ```
    </details>
 
-3. Finally, in your `viewWillAppear(_:)` and `viewWillDisappear(_:)` methods:
-
-   ```swift
-   class MyViewController: UIViewController, KeyboardAdjuster {
-       override func viewWillAppear(_ animated: Bool) {
-           super.viewWillAppear(animated)
-
-           activateKeyboardAdjuster()
-       }
-
-       override func viewWillDisappear(_ animated: Bool) {
-           super.viewWillDisappear(animated)
-
-           deactivateKeyboardAdjuster()
-       }
-   }
-   ```
-
-4. And you're done! Whenever a keyboard appears, your views will be automatically resized.
+3. And you're done! Whenever a keyboard appears, your view will be automatically resized.
 
 ## How It Works
 
-KeyboardAdjuster registers NSNotificationCenter callbacks for keyboard appearance and disappearance. When a keyboard appears, it pulls out the keyboard size from the notification, along with the duration of the keyboard animation, and applies that to the view constraint adjustment.
+KeyboardAdjuster registers NSNotificationCenter callbacks for keyboard appearance and disappearance. When a keyboard appears, it pulls out the keyboard size from the notification, along with the duration of the keyboard animation, and applies that to the `keyboardLayoutGuide` property.
 
 ## Author
 
 [Dan Loewenherz](https://github.com/dlo)
+
 
 ## License
 

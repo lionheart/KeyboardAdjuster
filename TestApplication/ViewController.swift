@@ -20,8 +20,6 @@ class ViewController: UIViewController, KeyboardAdjusterWithCustomHandlers {
 
     let CellIdentifier = "CellIdentifier"
 
-    var keyboardAdjustmentHelper = KeyboardAdjustmentHelper()
-
     var tableView: UITableView!
     var textField: UITextField!
 
@@ -49,25 +47,8 @@ class ViewController: UIViewController, KeyboardAdjusterWithCustomHandlers {
         tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-
-        keyboardAdjustmentHelper.constraint = view.bottomAnchor.constraint(equalTo: tableView.bottomAnchor)
-        keyboardAdjustmentHelper.constraint?.isActive = true
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        activateKeyboardAdjuster(showBlock: {
-            print("HI HI HI")
-        }) {
-            print("NONONON")
-        }
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-
-        deactivateKeyboardAdjuster()
+        tableView.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor).isActive = true
+        tableView.bottomAnchor.constraint(greaterThanOrEqualTo: keyboardLayoutGuide.topAnchor).isActive = true
     }
 }
 
