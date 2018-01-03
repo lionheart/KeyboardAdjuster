@@ -2,72 +2,44 @@
   "warnings": [
     {
       "file": "/Users/dan/Projects/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
-      "line": null,
-      "symbol": "KeyboardAdjuster",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/dan/Projects/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
       "line": 19,
-      "symbol": "KeyboardAdjustmentHelper",
-      "symbol_kind": "source.lang.swift.decl.struct",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/dan/Projects/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
-      "line": 20,
-      "symbol": "KeyboardAdjustmentHelper.constraint",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/dan/Projects/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
-      "line": 29,
-      "symbol": "KeyboardAdjustmentHelper.animated",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/dan/Projects/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
-      "line": 35,
-      "symbol": "KeyboardAdjustmentHelper.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/dan/Projects/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
-      "line": 38,
-      "symbol": "KeyboardAdjuster",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/dan/Projects/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
-      "line": 39,
-      "symbol": "KeyboardAdjuster.keyboardAdjustmentHelper",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/dan/Projects/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
-      "line": 42,
       "symbol": "KeyboardAdjusterWithCustomHandlers",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
-      "line": 43,
+      "line": 20,
       "symbol": "KeyboardAdjusterWithCustomHandlers.keyboardWillHideHandler()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
-      "line": 44,
+      "line": 21,
       "symbol": "KeyboardAdjusterWithCustomHandlers.keyboardWillShowHandler()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
+      "line": 24,
+      "symbol": "KeyboardLayoutGuide",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
+      "line": 43,
+      "symbol": "KeyboardLayoutGuide.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
+      "line": 61,
+      "symbol": "UIViewController.keyboardLayoutGuide",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     }
   ],
