@@ -16,7 +16,8 @@
 
 import UIKit
 
-public protocol KeyboardAdjusterWithCustomHandlers {
+public protocol KeyboardAdjusterOptions {
+    var animateKeyboardTransition: Bool { get }
     func keyboardWillHideHandler()
     func keyboardWillShowHandler()
 }
@@ -39,7 +40,7 @@ public class KeyboardLayoutGuide: UILayoutGuide {
         constraint = topAnchor.constraint(equalTo: view.bottomAnchor)
         constraint.isActive = true
     }
-    
+
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -72,13 +73,13 @@ extension UIViewController {
         let center = NotificationCenter.default
         let queue = OperationQueue.main
         guide.willHideBlockObserver = center.addObserver(forName: .UIKeyboardWillHide, object: nil, queue: queue, using: { [weak self] notification in
-            (self as? KeyboardAdjusterWithCustomHandlers)?.keyboardWillHideHandler()
+            (self as? KeyboardAdjusterOptions)?.keyboardWillHideHandler()
 
             self?.keyboardWillChangeAppearance(notification, toState: .hidden)
         })
         
         guide.willShowBlockObserver = center.addObserver(forName: .UIKeyboardWillShow, object: nil, queue: queue, using: { [weak self] notification in
-            (self as? KeyboardAdjusterWithCustomHandlers)?.keyboardWillShowHandler()
+            (self as? KeyboardAdjusterOptions)?.keyboardWillShowHandler()
 
             self?.keyboardWillChangeAppearance(notification, toState: .visible)
         })
@@ -128,8 +129,7 @@ extension UIViewController {
             keyboardLayoutGuide.constraint.constant = -frame.height
         }
 
-        let animated = true
-        if animated {
+        if (self as? KeyboardAdjusterOptions)?.animateKeyboardTransition ?? true {
             let animationOptions: UIViewAnimationOptions = [.beginFromCurrentState, curveAnimationOption]
             UIView.animate(withDuration: duration, delay: 0, options: animationOptions, animations: {
                 self.view.layoutIfNeeded()

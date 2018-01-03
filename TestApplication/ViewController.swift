@@ -9,7 +9,9 @@
 import UIKit
 import KeyboardAdjuster
 
-class ViewController: UIViewController, KeyboardAdjusterWithCustomHandlers {
+class ViewController: UIViewController, KeyboardAdjusterOptions {
+    var animateKeyboardTransition = true
+
     func keyboardWillHideHandler() {
         print("yo yo yo ---")
     }
