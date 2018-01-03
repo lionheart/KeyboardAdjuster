@@ -69,7 +69,7 @@
             <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Protocols/KeyboardAdjusterWithCustomHandlers.html">KeyboardAdjusterWithCustomHandlers</a>
+                <a class="nav-group-task-link" href="Protocols/KeyboardAdjusterOptions.html">KeyboardAdjusterOptions</a>
               </li>
             </ul>
           </li>
@@ -115,9 +115,9 @@
 </code></pre>
 
 <ol>
-<li>Figure out which view you&rsquo;d like to pin to the top of the keyboard&ndash;it&rsquo;s probably going to be a <code>UIScrollView</code>, <code>UITableView</code>, or <code>UITextView</code>. Then, wherever you&rsquo;re setting up your view constraints, use the <code>keyboardLayoutGuide</code> property to create a <code>lessThanOrEqualTo</code> constraint:</li>
+<li>Figure out which view you&rsquo;d like to pin to the top of the keyboard&ndash;it&rsquo;s probably going to be a <code>UIScrollView</code>, <code>UITableView</code>, or <code>UITextView</code>. Then, wherever you&rsquo;re setting up your view constraints, use the <code>keyboardLayoutGuide</code> property to create a <code>greaterThanOrEqualTo</code> constraint to the bottom of the view you&rsquo;d like to resize:</li>
 </ol>
-<pre class="highlight swift"><code>   <span class="kd">class</span> <span class="kt">MyViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">KeyboardAdjuster</span> <span class="p">{</span>
+<pre class="highlight swift"><code>   <span class="kd">class</span> <span class="kt">MyViewController</span><span class="p">:</span> <span class="kt">UIViewController</span> <span class="p">{</span>
        <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
            <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
 
@@ -153,6 +153,21 @@
 <ol>
 <li>And you&rsquo;re done! Whenever a keyboard appears, your view will be automatically resized.</li>
 </ol>
+<h2 id='optional-features' class='heading'>Optional Features</h2>
+
+<p>KeyboardAdjuster also allows you to provide callbacks when the keyboard state changes or specify whether to animate the transition (animated by default). If you&rsquo;d like to take advantage of these, just make your <code>UIViewController</code> conform to <code><a href="Protocols/KeyboardAdjusterOptions.html">KeyboardAdjusterOptions</a></code>, like so:</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MyViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">KeyboardAdjusterOptions</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">animateKeyboardTransition</span> <span class="o">=</span> <span class="kc">true</span>
+
+    <span class="kd">func</span> <span class="nf">keyboardWillHideHandler</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Hiding keyboard..."</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">keyboardWillShowHandler</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Showing keyboard..."</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 <h2 id='how-it-works' class='heading'>How It Works</h2>
 
 <p>KeyboardAdjuster registers NSNotificationCenter callbacks for keyboard appearance and disappearance. When a keyboard appears, it pulls out the keyboard size from the notification, along with the duration of the keyboard animation, and applies that to the <code>keyboardLayoutGuide</code> property.</p>
