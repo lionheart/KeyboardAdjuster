@@ -36,10 +36,10 @@ pod "KeyboardAdjuster"
    import KeyboardAdjuster
    ```
 
-2. Figure out which view you'd like to pin to the top of the keyboard--it's probably going to be a `UIScrollView`, `UITableView`, or `UITextView`. Then, wherever you're setting up your view constraints, use the `keyboardLayoutGuide` property to create a `lessThanOrEqualTo` constraint:
+2. Figure out which view you'd like to pin to the top of the keyboard--it's probably going to be a `UIScrollView`, `UITableView`, or `UITextView`. Then, wherever you're setting up your view constraints, use the `keyboardLayoutGuide` property to create a `greaterThanOrEqualTo` constraint to the bottom of the view you'd like to resize:
 
    ```swift
-   class MyViewController: UIViewController, KeyboardAdjuster {
+   class MyViewController: UIViewController {
        func viewDidLoad() {
            super.viewDidLoad()
 
@@ -72,6 +72,25 @@ pod "KeyboardAdjuster"
    </details>
 
 3. And you're done! Whenever a keyboard appears, your view will be automatically resized.
+
+## Optional Features
+
+KeyboardAdjuster also allows you to provide callbacks when the keyboard state changes or specify whether to animate the transition (animated by default). If you'd like to take advantage of these, just make your `UIViewController` conform to `KeyboardAdjusterOptions`, like so:
+
+
+```swift
+class MyViewController: UIViewController, KeyboardAdjusterOptions {
+    var animateKeyboardTransition = true
+
+    func keyboardWillHideHandler() {
+        print("Hiding keyboard...")
+    }
+
+    func keyboardWillShowHandler() {
+        print("Showing keyboard...")
+    }
+}
+```
 
 ## How It Works
 
