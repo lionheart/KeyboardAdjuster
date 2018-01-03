@@ -7,16 +7,16 @@
 
 KeyboardAdjuster provides a drop-in `UILayoutGuide` that helps you adjust your views to avoid the keyboard. That's pretty much all there is to it. It's battle-tested and easy to integrate into any project--Storyboards or code, doesn't matter.
 
-KeyboardAdjuster uses a `UILayoutGuide` approach that was heavily inspired by an implementation in [Swiftilities](https://github.com/Raizlabs/Swiftilities/tree/develop/Pod/Classes/Keyboard), by the fine folks at [RaizLabs](http://raizlabs.com).
-
 ### Requirements
 
 * [x] Auto Layout
 * [x] iOS 9.0-11.2+
 
+### History and Credits
+
 KeyboardAdjuster started as a Swift port of [LHSKeyboardAdjuster](https://github.com/lionheart/LHSKeyboardAdjusting), which is recommended for projects written in Objective-C.
 
-If you're currently choosing between KeyboardAdjuster and another alternative, please read about our [philosophy](https://gist.github.com/dlo/86208878ff976261fa16).
+KeyboardAdjuster uses a `UILayoutGuide` approach that was heavily inspired by an implementation in [Swiftilities](https://github.com/Raizlabs/Swiftilities/tree/develop/Pod/Classes/Keyboard), by the fine folks at [RaizLabs](http://raizlabs.com).
 
 ### Support KeyboardAdjuster
 
