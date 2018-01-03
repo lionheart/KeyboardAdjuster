@@ -66,7 +66,7 @@ pod "KeyboardAdjuster", "~> 2"
              tableView.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor).isActive = true
          }
 
-         tableView.bottomAnchor.constraint(lessThanOrEqualTo: keyboardLayoutGuide.topAnchor).isActive = true
+         tableView.bottomAnchor.constraint(greaterThanOrEqualTo: keyboardLayoutGuide.topAnchor).isActive = true
      }
      ```
    </details>
