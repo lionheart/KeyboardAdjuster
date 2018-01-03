@@ -1,3 +1,6 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem "jazzy"
+gem 'jazzy'
+gem 'cocoapods'
+gem 'xcpretty'
+gem 'yarn'
