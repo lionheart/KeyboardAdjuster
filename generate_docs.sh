@@ -1,6 +1,6 @@
 #!/bin/bash
 
-jazzy
+bundle exec jazzy
 
 git add docs/
 git add .jazzy.yaml
