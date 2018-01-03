@@ -25,7 +25,7 @@ Supporting KeyboardAdjuster, keeping it up to date with the latest iOS versions,
 KeyboardAdjuster is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
-pod "KeyboardAdjuster"
+pod "KeyboardAdjuster", "~> 3"
 ```
 
 ## Usage
