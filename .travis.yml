@@ -1,6 +1,6 @@
 script:
   - set -o pipefail && xcodebuild test -project KeyboardAdjuster.xcodeproj -scheme TestApplication -destination 'platform=iOS Simulator,name=iPhone X' | xcpretty
-  - pod lib lint
+  - bundle exec pod lib lint
 
 before_install:
   - gem update --system
