@@ -1,5 +1,5 @@
 script:
-  - set -o pipefail && xcodebuild test -project KeyboardAdjuster.xcodeproj -scheme TestApplication -destination 'platform=iOS Simulator,name=iPhone X' | xcpretty
+  - set -o pipefail && xcodebuild test -project KeyboardAdjuster.xcodeproj -scheme TestApplication -destination 'platform=iOS Simulator,name=iPhone X' | bundle exec xcpretty
   - bundle exec pod lib lint
 
 before_install:
