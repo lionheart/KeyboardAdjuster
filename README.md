@@ -1,9 +1,25 @@
-# KeyboardAdjuster
+<!--
+Copyright 2012-2018 Lionheart Software LLC
 
-[![CI Status](http://img.shields.io/travis/lionheart/KeyboardAdjuster.svg?style=flat)](https://travis-ci.org/lionheart/KeyboardAdjuster)
-[![Version](https://img.shields.io/cocoapods/v/KeyboardAdjuster.svg?style=flat)](http://cocoapods.org/pods/KeyboardAdjuster)
-[![Platform](https://img.shields.io/cocoapods/p/KeyboardAdjuster.svg?style=flat)](http://cocoapods.org/pods/KeyboardAdjuster)
-![Swift](http://img.shields.io/badge/swift-4-blue.svg?style=flat)
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+![](meta/repo-banner.png)
+
+[![CI Status][ci-badge]][travis-repo-url]
+[![Version][version-badge]][cocoapods-repo-url]
+[![Platform][platform-badge]][cocoapods-repo-url]
+[![Swift][swift-badge]][swift-url]
 
 KeyboardAdjuster provides a drop-in `UILayoutGuide` that helps you adjust your views to avoid the keyboard. That's pretty much all there is to it. It's battle-tested and easy to integrate into any project--Storyboards or code, doesn't matter.
 
@@ -22,7 +38,7 @@ Supporting KeyboardAdjuster, keeping it up to date with the latest iOS versions,
 
 ## Installation
 
-KeyboardAdjuster is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
+KeyboardAdjuster is available through [CocoaPods][cocoapods-url]. To install it, simply add the following line to your Podfile:
 
 ```ruby
 pod "KeyboardAdjuster", "~> 3"
@@ -104,3 +120,20 @@ KeyboardAdjuster registers NSNotificationCenter callbacks for keyboard appearanc
 ## License
 
 KeyboardAdjuster is available under the Apache 2.0 LICENSE. See the [LICENSE](LICENSE) file for more info.
+
+<!-- Images -->
+
+[ci-badge]: https://img.shields.io/travis/lionheart/KeyboardAdjuster.svg?style=flat
+[version-badge]: https://img.shields.io/cocoapods/v/KeyboardAdjuster.svg?style=flat
+[license-badge]: https://img.shields.io/cocoapods/l/KeyboardAdjuster.svg?style=flat
+[platform-badge]: https://img.shields.io/cocoapods/p/KeyboardAdjuster.svg?style=flat
+[swift-badge]: http://img.shields.io/badge/swift-4-blue.svg?style=flat
+
+<!-- Links -->
+
+[semver-url]: http://www.semver.org
+[travis-repo-url]: https://travis-ci.org/lionheart/KeyboardAdjuster
+[cocoapods-url]: http://cocoapods.org
+[cocoapods-repo-url]: http://cocoapods.org/pods/KeyboardAdjuster
+[doc-url]: https://code.lionheart.software/KeyboardAdjuster/
+[swift-url]: https://swift.org
