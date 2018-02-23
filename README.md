@@ -26,16 +26,10 @@ KeyboardAdjuster provides a drop-in `UILayoutGuide` that helps you adjust your v
 
 KeyboardAdjuster started as a Swift port of [LHSKeyboardAdjuster](https://github.com/lionheart/LHSKeyboardAdjusting), which is recommended for projects written in Objective-C.
 
-KeyboardAdjuster uses a `UILayoutGuide` approach that was heavily inspired by an implementation in [Swiftilities](https://github.com/Raizlabs/Swiftilities/tree/develop/Pod/Classes/Keyboard), by the fine folks at [RaizLabs](http://raizlabs.com).
-
 ### Requirements
 
 * [x] Auto Layout
 * [x] iOS 9.0-11.2+
-
-### Support KeyboardAdjuster
-
-Supporting KeyboardAdjuster, keeping it up to date with the latest iOS versions, etc., takes a lot of time! So, if you're a developer who's gotten some utility out of this library, please support it by starring the repo. This increases its visibility in GitHub search and encourages others to contribute. 🙏🏻🍻
 
 ## Installation
 
@@ -113,10 +107,13 @@ class MyViewController: UIViewController, KeyboardAdjusterOptions {
 
 KeyboardAdjuster registers NSNotificationCenter callbacks for keyboard appearance and disappearance. When a keyboard appears, it pulls out the keyboard size from the notification, along with the duration of the keyboard animation, and applies that to the `keyboardLayoutGuide` property.
 
+### Support KeyboardAdjuster
+
+Supporting KeyboardAdjuster, keeping it up to date with the latest iOS versions, etc., takes a lot of time! So, if you're a developer who's gotten some utility out of this library, please support it by starring the repo. This increases its visibility in GitHub search and encourages others to contribute. 🙏🏻🍻
+
 ## Author
 
 [Dan Loewenherz](https://github.com/dlo)
-
 
 ## License
 
