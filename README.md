@@ -15,6 +15,7 @@ limitations under the License.
 -->
 
 ![](meta/repo-banner.png)
+[![](meta/repo-banner-bottom.png)][lionheart-url]
 
 [![CI Status][ci-badge]][travis-repo-url]
 [![Version][version-badge]][cocoapods-repo-url]
@@ -137,3 +138,5 @@ KeyboardAdjuster is available under the Apache 2.0 LICENSE. See the [LICENSE](LI
 [cocoapods-repo-url]: http://cocoapods.org/pods/KeyboardAdjuster
 [doc-url]: https://code.lionheart.software/KeyboardAdjuster/
 [swift-url]: https://swift.org
+[lionheart-url]: https://lionheartsw.com/
+
