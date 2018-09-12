@@ -64,24 +64,6 @@ pod "KeyboardAdjuster", "~> 3"
    }
    ```
 
-   <details>
-     <summary><strong>NOTE:</strong> If you're using iOS 11 and your view is using the <code>safeAreaLayoutGuide</code> to set constraints, click here to view an alternate approach.</summary>
-
-     ```swift
-     func viewDidLoad() {
-         super.viewDidLoad()
-
-         if #available(iOS 11, *) {
-             tableView.bottomAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-         } else {
-             tableView.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor).isActive = true
-         }
-
-         tableView.bottomAnchor.constraint(greaterThanOrEqualTo: keyboardLayoutGuide.topAnchor).isActive = true
-     }
-     ```
-   </details>
-
 3. And you're done! Whenever a keyboard appears, your view will be automatically resized.
 
 ## Optional Features

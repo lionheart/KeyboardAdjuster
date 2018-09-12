@@ -34,10 +34,17 @@ public class KeyboardLayoutGuide: UILayoutGuide {
         
         view.addLayoutGuide(self)
 
-        leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        constraint = topAnchor.constraint(equalTo: view.bottomAnchor)
+        if #available(iOS 11.0, *) {
+            leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+            trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+            bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+            constraint = topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        } else {
+            leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+            trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+            bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+            constraint = topAnchor.constraint(equalTo: view.bottomAnchor)
+        }
         constraint.isActive = true
     }
 
