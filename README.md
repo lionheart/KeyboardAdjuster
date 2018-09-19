@@ -72,13 +72,7 @@ pod "KeyboardAdjuster", "~> 3"
      func viewDidLoad() {
          super.viewDidLoad()
 
-         if #available(iOS 11, *) {
-             tableView.bottomAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-         } else {
-             tableView.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor).isActive = true
-         }
-
-         tableView.bottomAnchor.constraint(greaterThanOrEqualTo: keyboardLayoutGuide.topAnchor).isActive = true
+         tableView.bottomAnchor.constraint(lessThanOrEqualTo: keyboardLayoutGuide.topAnchor).isActive = true
      }
      ```
    </details>

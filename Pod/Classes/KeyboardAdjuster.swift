@@ -113,7 +113,7 @@ extension UIViewController {
 
         case .linear:
             curveAnimationOption = .curveLinear
-
+            
         default:
             // This probably doesn't map 1-1 with the animation curve provided in userInfo, but there's no way to tell which one it should really be, so I made an educated guess. :)
             curveAnimationOption = .curveEaseOut
