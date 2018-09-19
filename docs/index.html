@@ -80,27 +80,40 @@
         <section class="section">
           <div class="section-content">
             
-            <h1 id='keyboardadjuster' class='heading'>KeyboardAdjuster</h1>
+            <!--
+Copyright 2012-2018 Lionheart Software LLC
 
-<p><a href="https://travis-ci.org/lionheart/KeyboardAdjuster"><img src="http://img.shields.io/travis/lionheart/KeyboardAdjuster.svg?style=flat" alt="CI Status"></a>
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<p><img src="meta/repo-banner.png" alt="">
+<a href="https://lionheartsw.com/"><img src="meta/repo-banner-bottom.png" alt=""></a></p>
+
+<p><a href="https://travis-ci.org/lionheart/KeyboardAdjuster"><img src="https://img.shields.io/travis/lionheart/KeyboardAdjuster.svg?style=flat" alt="CI Status"></a>
 <a href="http://cocoapods.org/pods/KeyboardAdjuster"><img src="https://img.shields.io/cocoapods/v/KeyboardAdjuster.svg?style=flat" alt="Version"></a>
+<a href="http://cocoapods.org/pods/KeyboardAdjuster"><img src="https://img.shields.io/cocoapods/l/KeyboardAdjuster.svg?style=flat" alt="License"></a>
 <a href="http://cocoapods.org/pods/KeyboardAdjuster"><img src="https://img.shields.io/cocoapods/p/KeyboardAdjuster.svg?style=flat" alt="Platform"></a>
-<img src="http://img.shields.io/badge/swift-4-blue.svg?style=flat" alt="Swift"></p>
+<a href="https://swift.org"><img src="http://img.shields.io/badge/swift-4-blue.svg?style=flat" alt="Swift"></a></p>
 
 <p>KeyboardAdjuster provides a drop-in <code>UILayoutGuide</code> that helps you adjust your views to avoid the keyboard. That&rsquo;s pretty much all there is to it. It&rsquo;s battle-tested and easy to integrate into any project&ndash;Storyboards or code, doesn&rsquo;t matter.</p>
 
 <p>KeyboardAdjuster started as a Swift port of <a href="https://github.com/lionheart/LHSKeyboardAdjusting">LHSKeyboardAdjuster</a>, which is recommended for projects written in Objective-C.</p>
-
-<p>KeyboardAdjuster uses a <code>UILayoutGuide</code> approach that was heavily inspired by an implementation in <a href="https://github.com/Raizlabs/Swiftilities/tree/develop/Pod/Classes/Keyboard">Swiftilities</a>, by the fine folks at <a href="http://raizlabs.com">RaizLabs</a>.</p>
 <h3 id='requirements' class='heading'>Requirements</h3>
 
 <ul>
 <li>[x] Auto Layout</li>
 <li>[x] iOS 9.0-11.2+</li>
 </ul>
-<h3 id='support-keyboardadjuster' class='heading'>Support KeyboardAdjuster</h3>
-
-<p>Supporting KeyboardAdjuster, keeping it up to date with the latest iOS versions, etc., takes a lot of time! So, if you&rsquo;re a developer who&rsquo;s gotten some utility out of this library, please support it by starring the repo. This increases its visibility in GitHub search and encourages others to contribute. 🙏🏻🍻</p>
 <h2 id='installation' class='heading'>Installation</h2>
 
 <p>KeyboardAdjuster is available through <a href="http://cocoapods.org">CocoaPods</a>. To install it, simply add the following line to your Podfile:</p>
@@ -137,13 +150,7 @@
  func viewDidLoad() {
      super.viewDidLoad()
 
-     if #available(iOS 11, *) {
-         tableView.bottomAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-     } else {
-         tableView.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor).isActive = true
-     }
-
-     tableView.bottomAnchor.constraint(greaterThanOrEqualTo: keyboardLayoutGuide.topAnchor).isActive = true
+     tableView.bottomAnchor.constraint(lessThanOrEqualTo: keyboardLayoutGuide.topAnchor).isActive = true
  }
  ```
 </code></pre>
@@ -171,12 +178,19 @@
 <h2 id='how-it-works' class='heading'>How It Works</h2>
 
 <p>KeyboardAdjuster registers NSNotificationCenter callbacks for keyboard appearance and disappearance. When a keyboard appears, it pulls out the keyboard size from the notification, along with the duration of the keyboard animation, and applies that to the <code>keyboardLayoutGuide</code> property.</p>
+<h3 id='support-keyboardadjuster' class='heading'>Support KeyboardAdjuster</h3>
+
+<p>Supporting KeyboardAdjuster, keeping it up to date with the latest iOS versions, etc., takes a lot of time! So, if you&rsquo;re a developer who&rsquo;s gotten some utility out of this library, please support it by starring the repo. This increases its visibility in GitHub search and encourages others to contribute. 🙏🏻🍻</p>
 <h2 id='author' class='heading'>Author</h2>
 
 <p><a href="https://github.com/dlo">Dan Loewenherz</a></p>
 <h2 id='license' class='heading'>License</h2>
 
 <p>KeyboardAdjuster is available under the Apache 2.0 LICENSE. See the <a href="LICENSE">LICENSE</a> file for more info.</p>
+
+<!-- Images -->
+
+<!-- Links -->
 
           </div>
         </section>
@@ -186,7 +200,7 @@
     </div>
     <section class="footer">
       <p>&copy; 2016-2017 Lionheart Software LLC</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
