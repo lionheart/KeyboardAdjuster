@@ -19,6 +19,7 @@ limitations under the License.
 
 [![CI Status][ci-badge]][travis-repo-url]
 [![Version][version-badge]][cocoapods-repo-url]
+[![License][license-badge]][cocoapods-repo-url]
 [![Platform][platform-badge]][cocoapods-repo-url]
 [![Swift][swift-badge]][swift-url]
 
