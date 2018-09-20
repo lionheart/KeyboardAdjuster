@@ -247,7 +247,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Lionheart Software LLC";
 				TargetAttributes = {
 					3736F8FE1C763B9100666FB1 = {
