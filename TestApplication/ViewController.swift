@@ -41,7 +41,7 @@ class ViewController: UIViewController, KeyboardAdjusterOptions {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.estimatedRowHeight = 44
-        tableView.rowHeight = UITableViewAutomaticDimension;
+        tableView.rowHeight = UITableView.automaticDimension;
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: CellIdentifier)
 
         view.addSubview(tableView)
