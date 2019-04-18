@@ -270,10 +270,9 @@
 			};
 			buildConfigurationList = 3736F8F91C763B9100666FB1 /* Build configuration list for PBXProject "KeyboardAdjuster" */;
 			compatibilityVersion = "Xcode 6.3";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
