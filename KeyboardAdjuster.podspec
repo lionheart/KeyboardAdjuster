@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/dwlz'
   s.documentation_url = 'https://code.lionheart.software/KeyboardAdjuster/'
 
-  s.platform     = :ios, '10.3'
+  s.platform     = :ios, '12.2'
   s.requires_arc = true
 
   s.pod_target_xcconfig = {
