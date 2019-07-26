@@ -22,6 +22,7 @@ public protocol KeyboardAdjusterOptions {
     func keyboardWillShowHandler()
 }
 
+@available(iOS 9.0, *)
 public class KeyboardLayoutGuide: UILayoutGuide {
     fileprivate var willHideBlockObserver: NSObjectProtocol?
     fileprivate var willShowBlockObserver: NSObjectProtocol?
@@ -58,6 +59,7 @@ public class KeyboardLayoutGuide: UILayoutGuide {
     }
 }
 
+@available(iOS 9.0, *)
 extension UIViewController {
     public var keyboardLayoutGuide: KeyboardLayoutGuide {
         guard let guide = view.layoutGuides.first(where: { $0 is KeyboardLayoutGuide }) as? KeyboardLayoutGuide else {
