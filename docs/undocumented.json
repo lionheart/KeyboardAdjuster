@@ -1,54 +1,54 @@
 {
   "warnings": [
     {
-      "file": "/Users/dan/Projects/30-39 Open Source/31 Lionheart/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
+      "file": "/Users/dan/Projects/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
       "line": 19,
       "symbol": "KeyboardAdjusterOptions",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/30-39 Open Source/31 Lionheart/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
+      "file": "/Users/dan/Projects/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
       "line": 20,
       "symbol": "KeyboardAdjusterOptions.animateKeyboardTransition",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/30-39 Open Source/31 Lionheart/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
+      "file": "/Users/dan/Projects/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
       "line": 21,
       "symbol": "KeyboardAdjusterOptions.keyboardWillHideHandler()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/30-39 Open Source/31 Lionheart/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
+      "file": "/Users/dan/Projects/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
       "line": 22,
       "symbol": "KeyboardAdjusterOptions.keyboardWillShowHandler()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/30-39 Open Source/31 Lionheart/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
+      "file": "/Users/dan/Projects/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
       "line": 25,
       "symbol": "KeyboardLayoutGuide",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/30-39 Open Source/31 Lionheart/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
+      "file": "/Users/dan/Projects/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
       "line": 44,
       "symbol": "KeyboardLayoutGuide.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/30-39 Open Source/31 Lionheart/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
+      "file": "/Users/dan/Projects/keyboardadjuster/Pod/Classes/KeyboardAdjuster.swift",
       "line": 62,
       "symbol": "UIViewController.keyboardLayoutGuide",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/dan/Projects/30-39 Open Source/31 Lionheart/keyboardadjuster"
+  "source_directory": "/Users/dan/Projects/keyboardadjuster"
 }
