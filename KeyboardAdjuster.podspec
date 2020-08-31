@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.author           = { "Dan Loewenherz" => "dan@lionheartsw.com" }
   s.source           = { :git => "https://github.com/lionheart/KeyboardAdjuster.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/dwlz'
-  s.documentation_url = 'https://code.lionheart.software/KeyboardAdjuster/'
+# s.documentation_url = 'https://code.lionheart.software/KeyboardAdjuster/'
 
   s.platform     = :ios, '12.2'
   s.requires_arc = true
