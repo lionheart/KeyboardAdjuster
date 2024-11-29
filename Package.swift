@@ -5,7 +5,7 @@ let package = Package(
     name: "KeyboardAdjuster",
     defaultLocalization: "en",
     platforms: [
-        .iOS(.v17)
+        .iOS(.v15)
     ],
     products: [
         .library(
@@ -22,5 +22,6 @@ let package = Package(
             name: "KeyboardAdjusterTests",
             dependencies: ["KeyboardAdjuster"]
         )
-    ]
+    ],
+    swiftLanguageModes: [.v4]
 )
